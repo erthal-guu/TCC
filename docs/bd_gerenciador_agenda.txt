@@ -1,0 +1,85 @@
+-- =========================================
+-- Banco de Dados: gerenciador_agenda
+-- =========================================
+
+DROP DATABASE IF EXISTS agenda_professores;
+CREATE DATABASE gerenciador_agenda CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE gerenciador_agenda;
+
+-- =========================================
+-- Tabela: users (administrador)
+-- =========================================
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+-- =========================================
+-- Tabela: teachers (professores)
+-- =========================================
+CREATE TABLE teachers (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    phone VARCHAR(20)
+);
+
+-- =========================================
+-- Tabela: subjects (matérias)
+-- =========================================
+CREATE TABLE subjects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
+);
+
+-- =========================================
+-- Tabela: turns (turnos)
+-- =========================================
+CREATE TABLE turns (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(20) NOT NULL
+);
+
+-- Inserindo os turnos padrão
+INSERT INTO turns (name) VALUES ('Matutino'), ('Vespertino'), ('Noturno');
+
+-- =========================================
+-- Tabela: classes (turmas)
+-- =========================================
+CREATE TABLE classes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    year INT NOT NULL,
+    shift_id INT NOT NULL,
+    FOREIGN KEY (shift_id) REFERENCES turns(id)
+);
+
+-- =========================================
+-- Tabela: teacher_subject_turn (relacionamento professor → matéria → turno)
+-- =========================================
+CREATE TABLE teacher_subject_turn (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    teacher_id INT NOT NULL,
+    subject_id INT NOT NULL,
+    turn_id INT NOT NULL,
+    skill_level TINYINT NOT NULL DEFAULT 0, -- 0 = N0, 1 = N1, 2 = N2
+    days SET('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday') NOT NULL,
+    FOREIGN KEY (teacher_id) REFERENCES teachers(id),
+    FOREIGN KEY (subject_id) REFERENCES subjects(id),
+    FOREIGN KEY (turn_id) REFERENCES turns(id),
+    UNIQUE KEY unique_teacher_subject_turn (teacher_id, subject_id, turn_id)
+);
+
+-- =========================================
+-- Tabela: class_schedule (agenda das turmas)
+-- =========================================
+CREATE TABLE class_schedule (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    teacher_subject_turn_id INT NOT NULL,
+    class_id INT NOT NULL,
+    day ENUM('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday') NOT NULL,
+    FOREIGN KEY (teacher_subject_turn_id) REFERENCES teacher_subject_turn(id),
+    FOREIGN KEY (class_id) REFERENCES classes(id)
+);
+
