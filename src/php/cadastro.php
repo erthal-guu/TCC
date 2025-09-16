@@ -10,7 +10,7 @@ $hashSenha = password_hash($senha, PASSWORD_DEFAULT);
 
 $sql = "INSERT INTO professores (nome,email,telefone,senha) VALUES('$nome','$email','$telefone','$hashSenha')";
 if (mysqli_query($connection ,$sql)) {
-    header("location : home.html");
+    header("location : /../html/login.html");
     exit();   
 }
 else {
