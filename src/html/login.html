@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Login</title>
+    <link rel="stylesheet" href="../css/cadastro.css"> 
+</head>
+<body>
+    <div class="container-cadastro">
+        <div class="imagem-fundo"></div>
+
+        <div class="formulario-lateral">
+            <div class="logo-espaco">
+                <img src="../assets/img/logo-senai.jpg" alt="Logo da Empresa">
+            </div>
+            <h2>Login</h2>
+            <form id="cadastroForm" action="../php/cadastro.php" method="post">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <button type="submit" onclick="ValidarCampos()">Entrar</button>
+            </form>
+        </div>
+    </div>
+    <script src="Login.js"></script>
+</body>
+</html>

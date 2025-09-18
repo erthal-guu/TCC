@@ -3,7 +3,7 @@
 $server ="localhost";
 $user = "root";
 $password = "";
-$database = "gerenciador_agendas";
+$database = "gerenciador_agenda";
 
 $connection =new mysqli($server,$user,$password,$database);
 
