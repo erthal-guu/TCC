@@ -2,7 +2,6 @@
 -- Banco de Dados: gerenciador_agenda
 -- =========================================
 
-DROP DATABASE IF EXISTS agenda_professores;
 CREATE DATABASE gerenciador_agenda CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE gerenciador_agenda;
 
