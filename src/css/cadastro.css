@@ -1,7 +1,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../assets/img/backgroundBranco.jpg');
+    background-image: url('../assets/img/Background.png');
     background-size: cover;
     margin: 0;
     display: flex;
@@ -21,7 +21,7 @@ body {
 
 .imagem-fundo {
     flex: 1;
-    background-image: url('../assets/img/Campus_SJP_1.jpg');
+    background-image: url('../assets/img/Foto-Sesi.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -41,7 +41,7 @@ body {
 }
 
 .logo-espaco img {
-    max-width: 150px; /* Ajuste o tamanho do logo */
+    max-width: 150px;
     height: auto;
 }
 
