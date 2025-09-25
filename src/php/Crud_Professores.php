@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Email já Cadastrado!');</script>";
         exit();
     } else {
-        $sql_insert = "INSERT INTO professores (nome, email, telefone, disciplina, nivel_capacitacao) VALUES (?, ?, ?, ?, ?)";
+        $sql_insert = "INSERT INTO professores (nome, email, telefone, disciplinas, nivel_capacitacao) VALUES (?, ?, ?, ?, ?)";
         $stmt_insert = mysqli_prepare($connection, $sql_insert);
         
         if (!$stmt_insert) {
@@ -34,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (mysqli_stmt_execute($stmt_insert)) {
             echo "<script>alert('Professor Cadastrado com sucesso!!');</script>";
+            header("Location: lista_professores.php");
+
         } else {
             echo "Erro ao cadastrar Professor: " . mysqli_stmt_error($stmt_insert);
         }
