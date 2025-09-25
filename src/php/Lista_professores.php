@@ -1,7 +1,7 @@
 <?php
 include("conexao.php");
 
-$sql = "SELECT nome FROM professores ";
+$sql = "SELECT nome,disciplina,nivel_capacitacao FROM professores ";
 
 
 
@@ -29,9 +29,9 @@ if (!$result) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr>";
             echo "<td>" . htmlspecialchars($row["nome"]) . "</td>";
-            // echo "<td>" . htmlspecialchars($row["nome_disciplina"]) . "</td>";
-            // echo "<td>" . htmlspecialchars($row["nivel_capacitacao"]) . "</td>";
-            // echo "</tr>";
+             echo "<td>" . htmlspecialchars($row["disciplina"]) . "</td>";
+             echo "<td>" . htmlspecialchars($row["nivel_capacitacao"]) . "</td>";
+             echo "</tr>";
         }
         echo "</table>"; 
     } else {
