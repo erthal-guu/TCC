@@ -61,7 +61,6 @@ body {
     padding: 5px 10px;
 }
 
-/* Conteúdo central */
 .content {
     transition: margin-left 0.3s ease-in-out;
     padding: 60px 20px;
