@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-	-- =========================================
-=======
--- =========================================
->>>>>>> 25563af7c6df11cb2fd0780b54704a25ddf5d515
--- Banco de Dados: gerenciador_agenda
--- =========================================
+
 
 CREATE DATABASE gerenciador_agenda CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE gerenciador_agenda;
@@ -26,7 +20,9 @@ CREATE TABLE professores (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100),
-    telefone VARCHAR(20)
+    telefone VARCHAR(20),
+	disciplina VARCHAR(50),
+	nivel_capacitacao VARCHAR(10)
 );
 
 -- =========================================
@@ -58,35 +54,3 @@ CREATE TABLE turmas (
     id_turno INT NOT NULL,
     FOREIGN KEY (id_turno) REFERENCES turnos(id)
 );
-
--- =========================================
--- Tabela: professor_materia_turno (relacionamento professor → matéria → turno)
--- =========================================
-CREATE TABLE professor_materia_turno (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_professor INT NOT NULL,
-    id_materia INT NOT NULL,
-    id_turno INT NOT NULL,
-    nivel_habilidade TINYINT NOT NULL DEFAULT 0, -- 0 = N0, 1 = N1, 2 = N2
-    dias SET('Segunda','Terca','Quarta','Quinta','Sexta','Sabado') NOT NULL,
-    FOREIGN KEY (id_professor) REFERENCES professores(id),
-    FOREIGN KEY (id_materia) REFERENCES materias(id),
-    FOREIGN KEY (id_turno) REFERENCES turnos(id),
-    UNIQUE KEY professor_materia_turno_unico (id_professor, id_materia, id_turno)
-);
-
--- =========================================
--- Tabela: agenda_turmas (agenda das turmas)
--- =========================================
-CREATE TABLE agenda_turmas (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    id_professor_materia_turno INT NOT NULL,
-    id_turma INT NOT NULL,
-    dia ENUM('Segunda','Terca','Quarta','Quinta','Sexta','Sabado') NOT NULL,
-    FOREIGN KEY (id_professor_materia_turno) REFERENCES professor_materia_turno(id),
-    FOREIGN KEY (id_turma) REFERENCES turmas(id)
-<<<<<<< HEAD
-);
-=======
-);	
->>>>>>> 25563af7c6df11cb2fd0780b54704a25ddf5d515
