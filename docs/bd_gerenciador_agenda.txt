@@ -20,7 +20,6 @@ CREATE TABLE professores (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100),
-    telefone VARCHAR(20),
 	disciplina VARCHAR(50),
 	nivel_capacitacao VARCHAR(10)
 );
@@ -28,7 +27,7 @@ CREATE TABLE professores (
 -- =========================================
 -- Tabela: disciplina
 -- =========================================
-CREATE TABLE disciplina (
+CREATE TABLE disciplinas (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL
 );

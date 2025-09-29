@@ -29,7 +29,7 @@ if (!$result) {
             echo "<td>" . htmlspecialchars($row["disciplinas"]) . "</td>";
             echo "<td>" . htmlspecialchars($row["nivel_capacitacao"]) . "</td>";
             echo "<td>
-                    <a href='../html/editar_professor.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm'>Editar</a>
+                    <a href='editar_professores.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm'>Editar</a>
                     <form method='POST' onsubmit='return confirm(\"Tem certeza que deseja excluir este professor?\")'>
                         <input type='hidden' name='id' value='" . $row["id"] . "'>
                         <input type='hidden' name='action' value='delete'>
