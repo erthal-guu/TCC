@@ -4,7 +4,6 @@ include("conexao.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
     $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
     $senha = $_POST['senha'];
     $hashSenha = password_hash($senha, PASSWORD_DEFAULT);
 
@@ -23,17 +22,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<script>alert('Email já Cadastrado!');</script>";
         exit();
     } else {
-        $sql_insert = "INSERT INTO usuarios (nome_usuario, email, telefone, senha) VALUES (?, ?, ?, ?)";
+        $sql_insert = "INSERT INTO usuarios (nome_usuario, email, senha) VALUES (?, ?, ?)";
         $stmt_insert = mysqli_prepare($connection, $sql_insert);
         
         if (!$stmt_insert) {
             die("Erro ao preparar a consulta de inserção: " . mysqli_error($connection));
         }
 
-        mysqli_stmt_bind_param($stmt_insert, "ssss", $nome, $email, $telefone, $hashSenha);
+        mysqli_stmt_bind_param($stmt_insert, "sss", $nome, $email, $hashSenha);
 
         if (mysqli_stmt_execute($stmt_insert)) {
-            echo "<script>alert('Usuário Cadastrado com sucesso!!');</script>";
+             header("Location: ../html/home.html");
         } else {
             echo "Erro ao cadastrar Usuário: " . mysqli_stmt_error($stmt_insert);
         }
