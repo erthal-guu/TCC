@@ -11,7 +11,7 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <title>Lista de Professores e Disciplinas</title>
-    <link rel="stylesheet" href="../css/lista.css"> 
+    <link rel="stylesheet" href="../view/css/lista.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -23,20 +23,20 @@ if (!$result) {
     if ($result->num_rows > 0) {
         echo "<table class='table table-striped'>"; 
         echo "<tr><th>Nome do Professor</th><th>Disciplina</th><th>Nível de Capacitação</th><th>Ações</th></tr>";
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . htmlspecialchars($row["nome"]) . "</td>";
-            echo "<td>" . htmlspecialchars($row["disciplinas"]) . "</td>";
-            echo "<td>" . htmlspecialchars($row["nivel_capacitacao"]) . "</td>";
-            echo "<td>
-                    <a href='editar_professores.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm'>Editar</a>
-                    <form method='POST' onsubmit='return confirm(\"Tem certeza que deseja excluir este professor?\")'>
-                        <input type='hidden' name='id' value='" . $row["id"] . "'>
-                        <input type='hidden' name='action' value='delete'>
-                        <button type='submit' class='btn btn-danger btn-sm'>Deletar</button>
-                    </form>
-                  </td>";
-            echo "</tr>";
+while ($row = $result->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . htmlspecialchars($row["nome"]) . "</td>";
+    echo "<td>" . htmlspecialchars($row["disciplinas"]) . "</td>";
+    echo "<td>" . htmlspecialchars($row["nivel_capacitacao"]) . "</td>";
+    echo "<td>
+            <a href='editar_professores.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm'>Editar</a>
+            <form method='POST' onsubmit='return confirm(\"Tem certeza que deseja excluir este professor?\")'>
+                <input type='hidden' name='id' value='" . $row["id"] . "'>
+                <input type='hidden' name='action' value='delete'>
+                <button type='submit' class='btn btn-danger btn-sm'>Deletar</button>
+            </form>
+          </td>";
+    echo "</tr>";
         }
         echo "</table>"; 
     } else {
