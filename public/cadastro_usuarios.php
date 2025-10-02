@@ -1,5 +1,5 @@
 <?php
-include("conexao.php");
+include("../app/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'];
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_bind_param($stmt_insert, "sss", $nome, $email, $hashSenha);
 
         if (mysqli_stmt_execute($stmt_insert)) {
-             header("Location: ../html/home.html");
+             header("Location:home.php");
         } else {
             echo "Erro ao cadastrar Usuário: " . mysqli_stmt_error($stmt_insert);
         }
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Cadastro</title>
-    <link rel="stylesheet" href="../css/cadastro.css"> 
+    <link rel="stylesheet" href="assets/css/cadastro.css"> 
 </head>
 <body>
     <div class="container-cadastro">
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="formulario-lateral">
             <div class="logo-espaco">
-                <img src="../assets/img/logo-senai.jpg" alt="Logo da Empresa">
+                <img src="assets/img/logo-senai.jpg" alt="Logo da Empresa">
             </div>
             <h2>Cadastro</h2>
             <form id="cadastroForm" method="post">
@@ -77,6 +77,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="form-group">
                     <label for="confirmaSenha">Confirme a Senha:</label>
                     <input type="password" id="confirmaSenha" name="confirmaSenha" required>
+                </div>
+                <div>
+                    <p>já tem uma conta?<a href="login.php"> Entre aqui </a></p>
                 </div>
                 <button type="submit" onclick="ValidarCampos()">Cadastrar</button>
             </form>

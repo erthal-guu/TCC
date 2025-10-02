@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url('../assets/img/Background.png');
+    background-image: url('../img/Background.png');
     background-size: cover;
     margin: 0;
     display: flex;
@@ -20,7 +20,7 @@ body {
 
 .imagem-fundo {
     flex: 1;
-    background-image: url('../assets/img/Foto-Sesi.jpg');
+    background-image: url('../img/Foto-Sesi.jpg');
     background-size: cover;
     background-position: center;
 }

@@ -1,5 +1,5 @@
 <?php
-include("../controller/conexao.php");
+include("../app/conexao.php");
 
 $sql_disciplina = "SELECT nome_disciplina FROM disciplinas";
 $result_disciplina = $connection->query($sql_disciplina);
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_bind_param($stmt_insert, "ssss", $nome, $email, $disciplina, $nivelCapacitacao);
 
         if (mysqli_stmt_execute($stmt_insert)) {
-            header("Location: ../controller/Crud_professores.php");
+            header("Location: ../app/Crud_professores.php");
 
         } else {
             echo "Erro ao cadastrar Professor: " . mysqli_stmt_error($stmt_insert);
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Professores</title>
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="assets/css/cadastro.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"> 
 </head>
 <body>

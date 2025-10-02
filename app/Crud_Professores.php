@@ -11,7 +11,7 @@ if (!$result) {
 <head>
     <meta charset="UTF-8">
     <title>Lista de Professores e Disciplinas</title>
-    <link rel="stylesheet" href="../view/css/lista.css"> 
+    <link rel="stylesheet" href="../public/assets/css/lista.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>

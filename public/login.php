@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include("conexao.php");
+include("../app/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Login</title>
-    <link rel="stylesheet" href="../css/cadastro.css"> 
+    <link rel="stylesheet" href="assets/css/cadastro.css"> 
 </head>
 <body>
     <div class="container-cadastro">
@@ -60,21 +60,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="formulario-lateral">
             <div class="logo-espaco">
-                <img src="../assets/img/logo-senai.jpg" alt="Logo da Empresa">
+                <img src="assets/img/logo-senai.jpg" alt="Logo da Empresa">
             </div>
             <h2>Login</h2>
-            <form id="cadastroForm" action="../php/login.php" method="post">
+            <form id="cadastroForm" method="post">
                 <div class="form-group">
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" id="telefone" name="telefone" required>
-                </div>
-                <div class="form-group">
                     <label for="senha">Senha:</label>
                     <input type="password" id="senha" name="senha" required>
+                </div>
+                <div>
+                    <p>Não tem uma conta ?<a href="cadastro_usuarios.php"> Cadastre-se aqui </a></p>
                 </div>
                 <button type="submit" onclick="ValidarCampos()">Entrar</button>
             </form>
