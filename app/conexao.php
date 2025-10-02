@@ -1,9 +1,5 @@
 <?php
-
-$server ="localhost";
-$user = "root";
-$password = "";
-$database = "gerenciador_agenda";
+include("../config/database.php");
 $connection =new mysqli($server,$user,$password,$database);
 
 if ($connection->connect_error){
