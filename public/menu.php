@@ -13,6 +13,7 @@
     <div class="sidebar" id="sidebar">
         <h4 id="menuprinc">Menu Principal</h4>
 
+        <a href="home.php">Home</a>
         <a href="../app/Crud_Professores.php">Cadastrar Professor</a>
         <a href="cadastro_uc.php">Cadastrar UC</a>
         <a href="cadastrar_turma.php">Cadastrar Turma</a>
