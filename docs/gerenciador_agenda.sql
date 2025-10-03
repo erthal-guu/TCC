@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `agenda_turmas` (
   KEY `id_professor_materia_turno` (`id_professor_materia_turno`),
   KEY `id_turma` (`id_turma`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+ 
 -- --------------------------------------------------------
 
 --
@@ -25,6 +25,8 @@ DROP TABLE IF EXISTS `disciplinas`;
 CREATE TABLE IF NOT EXISTS `disciplinas` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome_disciplina` varchar(191) COLLATE utf8mb4_general_ci NOT NULL,
+  'codigo_disciplina' varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  'turno' varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nome_disciplina` (`nome_disciplina`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
