@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $turno = isset($_POST['turno']) ? $_POST['turno'] : '';
     $codigo_disciplina = isset($_POST['codigo']) ? $_POST['codigo'] : '';
     
-    // Validação básica
+    
    if (empty($nome_disciplina) || empty($turno) || empty($codigo_disciplina)) {
     $msg = "Por favor, preencha todos os campos!";
 } else {
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($result->num_rows > 0) {
         $msg = "Essa disciplina já está cadastrada!";
     } else {
-        // Insere matéria
+        
         $sql = "INSERT INTO disciplinas (nome_disciplina, codigo_disciplina, turno) VALUES (?, ?, ?)";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("sss", $nome_disciplina, $codigo, $turno);
