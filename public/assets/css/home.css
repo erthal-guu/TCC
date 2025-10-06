@@ -359,7 +359,7 @@
             font-size: 26px;
             width: 45px;
             height: 45px;
-            background: #003D7A;
+            background: linear-gradient(135deg, #003D7A, #0066B3);
             color: white;
             border-radius: 10px;
             display: flex;

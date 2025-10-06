@@ -1,6 +1,7 @@
 <?php
-session_start();
 include("../app/conexao.php");
+include("../app/protect.php");
+protect();
 
 $sql_professores = "SELECT COUNT(*) AS total FROM professores";
 $result = $connection->query($sql_professores);
