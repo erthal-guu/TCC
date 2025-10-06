@@ -8,23 +8,82 @@
     <link rel="stylesheet" href="assets/css/menu.css">
 </head>
 <body>
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
 
-    <div class="hamburger" id="hamburger">☰</div>
-    <div class="sidebar" id="sidebar">
-        <h4 id="menuprinc">Menu Principal</h4>
+<!-- Botão Hamburger -->
+<button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
 
-        <a href="home.php">Home</a>
-        <a href="../app/Crud_Professores.php">Cadastrar Professor</a>
-        <a href="cadastro_uc.php">Cadastrar UC</a>
-        <a href="cadastrar_turma.php">Cadastrar Turma</a>
-        <a href="cadastrar_relacionamento.php">Relacionar Professor/Matéria/Turno</a>
-        <hr>
-        <a href="gerenciar_agenda.php">Gerenciar Agenda</a>
-        <a href="visualizar_agenda.php">Visualizar Agenda</a>
-        <hr>
-        <a href="relatorios.php">Relatórios</a>
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-title"><p><img src="assets/img/logo-senai-home.png" alt=""></p></div>
     </div>
 
+    <div class="sidebar-content">
+        <div class="menu-section">
+            <div class="menu-section-title">PRINCIPAL</div>
+            <a href="home.php">
+                <div class="menu-icon icon-home"></div>
+                <span>Home</span>
+            </a>
+        </div>
+
+        <div class="menu-section">
+            <div class="menu-section-title">CADASTROS</div>
+            <a href="../app/Crud_Professores.php">
+                <div class="menu-icon icon-professor"></div>
+                <span>Cadastrar Professor</span>
+            </a>
+            <a href="cadastro_uc.php">
+                <div class="menu-icon icon-book"></div>
+                <span>Cadastrar UC</span>
+            </a>
+            <a href="cadastrar_turma.php">
+                <div class="menu-icon icon-users"></div>
+                <span>Cadastrar Turma</span>
+            </a>
+            <a href="cadastrar_relacionamento.php">
+                <div class="menu-icon icon-link"></div>
+                <span>Relacionar Prof/Matéria/Turno</span>
+            </a>
+        </div>
+
+        <div class="menu-divider"></div>
+
+        <div class="menu-section">
+            <div class="menu-section-title">AGENDA</div>
+            <a href="gerenciar_agenda.php">
+                <div class="menu-icon icon-calendar"></div>
+                <span>Gerenciar Agenda</span>
+            </a>
+            <a href="visualizar_agenda.php">
+                <div class="menu-icon icon-eye"></div>
+                <span>Visualizar Agenda</span>
+            </a>
+        </div>
+
+        <div class="menu-divider"></div>
+
+        <div class="menu-section">
+            <div class="menu-section-title">ANÁLISES</div>
+            <a href="relatorios.php">
+                <div class="menu-icon icon-chart"></div>
+                <span>Relatórios</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="sidebar-footer">
+        <div class="sidebar-footer-text">
+            © 2025 Sistema Acadêmico<br>
+            Versão 1.0
+        </div>
+    </div>
+</div>
     <script src="assets/js/menu.js"></script>
 </body>
 </html>

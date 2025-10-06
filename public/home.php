@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("../app/conexao.php");
 
 $sql_professores = "SELECT COUNT(*) AS total FROM professores";
@@ -33,6 +34,9 @@ if ($result) {
 } else {
     echo "Erro na consulta: " . $connection->error;
 }
+if (isset($_SESSION['nome_usuario'])) {
+    $nomeUsuario = $_SESSION['nome_usuario'];
+} 
 
 $connection->close();
 ?>
@@ -40,12 +44,12 @@ $connection->close();
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sistema de Agenda - Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/menu.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 <body>
 
@@ -53,21 +57,14 @@ $connection->close();
 
 <div class="top-header">
     <div class="logo-section">
-        <h2>🎓 Sistema Acadêmico SESI/SENAI</h2>
+        <h2><img src="assets/img/logo-senai-home.png" alt="Logo SENAI" /></h2>
     </div>
-    <div class="user-info" onclick="alert('Perfil do usuário')">
-        <div class="user-avatar">AD</div>
-        <div class="user-details">
-            <div class="user-name">Admin Sistema</div>
-            <div class="user-role">Administrador</div>
-        </div>
-    </div>
-    <button class="logout-btn" onclick="alert('Logout realizado')">Sair</button>
+    <a href="../app/logout.php" class="logout-btn btn btn-danger">Sair</a>
 </div>
 
 <div class="content-area">
     <div class="welcome-section">
-        <h1>Bem-vindo de volta! 👋</h1>
+        <h1>Bem-vindo de volta! 👋 <?php echo htmlspecialchars($nomeUsuario); ?></h1>
         <p>Aqui está um resumo do seu sistema acadêmico</p>
     </div>
 
@@ -94,7 +91,7 @@ $connection->close();
                 <div class="card-title">Unidades Curriculares</div>
                 <div class="card-description">Consulte todas as disciplinas/unidades curriculares disponíveis.</div>
                 <div class="card-stats">
-                    <span class="card-stats-number"><?php echo $totalUnidades?></span>
+                    <span class="card-stats-number"><?php echo $totalUnidades; ?></span>
                     <span class="card-stats-label">Unidades Disponíveis</span>
                 </div>
                 <button class="card-button" onclick="alert('Visualizar UCs')">Visualizar</button>
@@ -114,8 +111,6 @@ $connection->close();
             </div>
         </div>
     </div>
-
-    <!-- Estatísticas -->
     <div class="stats-section">
         <h2>📊 Estatísticas do Sistema</h2>
         <div class="stats-grid">
@@ -137,8 +132,6 @@ $connection->close();
             </div>
         </div>
     </div>
-
-    <!-- Ações Rápidas -->
     <div class="quick-actions">
         <h2>⚡ Ações Rápidas</h2>
         <div class="actions-grid">
