@@ -48,7 +48,7 @@ while ($row = $result->fetch_assoc()) {
     ?>
     
     <div class="Button_container mt-3">
-        <a href="../html/cadastro_professores.html" class="btn btn-primary btn-lg">Adicionar</a>
+        <a href="../public/cadastro_professores.php" class="btn btn-primary btn-lg">Adicionar</a>
     </div>
 </div>
 </body>
