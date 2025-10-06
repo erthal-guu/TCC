@@ -1,12 +1,35 @@
 <?php
 include("../app/conexao.php");
-$sql = "SELECT COUNT(*) AS total FROM professores";
-$result = $connection->query($sql);
+
+$sql_professores = "SELECT COUNT(*) AS total FROM professores";
+$result = $connection->query($sql_professores);
 $totalProfessores = 0;
 
 if ($result) {
     $row = $result->fetch_assoc();
     $totalProfessores = $row['total'];
+} else {
+    echo "Erro na consulta: " . $connection->error;
+}
+
+$sql_Unidades = "SELECT COUNT(*) AS total FROM unidades_curriculares";
+$result = $connection->query($sql_Unidades);
+$totalUnidades = 0;
+
+if ($result) {
+    $row = $result->fetch_assoc();
+    $totalUnidades = $row['total'];
+} else {
+    echo "Erro na consulta: " . $connection->error;
+}
+
+$sql_turmas = "SELECT COUNT(*) AS total FROM turmas";
+$result = $connection->query($sql_turmas);
+$totalTurmas = 0;
+
+if ($result) {
+    $row = $result->fetch_assoc();
+    $totalTurmas = $row['total'];
 } else {
     echo "Erro na consulta: " . $connection->error;
 }
@@ -50,7 +73,6 @@ $connection->close();
 
     <div class="cards-container">
 
-        <!-- Card de Professores -->
         <div class="card card-professores">
             <div class="card-content">
                 <div class="card-icon">👨‍🏫</div>
@@ -66,29 +88,27 @@ $connection->close();
             </div>
         </div>
 
-        <!-- Card de Unidades Curriculares -->
         <div class="card card-unidades">
             <div class="card-content">
                 <div class="card-icon">📚</div>
                 <div class="card-title">Unidades Curriculares</div>
                 <div class="card-description">Consulte todas as disciplinas/unidades curriculares disponíveis.</div>
                 <div class="card-stats">
-                    <span class="card-stats-number">18</span>
+                    <span class="card-stats-number"><?php echo $totalUnidades?></span>
                     <span class="card-stats-label">Unidades Disponíveis</span>
                 </div>
                 <button class="card-button" onclick="alert('Visualizar UCs')">Visualizar</button>
             </div>
         </div>
 
-        <!-- Card de Turmas -->
         <div class="card card-turmas">
             <div class="card-content">
                 <div class="card-icon">👥</div>
                 <div class="card-title">Turmas</div>
                 <div class="card-description">Acompanhe as turmas cadastradas e seus respectivos turnos.</div>
                 <div class="card-stats">
-                    <span class="card-stats-number">12</span>
-                    <span class="card-stats-label">Turmas Ativas</span>
+                    <span class="card-stats-number"><?php echo $totalTurmas; ?></span>
+                    <span class="card-stats-label">Turmas cadastradas</span>
                 </div>
                 <button class="card-button" onclick="alert('Visualizar Turmas')">Visualizar</button>
             </div>
