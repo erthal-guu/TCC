@@ -66,7 +66,6 @@ $connection->close();
 <div class="content-area">
     <div class="welcome-section">
         <h1>Bem-vindo de volta! 👋 <?php echo htmlspecialchars($nomeUsuario); ?></h1>
-        <p>Aqui está um resumo do seu sistema acadêmico</p>
     </div>
 
     <div class="cards-container">
@@ -82,7 +81,7 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $totalProfessores; ?></span>
                     <span class="card-stats-label">Professores Cadastrados</span>
                 </div>
-                <button class="card-button" onclick="alert('Visualizar Professores')">Visualizar</button>
+                <button class="card-button"><a href="../app/crud_professores.php">Visualizar</a></button>
             </div>
         </div>
 

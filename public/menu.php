@@ -31,7 +31,7 @@
 
         <div class="menu-section">
             <div class="menu-section-title">CADASTROS</div>
-            <a href="../app/Crud_Professores.php">
+            <a href="cadastro_Professores.php">
                 <div class="menu-icon icon-professor"></div>
                 <span>Cadastrar Professor</span>
             </a>

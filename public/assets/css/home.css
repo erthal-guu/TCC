@@ -103,8 +103,6 @@
             background: #c01a1f;
             transform: translateY(-2px);
         }
-
-        /* Área de Conteúdo */
         .content-area {
             padding: 40px;
             max-width: 1400px;
@@ -267,8 +265,12 @@
         .card-turmas .card-button:hover {
             background: #003D7A;;
         }
+        .card-button a{
+            list-style: none;
+            text-decoration: none;
+            color: white;;
+        }
 
-        /* Seção de Estatísticas */
         .stats-section {
             background: white;
             border-radius: 12px;

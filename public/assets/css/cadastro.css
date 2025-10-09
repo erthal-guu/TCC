@@ -1,99 +1,208 @@
-body {
-    font-family: Arial, sans-serif;
-    background-image: url('../img/Background.png');
-    background-size: cover;
+* {
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f5f7fa;
     min-height: 100vh;
 }
 
-.container-cadastro {
+.header-principal {
+    background: #003D7A;    
+    padding: 16px 24px;
     display: flex;
-    width: 900px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.imagem-fundo {
-    flex: 1;
-    background: #003D7A;
-    /* background-image: url(../img/logo-senai-home.png); */
-    background-position: center;
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 0px 100px;
+    height: 70px;
 }
 
-.formulario-lateral {
-    width: 400px; 
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+}
+
+.menu-button:hover {
+    opacity: 0.8;
+}
+
+.logo-senai {
+    height: 40px;
+    width: auto;
+}
+
+.container-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.cadastro-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: calc(100vh - 150px);
+}
+
+.cadastro-card {
+    background: white;
+    border-radius: 12px;
     padding: 40px;
-    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #e8edf2;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    background: #003D7A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    color: white;
+}
+
+.card-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.card-title {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-subtitle {
+    text-align: center;
+    color: #6c757d;
+    font-size: 14px;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+.form-cadastro {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 20px;
 }
 
-.logo-espaco {
-    text-align: center;
-    margin-bottom: 20px;
+.form-group-modern {
+    display: flex;
+    flex-direction: column;
 }
 
-.logo-espaco img {
-    max-width: 150px;
-    height: auto;
+.form-group-modern label {
+    color: #495057;
+    font-weight: 500;
+    margin-bottom: 8px;
+    font-size: 14px;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"]{
+.form-group-modern input[type="text"],
+.form-group-modern input[type="email"],
+.form-select-modern {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif; 
-    font-size: 16px;
+    padding: 12px 16px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.2s;
+    background-color: white;
+    color: #495057;
 }
 
+.form-group-modern input[type="text"]:focus,
+.form-group-modern input[type="email"]:focus,
+.form-select-modern:focus {
+    outline: none;
+    border-color: #004494;
+    box-shadow: 0 0 0 3px rgba(0, 68, 148, 0.1);
+}
 
-button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    background: #003D7A;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+.form-group-modern input[type="text"]::placeholder,
+.form-group-modern input[type="email"]::placeholder {
+    color: #adb5bd;
+}
+
+.form-select-modern {
     cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23495057' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
 }
 
-button[type="submit"]:hover {
-    background-color: #0056b3;
-}
-.form-group select {
+
+.btn-cadastrar {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    padding: 12px 24px;
+    background: #003D7A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+.btn-cadastrar:hover {
+    background-color: #003670;
+}
+
+.btn-cadastrar:active {
+    background-color: #002a57;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-page {
+        padding: 24px 16px;
+    }
+    
+    .cadastro-card {
+        padding: 32px 24px;
+    }
+    
+    .card-title {
+        font-size: 20px;
+    }
+    
+    .header-principal {
+        padding: 12px 16px;
+    }
+    
+    .logo-senai {
+        height: 35px;
+    }
+}
+
+.container-cadastro,
+.imagem-fundo,
+.formulario-lateral {
+    display: none !important;
 }
