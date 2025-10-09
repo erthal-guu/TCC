@@ -8,10 +8,7 @@
     <link rel="stylesheet" href="assets/css/menu.css">
 </head>
 <body>
-<!-- Overlay -->
 <div class="overlay" id="overlay"></div>
-
-<!-- Botão Hamburger -->
 <button class="hamburger" id="hamburger">
     <span></span>
     <span></span>

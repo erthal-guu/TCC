@@ -44,11 +44,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 }
 
-// Busca professores para o select
 $professores_result = $conn->query("SELECT id, nome FROM professores ORDER BY nome ASC");
 ?><?php
 
-// Busca professores para o select
 $professores_result = $conn->query("SELECT id, nome FROM professores ORDER BY nome ASC");
 ?>
 

@@ -97,7 +97,7 @@
     padding: 30px 105px;
     color: white;
     position: relative;
-    height: 90px;
+    height: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,15 +106,6 @@
 .sidebar-header img{
     width: 140px;
     margin-top: 25px;
-}
-.sidebar-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #003D7A;
 }
 
 .sidebar-title {

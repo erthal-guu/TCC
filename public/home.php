@@ -136,8 +136,8 @@ $connection->close();
     <div class="quick-actions">
         <h2>⚡ Ações Rápidas</h2>
         <div class="actions-grid">
-            <button class="action-btn" onclick="alert('Cadastrar Professor')">
-                <span class="action-icon">➕</span>
+            <button class="action-btn" >
+                <a href="cadastro_professores.php"><span class="action-icon">➕</span></a>
                 <span>Novo Professor</span>
             </button>
             <button class="action-btn" onclick="alert('Cadastrar UC')">
