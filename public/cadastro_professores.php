@@ -64,9 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="imagem-fundo"></div>
 
         <div class="formulario-lateral">
-            <div class="logo-espaco">
-                <img src="assets/img/logo-senai.jpg" alt="Logo da Empresa">
-            </div>
             <h2>Cadastro</h2>
             <form id="cadastroForm" method="post">
                 <div class="form-group">
