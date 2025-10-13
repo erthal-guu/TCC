@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $msg = "Por favor, preencha todos os campos obrigatórios!";
         $msgType = "danger";
     } else {
-        $check = $connection->prepare("SELECT id FROM unidades_curriculares WHERE nome_unidade = ?");
+        $check = $connection->prepare("SELECT id FROM unidades_curriculares WHERE nome_disciplina = ?");
         $check->bind_param("s", $nome_disciplina);
         $check->execute();
         $result = $check->get_result();
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $msg = "Essa unidade curricular já está cadastrada!";
             $msgType = "warning";
         } else {
-            $sql = "INSERT INTO unidades_curriculares (nome_unidade, codigo_unidade, turno) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO unidades_curriculares (nome_disciplina, codigo_disciplina, turno) VALUES (?, ?, ?)";
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("sss", $nome_disciplina, $codigo_disciplina, $turno);
             
@@ -57,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $professores_result = $connection->query("SELECT id, nome FROM professores ORDER BY nome ASC");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">

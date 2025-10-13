@@ -80,7 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 
                 <h2 class="card-title">Cadastro de Professor</h2>
-                <p class="card-subtitle">Preencha os dados para cadastrar um novo professor no sistema</p>
                 
                 <form id="cadastroForm" method="post" class="form-cadastro">
                     <div class="form-group-modern">
@@ -123,9 +122,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             }
                             ?>
                         </select>
-                    </div>
-                    
+                        
+                    </div>                    
                     <button type="submit" class="btn-cadastrar" onclick="ValidarCampos()">Cadastrar</button>
+                    <p style="text-align: center; margin-top: 16px;">
+                    <a href="home.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
+                        ← Voltar para Home
+                    </a>
+                </p>
                 </form>
             </div>
         </div>

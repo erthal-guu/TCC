@@ -81,7 +81,7 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $totalProfessores; ?></span>
                     <span class="card-stats-label">Professores Cadastrados</span>
                 </div>
-                <button class="card-button"><a href="../app/crud_professores.php">Visualizar</a></button>
+                <button class="card-button"><a href="../app/Crud_professores">Visualizar</a></button>
             </div>
         </div>
 
