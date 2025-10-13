@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
             if ($stmt->execute()) {
                 $unidade_id = $connection->insert_id;
+                
                 if (!empty($professores)) {
                     $sql_prof = "INSERT INTO professor_unidade (id_professor, id_unidade) VALUES (?, ?)";
                     $stmt_prof = $connection->prepare($sql_prof);
@@ -73,7 +74,8 @@ $professores_result = $connection->query("SELECT id, nome FROM professores ORDER
 
 <div class="top-header">
     <div class="logo-section">
-        <h2><img src="assets/img/logo-senai-home.png" alt="Logo SENAI" /></h2>  
+        <h2><img src="assets/img/logo-senai-home.png" alt="Logo SENAI" /></h2>
+    </div>
 </div>
 
 <div class="container-page">
@@ -86,7 +88,6 @@ $professores_result = $connection->query("SELECT id, nome FROM professores ORDER
             </div>
 
             <h2 class="card-title">Cadastrar Nova Unidade Curricular</h2>
-            <p class="card-subtitle">Preencha as informações da disciplina abaixo</p>
 
             <?php if($msg): ?>
                 <div class="alert alert-<?= $msgType ?> alert-dismissible fade show" role="alert">
@@ -141,6 +142,12 @@ $professores_result = $connection->query("SELECT id, nome FROM professores ORDER
                 <button type="submit" class="btn-cadastrar">
                     📚 Cadastrar Unidade Curricular
                 </button>
+
+                <p style="text-align: center; margin-top: 16px;">
+                    <a href="home.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
+                        ← Voltar para Home
+                    </a>
+                </p>
             </form>
         </div>
     </div>
