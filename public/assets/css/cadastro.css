@@ -122,6 +122,7 @@ body {
 
 .form-group-modern input[type="text"],
 .form-group-modern input[type="email"],
+.form-group-modern input[type="password"],
 .form-select-modern {
     width: 100%;
     padding: 12px 16px;
@@ -135,6 +136,7 @@ body {
 
 .form-group-modern input[type="text"]:focus,
 .form-group-modern input[type="email"]:focus,
+.form-group-modern input[type="password"]:focus,
 .form-select-modern:focus {
     outline: none;
     border-color: #004494;
@@ -142,7 +144,8 @@ body {
 }
 
 .form-group-modern input[type="text"]::placeholder,
-.form-group-modern input[type="email"]::placeholder {
+.form-group-modern input[type="email"]::placeholder,
+.form-group-modern input[type="password"]::placeholder {
     color: #adb5bd;
 }
 
@@ -154,7 +157,6 @@ body {
     background-position: right 16px center;
     padding-right: 40px;
 }
-
 
 .btn-cadastrar {
     width: 100%;
@@ -177,8 +179,6 @@ body {
 .btn-cadastrar:active {
     background-color: #002a57;
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
     .container-page {
         padding: 24px 16px;
@@ -199,10 +199,8 @@ body {
     .logo-senai {
         height: 35px;
     }
-}
-
-.container-cadastro,
-.imagem-fundo,
-.formulario-lateral {
-    display: none !important;
+    
+    .header-content {
+        padding: 0px 20px;
+    }
 }

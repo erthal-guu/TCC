@@ -50,6 +50,7 @@ while ($row = $result->fetch_assoc()) {
     
     <div class="Button_container mt-3">
         <a href="../public/cadastro_professores.php" class="btn btn-primary btn-lg">Adicionar</a>
+        <script src="../public/assets/js/menu.js"></script>
     </div>
 </div>
 </body>
