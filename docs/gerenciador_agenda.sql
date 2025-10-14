@@ -74,7 +74,7 @@ INSERT INTO `professores` (`id`, `nome`, `email`, `disciplinas`, `nivel_capacita
 
 -- --------------------------------------------------------
 
--- Estrutura da tabela `turmas`
+-- Estrutura da tabela `turmas` (ATUALIZADA: com professor e sala)
 
 DROP TABLE IF EXISTS `turmas`;
 CREATE TABLE IF NOT EXISTS `turmas` (
@@ -82,8 +82,11 @@ CREATE TABLE IF NOT EXISTS `turmas` (
   `nome` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
   `ano` int NOT NULL,
   `id_turno` int NOT NULL,
+  `id_professor` int DEFAULT NULL,
+  `sala` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `id_turno` (`id_turno`)
+  KEY `id_turno` (`id_turno`),
+  KEY `id_professor` (`id_professor`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -134,3 +137,4 @@ INSERT INTO `unidades_curriculares` (`nome`, `codigo`, `carga_horaria`, `descric
 ('Informática Aplicada', 'INF001', 50, 'Uso de ferramentas computacionais básicas e avançadas.');
 
 -- --------------------------------------------------------
+ 
