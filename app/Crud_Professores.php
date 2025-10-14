@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-$sql = "SELECT id, nome, disciplinas, nivel_capacitacao FROM professores";
+$sql = "SELECT id, nome, disciplinas, nivel_capacitacao, email FROM professores"; // adicionei o email, pois no seu exemplo tinha e-mail na interface
 $result = $connection->query($sql);
 if (!$result) {
     die("Erro na consulta: " . $connection->error);
@@ -14,45 +14,45 @@ if (!$result) {
     <link rel="stylesheet" href="../public/assets/css/lista.css"> 
     <link rel="stylesheet" href="../public/assets/css/menu.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-<?php include("../public/menu.php");?>
-    <h1>Lista de Professores e Suas Disciplinas</h1>
-    
-    <?php
-    if ($result->num_rows > 0) {
-        echo "<table class='table table-striped'>"; 
-        echo "<tr><th>Nome do Professor</th><th>Disciplina</th><th>Nível de Capacitação</th><th>Ações</th></tr>";
-while ($row = $result->fetch_assoc()) {
-    echo "<tr>";
-    echo "<td>" . htmlspecialchars($row["nome"]) . "</td>";
-    echo "<td>" . htmlspecialchars($row["disciplinas"]) . "</td>";
-    echo "<td>" . htmlspecialchars($row["nivel_capacitacao"]) . "</td>";
-    echo "<td>
-            <a href='editar_professores.php?id=" . $row["id"] . "' class='btn btn-warning btn-sm'>Editar</a>
-            <form method='POST' onsubmit='return confirm(\"Tem certeza que deseja excluir este professor?\")'>
-                <input type='hidden' name='id' value='" . $row["id"] . "'>
-                <input type='hidden' name='action' value='delete'>
-                <button type='submit' class='btn btn-danger btn-sm'>Deletar</button>
-            </form>
-          </td>";
-    echo "</tr>";
-        }
-        echo "</table>"; 
-    } else {
-        echo "<p>Nenhum professor encontrado.</p>";
-    }
-
-    $result->close();
-    $connection->close();
-    ?>
-    
-    <div class="Button_container mt-3">
-        <a href="../public/cadastro_professores.php" class="btn btn-primary btn-lg">Adicionar</a>
-        <script src="../public/assets/js/menu.js"></script>
+<div class="container d-flex justify-content-center mt-5">
+    <div class="main d-flex flex-wrap justify-content-center">
+        <?php if ($result->num_rows > 0): ?>
+            <?php while ($row = $result->fetch_assoc()): ?>
+                <div class="one">
+                    <div class="text-right pr-2 pt-1"><i class="mdi mdi-dots-vertical dotdot"></i></div>
+                    <div class="d-flex justify-content-center mb-3">
+                        <img src="https://i.imgur.com/hczKIze.jpg" width="50" class="rounded-circle" alt="Foto de <?= htmlspecialchars($row['nome']) ?>">
+                    </div>
+                    <div class="text-center">
+                        <span class="name"><?= htmlspecialchars($row['nome']) ?></span>
+                        <p class="mail"><?= htmlspecialchars($row['email'] ?? 'Email não informado') ?></p>
+                    </div>
+                    <div class="disciplinas"><strong>Disciplinas:</strong> <?= htmlspecialchars($row['disciplinas']) ?></div>
+                    <div class="nivel_capacitacao"><strong>Nível de Capacitação:</strong> <?= htmlspecialchars($row['nivel_capacitacao']) ?></div>
+                    <div class="actions">
+                        <a href="editar_professores.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">✏️ Editar</a>
+                        <form method="POST" onsubmit="return confirm('Tem certeza que deseja excluir o professor <?= htmlspecialchars(addslashes($row['nome'])) ?>?');">
+                            <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                            <input type="hidden" name="action" value="delete">
+                            <button type="submit" class="btn btn-danger btn-sm">🗑️ Deletar</button>
+                        </form>
+                    </div>
+                </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p class="text-center">Nenhum professor encontrado.</p>
+        <?php endif; ?>
     </div>
 </div>
+
+<div class="container mt-4 text-center">
+    <a href="../public/cadastro_professores.php" class="btn btn-primary btn-lg">Adicionar Novo Professor</a>
+</div>
+
+<script src="../public/assets/js/menu.js"></script>
 </body>
 </html>
 
@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     mysqli_stmt_bind_param($stmt_delete,"i",$id);
     
     if(mysqli_stmt_execute($stmt_delete)){
-        echo "<script>alert('Professor excluído com sucesso!!'); window.location.href='Crud_professores.php';</script>";
+        echo "<script>alert('Professor excluído com sucesso!'); window.location.href='Crud_professores.php';</script>";
     } else {
         echo "<script>alert('Erro ao excluir professor: " . mysqli_stmt_error($stmt_delete) . "');</script>";
     }

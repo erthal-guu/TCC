@@ -1,14 +1,15 @@
 <?php
-include("../app/conexao.php");
+include("conexao.php");
+include("protect.php");
+protect();
 
 $id = $_GET['id'] ?? null;
 
 if (!$id) {
-    header("Location: Crud_turmas.php");
+    header("Location: lista_turmas.php");
     exit();
 }
 
-    
 $sql = "SELECT * FROM turmas WHERE id = ?";
 $stmt = mysqli_prepare($connection, $sql);
 mysqli_stmt_bind_param($stmt, "i", $id);
@@ -17,7 +18,7 @@ $result = mysqli_stmt_get_result($stmt);
 $turma = $result->fetch_assoc();
 
 if (!$turma) {
-    echo "Turma não encontrada.";
+    echo "<script>alert('Turma não encontrada.'); window.location.href='lista_turmas.php';</script>";
     exit();
 }
 
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         mysqli_stmt_bind_param($stmt_update, "siissi", $nome, $ano, $id_turno, $id_professor, $sala, $id);
 
         if (mysqli_stmt_execute($stmt_update)) {
-            header("Location: Crud_turmas.php");
+            header("Location: lista_turmas.php");
             exit();
         } else {
             echo "Erro ao atualizar turma: " . mysqli_stmt_error($stmt_update);
@@ -58,11 +59,12 @@ mysqli_close($connection);
 <head>
     <meta charset="UTF-8" />
     <title>Editar Turma</title>
-    <link rel="stylesheet" href="assets/css/cadastro.css" />
+    <link rel="stylesheet" href="../public/assets/css/cadastro.css" />
+    <link rel="stylesheet" href="../public/assets/css/menu.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 </head>
 <body>
-    <?php include("menu.php"); ?>
+    <?php include("../public/menu.php"); ?>
 
     <div class="container-page">
         <h2>Editar Turma</h2>
@@ -115,11 +117,12 @@ mysqli_close($connection);
 
             <button type="submit" class="btn-cadastrar">Atualizar</button>
             <p style="text-align: center; margin-top: 16px;">
-                <a href="Crud_turmas.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
+                <a href="lista_turmas.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
                     ← Voltar para lista de turmas
                 </a>
             </p>
         </form>
     </div>
+    
 </body>
 </html>

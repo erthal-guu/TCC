@@ -35,11 +35,11 @@
                 <div class="menu-icon icon-professor"></div>
                 <span>Cadastrar Professor</span>
             </a>
-            <a href="cadastro_uc.php">
+            <a href="../public/cadastro_uc.php">
                 <div class="menu-icon icon-book"></div>
                 <span>Cadastrar UC</span>
             </a>
-            <a href="cadastrar_turma.php">
+            <a href="../public/cadastro_turmas.php">
                 <div class="menu-icon icon-users"></div>
                 <span>Cadastrar Turma</span>
             </a>

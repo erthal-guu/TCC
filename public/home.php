@@ -107,7 +107,7 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $totalTurmas; ?></span>
                     <span class="card-stats-label">Turmas cadastradas</span>
                 </div>
-                <button class="card-button"><a href="../app/Crud_turmas">Visualizar</a></button>
+                <button class="card-button"><a href="../app/Lista_Turmas">Visualizar</a></button>
             </div>
         </div>
     </div>

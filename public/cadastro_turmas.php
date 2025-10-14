@@ -1,7 +1,6 @@
 <?php
 include("../app/conexao.php");
 
-// Consultas para popular selects
 $sql_turnos = "SELECT id, nome FROM turnos";
 $result_turnos = $connection->query($sql_turnos);
 
@@ -12,14 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $nome = $_POST['nome'] ?? '';
     $ano = $_POST['ano'] ?? '';
     $id_turno = $_POST['id_turno'] ?? '';
-    $id_professor = $_POST['id_professor'] ?? null; // Pode ser null
+    $id_professor = $_POST['id_professor'] ?? null;
     $sala = $_POST['sala'] ?? null;
-
-    // Validação básica
     if (empty($nome) || empty($ano) || empty($id_turno)) {
         echo "<script>alert('Por favor, preencha todos os campos obrigatórios!');</script>";
     } else {
-        // Optional: checar se já existe turma com mesmo nome e ano
         $sql_check = "SELECT id FROM turmas WHERE nome = ? AND ano = ?";
         $stmt_check = mysqli_prepare($connection, $sql_check);
         mysqli_stmt_bind_param($stmt_check, "si", $nome, $ano);
@@ -29,13 +25,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mysqli_stmt_num_rows($stmt_check) > 0) {
             echo "<script>alert('Turma já cadastrada com esse nome e ano!');</script>";
         } else {
-            // Inserir turma
             $sql_insert = "INSERT INTO turmas (nome, ano, id_turno, id_professor, sala) VALUES (?, ?, ?, ?, ?)";
             $stmt_insert = mysqli_prepare($connection, $sql_insert);
             mysqli_stmt_bind_param($stmt_insert, "siiss", $nome, $ano, $id_turno, $id_professor, $sala);
 
             if (mysqli_stmt_execute($stmt_insert)) {
-                header("Location: ../app/Crud_turmas.php"); // Ajuste para a página que listar turmas
+                header("Location: ../app/lista_turmas.php");
                 exit();
             } else {
                 echo "Erro ao cadastrar Turma: " . mysqli_stmt_error($stmt_insert);
@@ -78,7 +73,7 @@ mysqli_close($connection);
 
                     <div class="form-group-modern">
                         <label for="ano">Ano:</label>
-                        <input type="text" id="ano" name="ano" required/>
+                        <input type="text" id="ano" name="ano" required min="2000" max="2100" />
                     </div>
 
                     <div class="form-group-modern">
