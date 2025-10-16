@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `professores` (
 
 -- Extraindo dados da tabela `professores`
 
-INSERT INTO `professores` (`id`, `nome`, `email`, `disciplinas`, `nivel_capacitacao`) VALUES
+INSERT INTO `professores` (`id`, `nome`, `email`, `unidade_curricular`, `nivel_capacitacao`) VALUES
 (1, 'Gustavo erthal ', 'vplgugs@gmail.com', 'Desenvolvimento de sistemas', 'N3');
 
 -- --------------------------------------------------------
