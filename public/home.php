@@ -134,7 +134,7 @@ $connection->close();
         </div>
     </div>
     <div class="quick-actions">
-        <h2>⚡ Ações Rápidas</h2>
+        <h2> Ações Rápidas</h2>
         <div class="actions-grid">
             <button class="action-btn" >
                 <a href="cadastro_professores.php"><span class="action-icon">➕</span></a>
