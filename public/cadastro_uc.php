@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $msg = "Por favor, preencha todos os campos obrigatórios!";
         $msgType = "danger";
     } else {
-        // Verifica se já existe uma UC com o mesmo nome OU código
+        
         $check = $connection->prepare("SELECT id FROM uc WHERE unidade_curricular = ? OR sigla = ?");
         $check->bind_param("ss", $unidade_curricular, $sigla);
         $check->execute();
@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $msg = "Essa unidade curricular ou código já está cadastrado!";
             $msgType = "warning";
         } else {
-            // INSERT na tabela uc: sigla, unidade_curricular, curso_modulo
+            
             $sql = "INSERT INTO uc (sigla, unidade_curricular, curso_modulo) VALUES (?, ?, ?)";
             $stmt = $connection->prepare($sql);
             $stmt->bind_param("sss", $sigla, $unidade_curricular, $curso_modulo);
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($stmt->execute()) {
                 $id_unidade = $connection->insert_id;
                 
-                // Associa turno à UC (se informado e se a tabela de relacionamento existir)
+                
                 if (!empty($id_turno)) {
                     $table_check = $connection->query("SHOW TABLES LIKE 'uc_turno'");
                     
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 }
                 
-                // Associa professores à UC
+                
                 if (!empty($professores)) {
                     $table_check = $connection->query("SHOW TABLES LIKE 'professor_unidade'");
                     
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $msg = "Unidade Curricular cadastrada com sucesso!";
                 $msgType = "success";
                 
-                // Limpa os campos após sucesso
+                
                 $unidade_curricular = '';
                 $sigla = '';
                 $curso_modulo = '';
@@ -83,10 +83,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-// Busca professores para o select
+
 $professores_result = $connection->query("SELECT id, nome FROM professores ORDER BY nome ASC");
 
-// Busca turnos cadastrados na tabela turnos
+
 $turnos_result = $connection->query("SELECT id, nome FROM turnos ORDER BY id ASC");
 ?>
 
