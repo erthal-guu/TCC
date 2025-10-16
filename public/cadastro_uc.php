@@ -7,44 +7,72 @@ $msg = "";
 $msgType = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nome_disciplina = isset($_POST['disciplina']) ? trim($_POST['disciplina']) : '';
-    $turno = isset($_POST['turno']) ? $_POST['turno'] : '';
-    $codigo_disciplina = isset($_POST['codigo']) ? trim($_POST['codigo']) : '';
+    $unidade_curricular = isset($_POST['unidade_curricular']) ? trim($_POST['unidade_curricular']) : '';
+    $sigla = isset($_POST['sigla']) ? trim($_POST['sigla']) : '';
+    $curso_modulo = isset($_POST['curso_modulo']) ? trim($_POST['curso_modulo']) : '';
+    $id_turno = isset($_POST['id_turno']) ? $_POST['id_turno'] : '';
     $professores = isset($_POST['professores']) ? $_POST['professores'] : [];
     
-    if (empty($nome_disciplina) || empty($turno) || empty($codigo_disciplina)) {
+    if (empty($unidade_curricular) || empty($sigla) || empty($curso_modulo)) {
         $msg = "Por favor, preencha todos os campos obrigatórios!";
         $msgType = "danger";
     } else {
-        $check = $connection->prepare("SELECT id FROM unidades_curriculares WHERE nome_disciplina = ?");
-        $check->bind_param("s", $nome_disciplina);
+        // Verifica se já existe uma UC com o mesmo nome OU código
+        $check = $connection->prepare("SELECT id FROM uc WHERE unidade_curricular = ? OR sigla = ?");
+        $check->bind_param("ss", $unidade_curricular, $sigla);
         $check->execute();
         $result = $check->get_result();
         
         if ($result->num_rows > 0) {
-            $msg = "Essa unidade curricular já está cadastrada!";
+            $msg = "Essa unidade curricular ou código já está cadastrado!";
             $msgType = "warning";
         } else {
-            $sql = "INSERT INTO unidades_curriculares (nome_disciplina, codigo_disciplina, turno) VALUES (?, ?, ?)";
+            // INSERT na tabela uc: sigla, unidade_curricular, curso_modulo
+            $sql = "INSERT INTO uc (sigla, unidade_curricular, curso_modulo) VALUES (?, ?, ?)";
             $stmt = $connection->prepare($sql);
-            $stmt->bind_param("sss", $nome_disciplina, $codigo_disciplina, $turno);
+            $stmt->bind_param("sss", $sigla, $unidade_curricular, $curso_modulo);
             
             if ($stmt->execute()) {
-                $unidade_id = $connection->insert_id;
+                $id_unidade = $connection->insert_id;
                 
-                if (!empty($professores)) {
-                    $sql_prof = "INSERT INTO professor_unidade (id_professor, id_unidade) VALUES (?, ?)";
-                    $stmt_prof = $connection->prepare($sql_prof);
+                // Associa turno à UC (se informado e se a tabela de relacionamento existir)
+                if (!empty($id_turno)) {
+                    $table_check = $connection->query("SHOW TABLES LIKE 'uc_turno'");
                     
-                    foreach ($professores as $professor_id) {
-                        $stmt_prof->bind_param("ii", $professor_id, $unidade_id);
-                        $stmt_prof->execute();
+                    if ($table_check && $table_check->num_rows > 0) {
+                        $sql_turno = "INSERT INTO uc_turno (id_uc, id_turno) VALUES (?, ?)";
+                        $stmt_turno = $connection->prepare($sql_turno);
+                        $stmt_turno->bind_param("ii", $id_unidade, $id_turno);
+                        $stmt_turno->execute();
+                        $stmt_turno->close();
                     }
-                    $stmt_prof->close();
+                }
+                
+                // Associa professores à UC
+                if (!empty($professores)) {
+                    $table_check = $connection->query("SHOW TABLES LIKE 'professor_unidade'");
+                    
+                    if ($table_check && $table_check->num_rows > 0) {
+                        $sql_prof = "INSERT INTO professor_unidade (id_professor, id_unidade) VALUES (?, ?)";
+                        $stmt_prof = $connection->prepare($sql_prof);
+                        
+                        foreach ($professores as $id_professor) {
+                            $id_professor = intval($id_professor);
+                            $stmt_prof->bind_param("ii", $id_professor, $id_unidade);
+                            $stmt_prof->execute();
+                        }
+                        $stmt_prof->close();
+                    }
                 }
                 
                 $msg = "Unidade Curricular cadastrada com sucesso!";
                 $msgType = "success";
+                
+                // Limpa os campos após sucesso
+                $unidade_curricular = '';
+                $sigla = '';
+                $curso_modulo = '';
+                $id_turno = '';
             } else {
                 $msg = "Erro ao cadastrar: " . $stmt->error;
                 $msgType = "danger";
@@ -55,9 +83,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Busca professores para o select
 $professores_result = $connection->query("SELECT id, nome FROM professores ORDER BY nome ASC");
-?>
 
+// Busca turnos cadastrados na tabela turnos
+$turnos_result = $connection->query("SELECT id, nome FROM turnos ORDER BY id ASC");
+?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -101,43 +132,77 @@ $professores_result = $connection->query("SELECT id, nome FROM professores ORDER
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group-modern">
-                            <label for="disciplina">Nome da Disciplina *</label>
-                            <input type="text" id="disciplina" name="disciplina" class="form-control" 
-                                   placeholder="Ex: Programação Web" required>
+                            <label for="unidade_curricular">Nome da Unidade Curricular *</label>
+                            <input type="text" id="unidade_curricular" name="unidade_curricular" class="form-control" 
+                                   placeholder="Ex: Programação Web" 
+                                   value="<?= htmlspecialchars($unidade_curricular ?? '') ?>" 
+                                   required>
                         </div>
                     </div>
 
                     <div class="col-md-6">
                         <div class="form-group-modern">
-                            <label for="codigo">Código da Disciplina *</label>
-                            <input type="text" id="codigo" name="codigo" class="form-control" 
-                                   placeholder="Ex: UC-001" required>
+                            <label for="sigla">Sigla/Código *</label>
+                            <input type="text" id="sigla" name="sigla" class="form-control" 
+                                   placeholder="Ex: UC-001" 
+                                   value="<?= htmlspecialchars($sigla ?? '') ?>" 
+                                   required>
                         </div>
                     </div>
                 </div>
 
-                <div class="form-group-modern">
-                    <label for="turno">Turno(s) *</label>
-                    <select id="turno" name="turno" class="form-select-modern" required>
-                        <option value="" selected disabled>Selecione o(s) turno(s)</option>
-                        <option value="MATUTINO">Matutino</option>
-                        <option value="VESPERTINO">Vespertino</option>
-                        <option value="NOTURNO">Noturno</option>
-                        <option value="MATUTINO E VESPERTINO">Matutino e Vespertino</option>
-                        <option value="MATUTINO E NOTURNO">Matutino e Noturno</option>
-                        <option value="VESPERTINO E NOTURNO">Vespertino e Noturno</option>
-                        <option value="INTEGRAL">Integral (Todos)</option>
-                    </select>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-modern">
+                            <label for="curso_modulo">Curso/Módulo *</label>
+                            <input type="text" id="curso_modulo" name="curso_modulo" class="form-control" 
+                                   placeholder="Ex: Técnico em Informática - Módulo 2" 
+                                   value="<?= htmlspecialchars($curso_modulo ?? '') ?>" 
+                                   required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group-modern">
+                            <label for="id_turno">Turno (Opcional)</label>
+                            <select id="id_turno" name="id_turno" class="form-select-modern">
+                                <option value="">Selecione o turno</option>
+                                <?php 
+                                if ($turnos_result && $turnos_result->num_rows > 0) {
+                                    while($turno = $turnos_result->fetch_assoc()): 
+                                ?>
+                                    <option value="<?= $turno['id']; ?>" 
+                                            <?= (isset($id_turno) && $id_turno == $turno['id']) ? 'selected' : '' ?>>
+                                        <?= htmlspecialchars($turno['nome']); ?>
+                                    </option>
+                                <?php 
+                                    endwhile;
+                                } else {
+                                    echo '<option disabled>Nenhum turno cadastrado</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="form-group-modern">
                     <label for="professores">Professores Responsáveis (Opcional)</label>
                     <select id="professores" name="professores[]" class="form-select-modern" 
                             multiple style="height: 150px;">
-                        <?php while($row = $professores_result->fetch_assoc()): ?>
+                        <?php 
+                        if ($professores_result && $professores_result->num_rows > 0) {
+                            while($row = $professores_result->fetch_assoc()): 
+                        ?>
                             <option value="<?= $row['id']; ?>"><?= htmlspecialchars($row['nome']); ?></option>
-                        <?php endwhile; ?>
+                        <?php 
+                            endwhile;
+                        } else {
+                            echo '<option disabled>Nenhum professor cadastrado</option>';
+                        }
+                        ?>
                     </select>
+                    <small class="text-muted">Segure Ctrl (ou Cmd) para selecionar múltiplos professores</small>
                 </div>
 
                 <button type="submit" class="btn-cadastrar">

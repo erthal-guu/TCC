@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-$sql = "SELECT id, nome, disciplinas, nivel_capacitacao, email FROM professores";
+$sql = "SELECT id, nome, unidade_curricular, nivel_capacitacao, email FROM professores"; // adicionei o email, pois no seu exemplo tinha e-mail na interface
 $result = $connection->query($sql);
 if (!$result) {
     die("Erro na consulta: " . $connection->error);
@@ -15,7 +15,6 @@ if (!$result) {
     <link rel="stylesheet" href="../public/assets/css/menu.css"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-    <?php include('../public/menu.php')?>
 </head>
 <body>
 <div class="container d-flex justify-content-center mt-5">
@@ -31,14 +30,14 @@ if (!$result) {
                         <span class="name"><?= htmlspecialchars($row['nome']) ?></span>
                         <p class="mail"><?= htmlspecialchars($row['email'] ?? 'Email não informado') ?></p>
                     </div>
-                    <div class="disciplinas"><strong>Disciplinas:</strong> <?= htmlspecialchars($row['disciplinas']) ?></div>
+                    <div class="unidade_curricular"><strong>Disciplinas:</strong> <?= htmlspecialchars($row['unidade_curricular']) ?></div>
                     <div class="nivel_capacitacao"><strong>Nível de Capacitação:</strong> <?= htmlspecialchars($row['nivel_capacitacao']) ?></div>
                     <div class="actions">
-                        <a href="editar_professores.php?id=<?= $row['id'] ?>"  class="btn-cadastrar" style="text-decoration: none;margin-left : 10px;">Editar</a>
+                        <a href="editar_professores.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">✏️ Editar</a>
                         <form method="POST" onsubmit="return confirm('Tem certeza que deseja excluir o professor <?= htmlspecialchars(addslashes($row['nome'])) ?>?');">
                             <input type="hidden" name="id" value="<?= $row['id'] ?>">
                             <input type="hidden" name="action" value="delete">
-                            <button type="submit" class="btn-cadastrar">Deletar</button>
+                            <button type="submit" class="btn btn-danger btn-sm">🗑️ Deletar</button>
                         </form>
                     </div>
                 </div>

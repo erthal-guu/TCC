@@ -14,7 +14,7 @@ if ($result) {
     echo "Erro na consulta: " . $connection->error;
 }
 
-$sql_Unidades = "SELECT COUNT(*) AS total FROM unidades_curriculares";
+$sql_Unidades = "SELECT COUNT(*) AS total FROM uc";
 $result = $connection->query($sql_Unidades);
 $totalUnidades = 0;
 
@@ -94,7 +94,8 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $totalUnidades; ?></span>
                     <span class="card-stats-label">Unidades Disponíveis</span>
                 </div>
-                <button class="card-button" onclick="alert('Visualizar UCs')">Visualizar</button>
+                <button class="card-button"><a href="../app/Lista_uc">Visualizar</a></button>
+
             </div>
         </div>
 
@@ -139,8 +140,8 @@ $connection->close();
                 <a href="cadastro_professores.php"><span class="action-icon">➕</span></a>
                 <span>Novo Professor</span>
             </button>
-            <button class="action-btn" onclick="alert('Cadastrar UC')">
-                <span class="action-icon">📖</span>
+            <button class="action-btn" >
+                <a href="cadastro_uc.php"><span class="action-icon">📖</span></a>
                 <span>Nova Unidade Curricular</span>
             </button>
             <button class="action-btn" onclick="alert('Cadastrar Turma')">

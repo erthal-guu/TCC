@@ -1,52 +1,78 @@
 <?php
 include("../app/conexao.php");
+include("../app/protect.php");
+protect();
 
-$sql_disciplina = "SELECT nome_disciplina FROM disciplinas";
-$result_disciplina = $connection->query($sql_disciplina);
+$msg = "";
+$msgType = "";
 
-$sql_nivel = "SELECT nivel FROM nivel_capacitacao";
+// Busca unidades curriculares da nova tabela uc
+$sql_uc = "SELECT unidade_curricular FROM uc ORDER BY unidade_curricular ASC";
+$result_uc = $connection->query($sql_uc);
+
+// Busca níveis de capacitação
+$sql_nivel = "SELECT nivel FROM nivel_capacitacao ORDER BY nivel ASC";
 $result_nivel = $connection->query($sql_nivel);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $disciplina = $_POST['disciplina'];
-    $nivelCapacitacao = $_POST['nivel_capacitacao'];
+    $nome = isset($_POST['nome']) ? trim($_POST['nome']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $unidade_curricular = isset($_POST['unidade_curricular']) ? $_POST['unidade_curricular'] : '';
+    $nivel_capacitacao = isset($_POST['nivel_capacitacao']) ? $_POST['nivel_capacitacao'] : '';
 
-    $sql_check = "SELECT email FROM professores WHERE email = ?";
-    $stmt_check = mysqli_prepare($connection, $sql_check);
-    
-    if (!$stmt_check) {
-        die("Erro ao preparar a consulta de verificação: " . mysqli_error($connection));
-    }
-    mysqli_stmt_bind_param($stmt_check, "s", $email);
-    mysqli_stmt_execute($stmt_check);
-    
-    $result_check = mysqli_stmt_get_result($stmt_check);
-    
-    if (mysqli_num_rows($result_check) > 0) {
-        echo "<script>alert('Email já Cadastrado!');</script>";
-        exit();
+    // Validação de campos obrigatórios
+    if (empty($nome) || empty($email) || empty($unidade_curricular) || empty($nivel_capacitacao)) {
+        $msg = "Por favor, preencha todos os campos obrigatórios!";
+        $msgType = "danger";
     } else {
-        $sql_insert = "INSERT INTO professores (nome, email, disciplinas, nivel_capacitacao) VALUES (?, ?, ?, ?)";
-        $stmt_insert = mysqli_prepare($connection, $sql_insert);
+        // Verifica se o email já está cadastrado
+        $sql_check = "SELECT email FROM professores WHERE email = ?";
+        $stmt_check = $connection->prepare($sql_check);
         
-        if (!$stmt_insert) {
-            die("Erro ao preparar a consulta de inserção: " . mysqli_error($connection));
-        }
-        mysqli_stmt_bind_param($stmt_insert, "ssss", $nome, $email, $disciplina, $nivelCapacitacao);
-
-        if (mysqli_stmt_execute($stmt_insert)) {
-            header("Location: ../app/Crud_professores.php");
-
+        if (!$stmt_check) {
+            $msg = "Erro ao preparar a consulta de verificação: " . $connection->error;
+            $msgType = "danger";
         } else {
-            echo "Erro ao cadastrar Professor: " . mysqli_stmt_error($stmt_insert);
+            $stmt_check->bind_param("s", $email);
+            $stmt_check->execute();
+            $result_check = $stmt_check->get_result();
+            
+            if ($result_check->num_rows > 0) {
+                $msg = "Este email já está cadastrado!";
+                $msgType = "warning";
+            } else {
+                // Insere o novo professor na tabela professores
+                $sql_insert = "INSERT INTO professores (nome, email, unidade_curricular, nivel_capacitacao) VALUES (?, ?, ?, ?)";
+                $stmt_insert = $connection->prepare($sql_insert);
+                
+                if (!$stmt_insert) {
+                    $msg = "Erro ao preparar a consulta de inserção: " . $connection->error;
+                    $msgType = "danger";
+                } else {
+                    $stmt_insert->bind_param("ssss", $nome, $email, $unidade_curricular, $nivel_capacitacao);
+
+                    if ($stmt_insert->execute()) {
+                        $msg = "Professor cadastrado com sucesso!";
+                        $msgType = "success";
+                        
+                        // Limpa os campos após sucesso
+                        $nome = '';
+                        $email = '';
+                        $unidade_curricular = '';
+                        $nivel_capacitacao = '';
+                        
+                        // Redireciona após 2 segundos
+                        header("refresh:2;url=home.php");
+                    } else {
+                        $msg = "Erro ao cadastrar Professor: " . $stmt_insert->error;
+                        $msgType = "danger";
+                    }
+                    $stmt_insert->close();
+                }
+            }
+            $stmt_check->close();
         }
-        
-        mysqli_stmt_close($stmt_insert);
     }
-    mysqli_stmt_close($stmt_check);
-    mysqli_close($connection);
 }
 ?>
 
@@ -61,6 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body>
     <?php include("menu.php");?>
+    
     <header class="header-principal">
         <div class="header-content">
             <img src="assets/img/logo-senai-home.png" alt="SENAI Logo" class="logo-senai">
@@ -81,59 +108,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 <h2 class="card-title">Cadastro de Professor</h2>
                 
-                <form id="cadastroForm" method="post" class="form-cadastro">
+                <?php if($msg): ?>
+                    <div class="alert alert-<?= $msgType ?> alert-dismissible fade show" role="alert">
+                        <?= $msg ?>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                <?php endif; ?>
+                
+                <form method="POST" class="form-cadastro">
                     <div class="form-group-modern">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required>
+                        <label for="nome">Nome *</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite o nome do professor" 
+                               value="<?= htmlspecialchars($nome ?? '') ?>" required>
                     </div>
                     
                     <div class="form-group-modern">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" placeholder="Digite o email do professor" 
+                               value="<?= htmlspecialchars($email ?? '') ?>" required>
                     </div>
                     <div class="form-group-modern">    
-                        <label for="disciplina">Disciplina:</label>
-                        <select class="form-select-modern" name="disciplina" required>
-                            <option value="">Escolha uma disciplina</option>
+                        <label for="unidade_curricular">Unidade Curricular *</label>
+                        <select id="unidade_curricular" name="unidade_curricular" class="form-select-modern" required>
+                            <option value="">Selecione uma unidade curricular</option>
                             <?php
-                            if ($result_disciplina->num_rows > 0) {
-                                while($row = $result_disciplina->fetch_assoc()) {
-                                    echo '<option value="' . htmlspecialchars($row['nome_disciplina']) . '">' . htmlspecialchars($row['nome_disciplina']) . '</option>';
+                            if ($result_uc && $result_uc->num_rows > 0) {
+                                while($row = $result_uc->fetch_assoc()) {
+                                    $selected = (isset($unidade_curricular) && $unidade_curricular == $row['unidade_curricular']) ? 'selected' : '';
+                                    echo '<option value="' . htmlspecialchars($row['unidade_curricular']) . '" ' . $selected . '>' . htmlspecialchars($row['unidade_curricular']) . '</option>';
                                 }
                             } else {
-                                echo '<option value="">Nenhuma disciplina cadastrada</option>';
+                                echo '<option value="">Nenhuma unidade curricular cadastrada</option>';
                             }
                             ?>
                         </select>
                     </div>
                     
                     <div class="form-group-modern">
-                        <label for="nivel_capacitacao">Nível Capacitação:</label>
-                        <select class="form-select-modern" name="nivel_capacitacao" required>
-                            <option value="">Escolha um nível</option>
+                        <label for="nivel_capacitacao">Nível de Capacitação *</label>
+                        <select id="nivel_capacitacao" name="nivel_capacitacao" class="form-select-modern" required>
+                            <option value="">Selecione um nível</option>
                             <?php
-                            if ($result_nivel->num_rows > 0) {
+                            if ($result_nivel && $result_nivel->num_rows > 0) {
                                 while($row = $result_nivel->fetch_assoc()) {
-                                    echo '<option value="' . htmlspecialchars($row['nivel']) . '">' . htmlspecialchars($row['nivel']) . '</option>';
+                                    $selected = (isset($nivel_capacitacao) && $nivel_capacitacao == $row['nivel']) ? 'selected' : '';
+                                    echo '<option value="' . htmlspecialchars($row['nivel']) . '" ' . $selected . '>' . htmlspecialchars($row['nivel']) . '</option>';
                                 }
                             } else {
                                 echo '<option value="">Nenhum nível cadastrado</option>';
                             }
                             ?>
                         </select>
-                        
-                    </div>                    
-                    <button type="submit" class="btn-cadastrar" onclick="ValidarCampos()">Cadastrar</button>
+                    </div>
+                    
+                    <button type="submit" class="btn-cadastrar">👨‍🏫 Cadastrar Professor</button>
+                    
                     <p style="text-align: center; margin-top: 16px;">
-                    <a href="home.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
-                        ← Voltar para Home
-                    </a>
-                </p>
+                        <a href="home.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
+                            ← Voltar para Home
+                        </a>
+                    </p>
                 </form>
             </div>
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+<?php $connection->close(); ?>

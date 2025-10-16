@@ -1,4 +1,5 @@
--- --------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS `gerenciador_agenda` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `gerenciador_agenda`;
 
 -- Estrutura da tabela `agenda_turmas`
 
@@ -11,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `agenda_turmas` (
   PRIMARY KEY (`id`),
   KEY `id_professor_materia_turno` (`id_professor_materia_turno`),
   KEY `id_turma` (`id_turma`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -25,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `disciplinas` (
   `turno` varchar(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nome_disciplina` (`nome_disciplina`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Extraindo dados da tabela `disciplinas`
 
@@ -43,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `nivel_capacitacao` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nivel` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Extraindo dados da tabela `nivel_capacitacao`
 
@@ -65,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `professores` (
   `disciplinas` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `nivel_capacitacao` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Extraindo dados da tabela `professores`
 
@@ -87,7 +88,7 @@ CREATE TABLE IF NOT EXISTS `turmas` (
   PRIMARY KEY (`id`),
   KEY `id_turno` (`id_turno`),
   KEY `id_professor` (`id_professor`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -98,7 +99,12 @@ CREATE TABLE IF NOT EXISTS `turnos` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+-- Extraindo dados da tabela `turnos`
+INSERT INTO `turnos` (`id`, `nome`) VALUES
+(1, 'Manha'),
+(2, 'Tarde'),
+(3, 'Noite');
 
 INSERT INTO turnos (nome) VALUES 
   ('Manhã'),
@@ -119,28 +125,19 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `nome_usuario` (`nome_usuario`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
--- NOVA TABELA: unidades_curriculares
+-- Tabela `uc` substituindo `unidades_curriculares`
 
-DROP TABLE IF EXISTS `unidades_curriculares`;
-CREATE TABLE IF NOT EXISTS `unidades_curriculares` (
+DROP TABLE IF EXISTS `uc`;
+CREATE TABLE IF NOT EXISTS `uc` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `codigo` VARCHAR(20) COLLATE utf8mb4_general_ci NOT NULL UNIQUE,
-  `carga_horaria` INT NOT NULL,
-  `descricao` TEXT COLLATE utf8mb4_general_ci,
-  `data_criacao` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `sigla` VARCHAR(20) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `unidade_curricular` VARCHAR(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `curso_modulo` VARCHAR(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- Dados exemplo
-INSERT INTO `unidades_curriculares` (`nome`, `codigo`, `carga_horaria`, `descricao`) VALUES
-('Matemática Básica', 'MAT001', 40, 'Introdução aos conceitos fundamentais de matemática.'),
-('Português Instrumental', 'POR001', 30, 'Leitura, interpretação e produção de texto.'),
-('Informática Aplicada', 'INF001', 50, 'Uso de ferramentas computacionais básicas e avançadas.');
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
- 
