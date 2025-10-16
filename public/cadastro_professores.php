@@ -6,11 +6,11 @@ protect();
 $msg = "";
 $msgType = "";
 
-// Busca unidades curriculares da nova tabela uc
+
 $sql_uc = "SELECT unidade_curricular FROM uc ORDER BY unidade_curricular ASC";
 $result_uc = $connection->query($sql_uc);
 
-// Busca níveis de capacitação
+
 $sql_nivel = "SELECT nivel FROM nivel_capacitacao ORDER BY nivel ASC";
 $result_nivel = $connection->query($sql_nivel);
 
@@ -20,12 +20,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $unidade_curricular = isset($_POST['unidade_curricular']) ? $_POST['unidade_curricular'] : '';
     $nivel_capacitacao = isset($_POST['nivel_capacitacao']) ? $_POST['nivel_capacitacao'] : '';
 
-    // Validação de campos obrigatórios
+   
     if (empty($nome) || empty($email) || empty($unidade_curricular) || empty($nivel_capacitacao)) {
         $msg = "Por favor, preencha todos os campos obrigatórios!";
         $msgType = "danger";
     } else {
-        // Verifica se o email já está cadastrado
+       
         $sql_check = "SELECT email FROM professores WHERE email = ?";
         $stmt_check = $connection->prepare($sql_check);
         
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $msg = "Este email já está cadastrado!";
                 $msgType = "warning";
             } else {
-                // Insere o novo professor na tabela professores
+                
                 $sql_insert = "INSERT INTO professores (nome, email, unidade_curricular, nivel_capacitacao) VALUES (?, ?, ?, ?)";
                 $stmt_insert = $connection->prepare($sql_insert);
                 
@@ -55,13 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $msg = "Professor cadastrado com sucesso!";
                         $msgType = "success";
                         
-                        // Limpa os campos após sucesso
+                        
                         $nome = '';
                         $email = '';
                         $unidade_curricular = '';
                         $nivel_capacitacao = '';
                         
-                        // Redireciona após 2 segundos
+                        
                         header("refresh:2;url=home.php");
                     } else {
                         $msg = "Erro ao cadastrar Professor: " . $stmt_insert->error;
