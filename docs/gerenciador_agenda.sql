@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `professores` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `disciplinas` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `unidade_curricular` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `nivel_capacitacao` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
