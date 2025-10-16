@@ -1,6 +1,6 @@
 <?php
 include("conexao.php");
-$sql = "SELECT id, nome, unidade_curricular, nivel_capacitacao, email FROM professores"; // adicionei o email, pois no seu exemplo tinha e-mail na interface
+$sql = "SELECT id, nome, unidade_curricular, nivel_capacitacao, email FROM professores"; 
 $result = $connection->query($sql);
 if (!$result) {
     die("Erro na consulta: " . $connection->error);
