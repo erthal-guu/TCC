@@ -91,7 +91,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="Digite seu Email" required>
                     </div>
-                    
                     <div class="form-group-modern">    
                         <label for="disciplina">Disciplina:</label>
                         <select class="form-select-modern" name="disciplina" required>

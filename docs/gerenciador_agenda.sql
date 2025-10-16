@@ -100,6 +100,12 @@ CREATE TABLE IF NOT EXISTS `turnos` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO turnos (nome) VALUES 
+  ('Manhã'),
+  ('Tarde'),
+  ('Noite');
+
+
 -- --------------------------------------------------------
 
 -- Estrutura da tabela `usuarios`

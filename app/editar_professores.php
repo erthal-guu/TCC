@@ -52,12 +52,25 @@ mysqli_close($connection);
 <head>
     <meta charset="UTF-8">
     <title>Editar Professor</title>
+    <link rel="stylesheet" href="../public/assets/css/cadastro.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="container mt-4">
-    <h1>Editar Professor</h1>
+  <div class="container-page">
+        <div class="cadastro-wrapper">
+            <div class="cadastro-card">
+                <div class="card-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <line x1="19" y1="8" x2="19" y2="14"></line>
+                        <line x1="22" y1="11" x2="16" y2="11"></line>
+                    </svg>
+                </div>
+                
+                <h2 class="card-title">Editar Professor</h2>
     <form method="POST">
-        <div class="mb-3">
+        <div class=" ">
             <label class="form-label">Nome</label>
             <input type="text" name="nome" class="form-control" value="<?php echo htmlspecialchars($professor['nome']); ?>" required>
         </div>
@@ -73,8 +86,15 @@ mysqli_close($connection);
             <label class="form-label">Nível de Capacitação</label>
             <input type="text" name="nivel_capacitacao" class="form-control" value="<?php echo htmlspecialchars($professor['nivel_capacitacao']); ?>" required>
         </div>
-        <button type="submit" class="btn btn-success">Salvar Alterações</button>
-        <a href="Crud_professores.php" class="btn btn-secondary">Cancelar</a>
+        <button type="submit" class="btn-cadastrar">Salvar Alterações</button>
+        <a href="Crud_Professores.php" style="color: #003D7A; 
+          text-decoration: none; 
+          font-weight: 600; 
+          margin-top: 20px; 
+          display: inline-block;">
+  ← Cancelar
+</a>
+
     </form>
 </body>
 </html>
