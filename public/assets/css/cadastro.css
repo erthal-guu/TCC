@@ -78,6 +78,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 0 auto 24px;
+    margin-bottom: 20px;
     color: white;
 }
 
@@ -118,6 +119,7 @@ body {
     font-weight: 500;
     margin-bottom: 8px;
     font-size: 14px;
+    margin-top: 30px;
 }
 
 .form-group-modern input[type="text"],

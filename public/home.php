@@ -144,8 +144,8 @@ $connection->close();
                 <a href="cadastro_uc.php"><span class="action-icon">📖</span></a>
                 <span>Nova Unidade Curricular</span>
             </button>
-            <button class="action-btn" onclick="alert('Cadastrar Turma')">
-                <span class="action-icon">🎯</span>
+            <button class="action-btn">
+                <a href="cadastro_turmas.php"><span class="action-icon">🎯</span></a>
                 <span>Nova Turma</span>
             </button>
             <button class="action-btn" onclick="alert('Agendar Aula')">
