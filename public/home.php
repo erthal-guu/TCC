@@ -112,6 +112,7 @@ $connection->close();
             </div>
         </div>
     </div>
+
     <div class="stats-section">
         <h2>📊 Estatísticas do Sistema</h2>
         <div class="stats-grid">
@@ -148,8 +149,8 @@ $connection->close();
                 <a href="cadastro_turmas.php"><span class="action-icon">🎯</span></a>
                 <span>Nova Turma</span>
             </button>
-            <button class="action-btn" onclick="alert('Agendar Aula')">
-                <span class="action-icon">📅</span>
+            <button class="action-btn">
+                <a href="cadastro_agendamento.php"><span class="action-icon">📅</span></a>
                 <span>Agendar Aula</span>
             </button>
         </div>
