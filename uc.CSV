@@ -34,7 +34,6 @@ SST-AI2, Saúde e Segurança no Trabalho, Aux Info 2
 ET-AI2, Ética e cidadania, Aux Info 2
 MA-AI2, Meio ambiente, Aux Info 2
 CI, Criatividade e Ideação, Técnico em Administração
-FQAP1QSEG, Fundamentos da Qualidade Aplicadas nos Processos (APP), 1° Qualidade EAD - Segunda
 APP-2QS, Analise dos Processos e Produtos (APP), 2° Qualidade EAD - Sexta
 GI - SOL3, Gestão Industrial , Soldador - Turma 3
 GI - SOL4, Gestão Industrial , Soldador - Turma 4
@@ -61,7 +60,6 @@ WB-AIQP1, Word Básico, Auxiliar Informática - Qualifica PAC
 EB-AIQP1, Excel Básico, Auxiliar Informática - Qualifica PAC
 PPB-AIQP1, Power Point Básico, Auxiliar Informática - Qualifica PAC
 DI-AIQP1, Digitação e Internet, Auxiliar Informática - Qualifica PAC
-MA-AI2, Meio ambiente, Aux Info 2
 DGQ-3QS, Desempenho da Gestão da Qualidade, 3° Qualidade EAD - Segunda
 PARH-RHP1, Processos Administrativos de RH e DP, Assistente de RH - Turma 1 - Patronato
 GIMM1, Gestão Industrial, Mecânico de Manutenção Industrial
@@ -81,10 +79,8 @@ SLP-3M, Sistemas Lógicos Programáveis, 3° Téc Mecatrônica - Presencial
 IVF1, Inversores de Frequência, Inversores de Frequência - Mais Qualificação
 CB, Comissionamento da Bancada, 
 EASAI1ASE, Eletrônica Aplicada à Sistemas Automatizados I, 1° Téc Automação EAD - Segunda
-MSE-2EQ, Montagem de Sistemas Eletricos , 2° Eletromecânica EAD - Quarta
 IA-2AT, Instrumentação Analítica, 2° Téc. Automação EAD- Terça
 SLP-3AQ, Sistemas Lógicos Programáveis, 3° Téc Automação EAD - Quarta
-SLP-3M, Sistemas Lógicos Programáveis, 3° Téc Mecatrônica - Presencial
 ICLP-4N, Introdução a Controladores Lógicos Programaveis , 4° Mecânica Presencial
 FE-4N, Fundamentos Elétricos, 4° Mecânica Presencial
 EP-4N, Eletropneumática, 4° Mecânica Presencial
@@ -92,7 +88,6 @@ EH-4N, Eletrohidráulica, 4° Mecânica Presencial
 SAM-4N, Sistemas Automatizados de Manufatura, 4° Mecatrônica Presencial
 SLP-3MN, Sistemas Lógicos Programáveis, 3° Mecatrônica Presencial
 FI1ASEG, Fundamentos da Instrumentação, 1° Téc Automação EAD - Segunda
-IVF1, Inversores de Frequência, Inversores de Frequência - Mais Qualificação
 EASAII-2AS, Eletrônica Aplicada à Sistemas Automatizados, 2° Automação EAD - Segunda Noite
 RSCE-GM, Relações socioprofissionais&cidadania e ética, Assistente Administrativo - Guarda Mirim
 CI-1AUT, Comunicação e Informática Aplicada, 1° Téc Automação Presencial
@@ -107,19 +102,15 @@ FEI-JK, Fundamentos da eletricidade industrial, Téc Eletromecânica 2° Ano Iti
 FEI-1E, Fundamentos da Eletricidade Industrial, 1° Téc Eletromecânica EAD - Sábado
 SII-3C, Sistemas de Intertravamento Industrial , NEM Automação 3° C
 PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
-FE-1AUT, Fundamentos de Eletroeletrônica, 1° Téc Automação Presencial
 LP-1AUT, Lógica de Programação, 1° Téc Automação Presencial
 CIPI-1AUT, Criatividade e Ideação em Projetos de Inovação, 1° Téc Automação Presencial
-AE-2C, Acionamentos Eletroeletrônicos , NEM Automação  2° C
 DHP-2C, Diagramas Hidráulicos e Pneumáticos, NEM Automação  2° C
 FI-2C, Fundamentos da Instrumentação, NEM Automação  2° C
 AE-2B, Acionamentos Eletroeletrônicos , NEM Mecatrônica 2° B
 MVEM-2B, Modelagem Virtual de Elementos Mecânicos, NEM Mecatrônica 2° B
 EASA-2B, Eletrônica Aplicada a Sistemas Automatizados , NEM Mecatrônica 2° B
-FEI-JK, Fundamentos da eletricidade industrial, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
 GMI-3C, Gestão da Manutenção Industrial , NEM Automação 3° C
 PSCI-3C, Projetos de Sistemas de Controle Industrial , NEM Automação 3° C
-TICAI-3C, Tecnologias da Informação e Comunicação Aplicadas à Industria 4.0 , NEM Automação 3° C
 MSE, Montagem de Sistemas Elétricos, 2 Tec. Eletromecânica
 WK , Treinamento Wordskills, Elétrica
 PIM4M, Projeto de Inovação Mecânica, 4° Mecânica EAD - Sábado
@@ -134,7 +125,6 @@ SOL - P2, Prática de Soldagem, Soldador - Turma 2
 PS-3N, Processos de Soldagem- UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
 FTM-AP, Fundamentos da Tecnologia Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
 ICSCM-AP, Introdução a Corte Soldagem e Conformação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-FQ1, Ferramentas da Qualidade, Ferramentas da Qualidade 1
 MPP2Q, Monitoramento de Processos e Produtos (APP), 2° Qualidade EAD - Segunda
 FORMS, Boas Práticas - Forms , Treinamento
 TMAT1, Tecnologia dos Materiais, OPP - Turma 1
@@ -143,14 +133,11 @@ SAEPO4M, SAEP - PROVA PRÁTICA, 4° Mecânica EAD - Sábado
 ACB-CG, Aperfeiçoamento em AutoCad Básico, Treinamento Cristal Glass
 LID-SO2, Leitura e Interpretação de Desenho, Soldador - Turma 2
 MSM-2EQ, Montagem de Sistemas Mecânicos, 2° Eletromecânica EAD - Quarta
-SOL - P2, Prática de Soldagem, Soldador - Turma 2
 LID-SO3, Leitura e Interpretação de Desenho, Soldador - Turma 3
 SOL - T3, Teoria da Soldagem, Soldador - Turma 3
 SOL - P3, Prática de Soldagem, Soldador - Turma 3
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 SOL - T4, Teoria da Soldagem, Soldador - Turma 4
 SOL - P4, Prática de Soldagem, Soldador - Turma 4
-FTM-AP, Fundamentos da Tecnologia Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
 ICSCM-AP, Processos de Fabricação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
 PS-3M, Processos de Soldagem, 2° Mecânica Presencial
 LID-MILLS, Leitura e Interpretação de Desenho, TransFORMAR 2025.1 - Mills
@@ -164,16 +151,12 @@ FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Ele
 IDP-AP, Introdução a Desenvolvimento de Projetos, Téc Mecânica - 1° Ano - Itinerário V - Afonso Pena
 SST-AP, Saúde e Segurança do Trabalho e Sustentabilidade dos Processos Industrias, Téc Mecânica - 1° Ano - Itinerário V - Afonso Pena
 GP-TFEV, Gestão de Pessoas, APB Assistente Administrtaivo - Turma Fevereiro
-FORMS, Boas Práticas - Forms , Treinamento
 LGP-BOT, Liderança e, Boticário
 GP-MP, Gestão de Pessoas, APB Assistente Administrativo - Quarta e Sexta
-IDP-AP, Introdução a Desenvolvimento de Projetos, Téc Mecânica - 1° Ano - Itinerário V - Afonso Pena
-SST-AP, Saúde e Segurança do Trabalho e Sustentabilidade dos Processos Industrias, Téc Mecânica - 1° Ano - Itinerário V - Afonso Pena
 FQP-AA2, Fundamentos de Qualidade e Produtividade, Aux Adm 2
 RA-AA2, Rotinas Administrativas, Aux Adm 2
 II-AA2, Introdução à Informática, Aux Adm 2
 MCV-TN, Marketing Comercial e Vendas, APB Assistente Administrativo - Segunda e Terça
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 GPOL-MP, Gestão da Produção/Operações e Logística , APB Assistente Administrativo - Quarta e Sexta
 DI-AI2, Digitação e Internet, Aux Info 2
 PU-1M, Prática da Usinagem - UC Processos Básicos de Fabricação, 1° Téc Mecânica Presencial 
@@ -185,21 +168,16 @@ IFM-1E, Introdução a Fabricação Mecânica, 1° Téc Eletromecânica EAD - S�
 TCNC2M, Torno CNC, 2° Téc Mecânica Presencial
 AJ1, Ajustagem, Ajustagem - Turma 1 - Prefeitura
 PFM-AP, Introdução a Corte/Soldagem e Conformação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
 SST-FM, Saúde e Segurança no Trabalho, APB Ferramenteiro de Manutenção 
 RFFTMI, Fundamentos da Tecnologia Mecânica I – Recuperação final, 1° Téc. Eletromecânica
 DTSA-1AUT, Desenho Técnico Aplicado à Sistemas Automatizados - 6ª aula de 15, 1° Automação Presencial
 GM-3M, Gerenciamento de Manutenção, 3° Mecânica Presencial
 PM-3M, Prática de Manutenção, 2° Mecânica Presencial
 FTMII-1EST, Fundamentos da Tecnologia Mecânica II, 1° Téc Eletromecânica EAD - Sexta
-SST-FM, Saúde e Segurança no Trabalho, APB Ferramenteiro de Manutenção 
 PM-3B, Processos de Manufatura , NEM 3° b
 GI6, Gestão Industrial, OPP - Turma 6
 SST6, Saúde e Segurança do Trabalho, OPP - Turma 6
 MAT6, Matemática, OPP - Turma 6
-PFM-AP, Introdução a Corte/Soldagem e Conformação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 LUB-T1T, LUBRIFICAÇÃO  - Turma 1 - tarde, Treinamento - LG -
 TCNC2, Programação e Operação de Torno CNC, Torno CNC - Turma 2
 TOR3, Torneiro Mecânico, Torneiro Mecânico - Turma 3 - Prefeitura
@@ -209,7 +187,6 @@ FMMM-JK, Fabricação mecânica aplicada à manutenção e à montagem, Téc Ele
 TF1, Tecnologia da Ferramenta, Ferramentaria de Estampos - Turma 1
 CAD1, Projeto de Estampos em CAD, Ferramentaria de Estampos - Turma 1
 PP1, Prática Profissional, Ferramentaria de Estampos - Turma 1
-MPP2Q, Monitoramento de Processos e Produtos (APP), 2° Qualidade EAD - Segunda
 PBFM1MT, Processos Básicos de Fabricação Mecânica, 1° Téc Mecânica EAD - Terça
 REPPBFM, Processos Básicos de Fabricação Mecânica - Reposição, 1° Téc. Mecânica
 REPCP, Planejamento e Controle da Produção - Reposição, 2° Téc. Mecânica
@@ -225,7 +202,6 @@ PCP-2M, Planejamento e Controle da Produção, 2° Téc Mecânica EAD - Terça
 MET4, Metrologia, OPP - Turma 4
 LID4, Leitura e Interpretação de Desenho , OPP - Turma 4
 FTMI-1ESA, Fundamentos da Tecnologia Mecânica I, 1° Téc Eletromecânica EAD - Sábado
-FORMS, Boas Práticas - Forms , Treinamento
 PIMI-G, Projeto de Inovação Mecânica I, 3° APT Mecânica Gestamp
 IFM-1EST, Introdução a Fabricação Mecânica, 1° Téc Eletromecânica EAD - Sexta
 FA-1N, Física Aplicada, 1° Téc Mecânica Presencial
@@ -247,24 +223,15 @@ UC1, Leitura e Comunicação, 1° Ferramenteiro de Dispositivos - OneSubSea
 UC7, Relações SócioProfissionais Cidadania e ètica, 1° Ferramenteiro de Dispositivos - OneSubSea
 MSM-2ES, Montagem de Sistemas Mecânicos, 2° Eletromecânica Segunda Noite
 TMEC3, Tecnologia de Materiais , OPP 3
-MSM-2E, Montagem de Sistemas Mecânicos, 2° Eletromecânica EAD - Sábado
 CADII-OS, Projeto de Ferramentas e Dispositivos em CAD II , 3° Ferramenteiro de Dispositivos - OneSubsea
-FORMS, Boas Práticas - Forms , Treinamento
 PFM-AP, Processo de Fabricação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-FMMM-JK, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
 FMDEP, Fundamentos Mecânicos  - Dependencia Alessandro, 1° Eletromecânica
 SAEPO4E, SAEP - PROVA OBJETIVA, ELETROMECANICA
 SAEPP4E, SAEP - PROVA PRATICA, ELETROMECANICA
 OPPM, Otimização dos Processos de Produção Mecânica, Técnico em Mecânica 2º MÓDULO
-FTM-AP, Fundamentos da Tecnologia Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-ICSCM-AP, Processos de Fabricação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-PFM-AP, Introdução a Corte/Soldagem e Conformação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
 FTM-JK, Fundamentos da tecnologia mecânica, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
 ICSCM-JK, Introdução a corte/soldagem e conformação mecânica, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
-FMMM-JK, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
 RECF-JK, Recuperação Final, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 OMOC-FM, Operação de Máquinas Operatrizes Convencionais, 1° Ferramenteira de Manutenção
 WK , Treinamento Wordskills, Manutenção e solda
 RA, Uso de Recursos Visuais, Treinamento Professores Argus
@@ -288,32 +255,16 @@ ET-AA2, Ética e cidadania, Aux Adm 2
 MA-AA2, Meio ambiente, Aux Adm 2
 LP-AA2, Língua Portuguesa, Aux Adm 2
 ITTA-AA2, Interpretação de Textos Técnicos e Administrativos, Aux Adm 2
-IQP-AP, Introdução a Qualidade e Produtividade, Téc Mecânica - 1° Ano - Itinerário V - Afonso Pena
-ITICI4.0-AP, Introdução a Tecnologia da Informação/Comunicação e Indústria  4.0, Téc Mecânica - 1° Ano - Itinerário V - Afonso Pena
-PV-3A, Projeto de Vida - Autoconhecimento , Téc Linguagens - 3° A - Itinerário V 
 PV-3D, Projeto de Vida - Autoconhecimento , Téc Desen. Sistemas - 3° B - Itinerário V 
 PV-3B, Projeto de Vida - Autoconhecimento , Téc Mecatrônica - 3° C - Itinerário V 
 PV-3C, Projeto de Vida - Autoconhecimento , Téc Automação - 3° D - Itinerário V 
-PV-3E, Projeto de Vida - Autoconhecimento , Téc Linguagens - 3° E - Itinerário V 
-PV-3F, Projeto de Vida - Autoconhecimento , Téc Desen. Sistemas - 3° F - Itinerário V 
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 FQ-BOT, Ferramentas da, Boticário
-IIW-AI2, Introdução à Informática Windows, Aux Info 2
 CAD-1N, CAD - Fundamentos da Tecnologia Mecânica II, 1° Téc Mecânica Presencial
 AT1, Ajustagem e Torneiro Mecânico, Ajustagem e Torneiro Mecânico - Turma 1
 TOR2, Torneiro Mecânico, Torneiro Mecânico - Turma 2 - Prefeitura
 AT3, Ajustagem e Torneiro Mecânico, Ajustagem e Torneiro Mecânico - Turma 3
-PFM-2M, Processos de Fabricação Mecânica, 2° Téc Mecânica EAD - Terça
-CAD-1N, CAD - Fundamentos da Tecnologia Mecânica II, 1° Téc Mecânica Presencial
-AT1, Ajustagem e Torneiro Mecânico, Ajustagem e Torneiro Mecânico - Turma 1
-TOR2, Torneiro Mecânico, Torneiro Mecânico - Turma 2 - Prefeitura
-AT3, Ajustagem e Torneiro Mecânico, Ajustagem e Torneiro Mecânico - Turma 3
-PFM-2M, Processos de Fabricação Mecânica, 2° Téc Mecânica EAD - Terça
-AJ2, Ajustagem, Ajustagem - Turma 2 - Prefeitura
 AT6, Ajustagem e Torneiro Mecânico, Ajustagem e Torno  - Turma 6
 AT8, Ajustagem e Torneiro Mecânico, Ajustagem e Torno  - Turma 8
-PFM-2M, Processos de Fabricação Mecânica, 2° Téc Mecânica EAD - Terça
-CAD-1N, CAD - Fundamentos da Tecnologia Mecânica II, 1° Téc Mecânica Presencial
 FE-1M, Fundamentos de Eletroeletrônica, 1 ° Mecatrônica Presencial
 LP-1MN, Lógica de Programação, 1 ° Mecatrônica Presencial
 ITIC-VW, Introdução a Tecnologia da Informação e Comunicação, APT 1° Mecatrônica - VW
@@ -326,17 +277,13 @@ PCLPB1, Programação CLP - Básico , Programação CLP - Turma 2
 AE-2AT, Acionamentos Eletroeletrônicos, 2° Téc. Automação EAD- Terça
 SST-TJUN, Saúde e Segurança no Trabalho, APB Assistente Administrativo - Turma Junho
 TC-4A, Técnicas de Controle, 4° Téc Automação EAD - Sábado
-IVF1, Inversores de Frequência, Inversores de Frequência - Mais Qualificação
-LP-1MN, Lógica de Programação, 1 ° Mecatrônica Presencial
 CIPI-1M, Criatividade e Ideação em Projetos de Inovação, 1 ° Mecatrônica Presencial
 FC-AEP1, Formação Cidadã, Auxiliar de Eletricista Industrial / Prefeitura
 FP-AEP1, Formação Profissional, Auxiliar de Eletricista Industrial / Prefeitura
 DEPIC, Instrumentação e Controle – 20h presenciais - Dependência, 3° Téc. Automação
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 RSCE-GMJ, Relações socioprofissionais/cidadania e ética, APB Assistente Administrativo - Guarda Mirim
 FEA-1DSQ, Fundamentos da Eletroeletrônica Aplicada, 1° Desenvolvimento de Sistemas Quarta Noite
 EASAI-1AQ, Eletrônica Aplicada à Sistemas Automatizados , 1° Automação EAD - Quinta Noite
-IVF1, Inversores de Frequência, Inversores de Frequência - Mais Qualificação
 REPIA, Instrumentação Analítica – 2 alunos para reposição de 4h, 2° Téc. Automação
 DEPSLP, Sistemas Lógicos Programáveis – 32h – 2 alunos para cursar como DP - (preferência aos sábados), 4° Automação
 MVFI-2AS, Medição de Variáveis Físicas Industriais, 2° Téc Automação - Segunda Noite
@@ -346,10 +293,7 @@ SEE-2AT, Sistemas Eletrohidráulicos e Eletropneumáticos, 2° Automação - tar
 SEM-2AT, Sistemas Eletrônicos e Microcontrolados, 2° Automação - tarde
 MSE-2ES, Montagem de Sistemas Elétricas, 2° Téc Eletromecânica - Segunda Noite
 MSE-2ES, Montagem de Sistemas Eletricas, 2° Téc Eletromecânica - Sexta Tarde
-WK , Treinamento Wordskills, Elétrica
 ICLP-3MT, Introdução a Controladores Lógicos Programáveis, 3° Mecânica EAD - Terça Noite
-EASAII-2AS, Eletrônica Aplicada à Sistemas Automatizados, 2° Automação EAD - Segunda Noite
-EP-4N, Eletropneumática, 4° Mecânica Presencial
 MET-SO1, Metrologia, Soldador - Turma 1
 LID-SO1, Leitura e Interpretação de Desenho, Soldador - Turma 1
 MET-SO2, Metrologia, Soldador - Turma 2
@@ -363,15 +307,11 @@ LID1, Leitura e Interpretação de Desenho Técnico, OPP - Turma 1
 FTMII-1ESE, Fundamentos da Tecnologia Mecânica II, 1° Téc Eletromecânica EAD - Segunda
 RLAD-TFEV, Raciocinio Logico e Analise de Dados , APB Assistente Administrtaivo Seg e Ter- Turma Fevereiro
 CADP-2N, Modelagem Virtual de Elementos Mecânicos - Prática, 2° Mecatrônica - Presencial
-MET-SO2, Metrologia, Soldador - Turma 2
 PM-3N, Gerenciamento de Manutenção - UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
 OPM-2E, Organização da Produção Mecânica I , 2° Téc Eletromecânica EAD - Quarta 
-FTMII-1ESE, Fundamentos da Tecnologia Mecânica II, 1° Téc Eletromecânica EAD - Segunda
 SOLID-2ES, Aula Extra de Solid turma de 1° Eletromecânica Sabádo, 1° Téc Eletromecânica EAD - Sábado
-CAD-1N, CAD - Fundamentos da Tecnologia Mecânica II, 1° Téc Mecânica Presencial
 PCP2N, Planejamento e Controle da Produção , 2° Técnico em Mecânica - Presencial
 SST-GM, Saúde e Segurança do Trabalho, APB Assistente Administrativo - Guarda Mirim
-PM-3N, Gerenciamento de Manutenção - UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
 FMMM-2EQ, Fabricação Mecânica Aplicada à Manutenção e à Montagem, 2° Eletromecânica EAD - Quarta
 LIDMM1, Leitura e Interpretação de Desenho, Mecânico de Manutenção Industrial
 METMM1, Metrologia, Mecânico de Manutenção Industrial
@@ -408,13 +348,10 @@ MQAP-1L, Métodos Quantitativos Aplicados à Logística, 1° Téc Logística EAD
 IPL-1L, Introdução aos Processos Logísticos, 1° Téc Logística EAD - Terça
 GS-1L, Gestão de Suprimentos, 1° Téc Logística EAD - Terça
 PA-1L, Processos de Armazenagem, 1° Téc Logística EAD - Terça
-FORMS, Boas Práticas - Forms , Treinamento
 MQAP, Métodos Quantitativos Aplicados a Logística, Técnico em Logística - 1º Mód
 IPL, Introdução aos Processos Logísticos, Técnico em Logística - 1º Mód
 MQAL-1LQ, Métodos Quantitativos Aplicados à Logística, 1° Téc Logística EAD - Quinta
-RLAD-GM, Raciocínio Lógico e Análise de Dados, APB Assistente Administrativo- Guarda Mirim
 TSI-GM, Transformação no Setor Industrial, APB Assistente Administrativo- Guarda Mirim
-ADGQ-3QS, Análise de Desempenho da Gestão da Qualidade (APP), 3° Téc Qualidade EAD - Segunda
 GP-GM, Gestão de Pessoas, APB Assistente Administrativo- Guarda Mirim
 OCD2, Organização e Controle de Documentos, Assis Administrativo EAD - Turma 2
 RADM2, Rotinas Administrativas, Assis Administrativo EAD - Turma 2
@@ -425,13 +362,9 @@ SMPLOG1, Separação e Movimentação de Pedidos, Operador de Processos de Distr
 FLLOG2, Fundamentos da Logística, Operador de Processos de Distribuição Logística
 ETPLOG2, Expedição e Transporte de Pedidos, Operador de Processos de Distribuição Logística
 SMPLOG2, Separação e Movimentação de Pedidos, Operador de Processos de Distribuição Logística
-PA-1L, Processos de Armazenagem, 1° Téc Logística EAD - Terça
 FA-NPREF, Fundamentos Administração , APB Assistente Administrativo- Prefeitura Nova
-MQAL-1LQ, Métodos Quantitativos Aplicados à Logística, 1° Téc Logística EAD - Quinta
-IPL-1LQ, Introdução aos Processos Logísticos, 1° Téc Logística EAD - Quinta
 GS-1LQ, Gestão de Suprimentos, 1° Téc Logística EAD - Quinta
 PA-1LQ, Processos de Armazenagem, 1° Téc Logística EAD - Terça
-FI4.0LOG1, Fundamentos da Indústria 4.0, Operador de Processos de Distribuição Logística
 FQPLOG1, Fundamentos da Qualidade e Produtividade, Operador de Processos de Distribuição Logística
 GP-2LT, Gestão da Produção, 2° Téc Logística EAD - Terça
 GTD-1LT, Gestão de Transporte e Distribuição, 2° Téc Logística EAD - Terça
@@ -457,29 +390,21 @@ PA-3F, Programação de Aplicativos, NEM Desenvolvimento de Sistemas 3° F
 DS-3F, Desenvolvimento de Sistemas, NEM Desenvolvimento de Sistemas 3° F
 MODS-3F, Modelagem de Sistemas, NEM Desenvolvimento de Sistemas 3° F
 BS-2DS, Banco de Dados, 2° Téc Desenvolvimento de Sistemas EAD - Sábado
-PA-2DS, Programação de Aplicativos, 2° Téc Desenvolvimento de Sistemas EAD - Sábado
-LC-2D, Lógica computacional, NEM Desenvolvimento de Sistemas 2° D
 FRC-2D, Fundamentos de redes de computadores, NEM Desenvolvimento de Sistemas 2° D
 FBD-2D, Fundamentos de bancos de dados, NEM Desenvolvimento de Sistemas 2° D
-DS-3D, Desenvolvimento de Sistemas, NEM Desenvolvimento de Sistemas 3° D
-DS-3F, Desenvolvimento de Sistemas, NEM Desenvolvimento de Sistemas 3° F
 TS-3F, Teste de Sistemas, NEM Desenvolvimento de Sistemas 3° F
 IS-3F, Implantação de Sistemas, NEM Desenvolvimento de Sistemas 3° F
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 EASA-1AUT, Eletrônica Aplicada a Sistemas Automatizados, 1° Automação
 MSIS-3DSS, Manutenção de Sistemas, 3° Desenvolvimento de Sistemas EAD - Sabado
-PCNC-OS, Programação CNC, 3° Ferramenteiro de Dispositivos - OneSubsea
 DPSE-4E, Desenvolvimento de Projetos de Sistemas Eletromecânicos, 4° Téc Eletromecânica EAD - Quinta
 MF-OS, Manutenção de Ferramentas, APB Ferram. Dispositivos - OneSubsea
 GI - SOL2, Gestão Industrial , Soldador - Turma 2
 FMMM-2E, Fabricação Mecânica Aplicada à Manutenção e à Montagem, 2° Eletromecânica EAD - Sábado
 TMEC1, Tecnologia Mecânica, OPP - Turma 1
 SAEPP4E, SAEP - Prova Prática, 4° Téc Eletromecânica EAD - Quinta
-FORMS, Boas Práticas - Forms , Treinamento
 AJ3, Ajustagem , Ajustador Mecânico 
 GI1, Gestão Industrial, OPP - Turma 1
 SST1, Saúde e Segurança do Trabalho, OPP - Turma 1
-OMOCNC-OS, Operação de Máquinas Operatrizes CNC, 3° Ferramenteiro de Dispositivos - OneSubsea
 SAEPPVWM, SAEP - PROVA PRATÍCA, MECATRONICA VW
 TMAT3, Tecnologia dos Materiais, OPP - Turma 3
 TMEC3, Tecnologia Mecânica, OPP - Turma 3
@@ -488,35 +413,28 @@ TCNC2N, Torno CNC , 2° Técnico em Mecânica - Presencial
 PM-4N, Processos de Manufatura, 4° Técnico em Mecatrônica
 MET-AMII1, Metrologia , Aux Mec Ind - PATRONATO
 POT-TN, Planejamento e Organização do Trabalho, APB Assistente Administrativo - Seg e Ter
-MF-OS, Manutenção de Ferramentas, APB Ferram. Dispositivos - OneSubsea
 MASM-2M, Mecânica Aplicada a Sistemas Mecatrônicos, 2° Tec Mecatrônica - noite
 PFM-2M, Processos de Fabricação mcânica, 2° Tec Mecatrônica - noite
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 REPOPMI, Organização da Produção Mecânica I - 1 aluno p reposição de 4h, 2° Téc em Eletromecânica
 REPFMMM, Fabricação Mecânica Aplicada a Manutenção e a Montagem - 1 aluna para repor 4 horas, 2° Téc em Eletromecânica
 FCI-TAGO, Fundamentos da comunicação e informação, APB Assistente Administrativo - Turma Agosto
 SST-TAGO, Saúde e segurança no trabalho , APB Assistente Administrativo - Turma Agosto
 FMMM-2ES, Fabricação Mecânica Aplicada à Manutenção e à Montagem, 2° Eletromecânica Segunda Noite
-FRE2N, Fresagem Convencional , 2° Técnico em Mecânica - Presencial
 LID1 - Sind, Leitura e Interpretação de Desenho , OPP - SINDMETAL
 TMA1 - Sind, Tecnologia dos Materiais, OPP - SINDMETAL
 TME1 - Sind, Tecnologia Mecânica, OPP - SINDMETAL
 DEPIED, Implementação de equipamentos e dispositivos – 27h presenciais - Dependência, 3° Automação EAD 
 MVFI2A, Medição de Variáveis Físicas Industriais, 2° Automação EAD - Quarta
 DSC-4A, Desenvolvimento de Sistemas de Controle, 4° Automação - Sábado
-DPSE-4E, Desenvolvimento de Projetos de Sistemas Eletromecânicos, 4° Téc Eletromecânica EAD - Quinta
 FEI-1ESE, Fundamentos da Eletricidade Industrial, 1° Téc Eletromecânica EAD - Segunda
 FEA-1DS, Fundamentos de Eletroeletrônica Aplicada, 1° Desenvolvimento de Sistemas EAD - Segunda
 MVFI2AT, Medição de Variáveis Físicas Industriais, 2° Téc. Automação EAD- Terça
 EASAII-2A, Eletrônica Aplicada à Sistemas Automatizados II, 2° Téc. Automação EAD- Terça
 SAM-3M, Sistemas Automatizados de Manufatura, 3° Téc Mecatrônica - Presencial
 SAEPO4E, SAEP - Prova ObjetIva, 4° Téc Eletromecânica EAD - Quinta
-SAEPP4E, SAEP - Prova Prática, 4° Téc Eletromecânica EAD - Quinta
-FORMS, Boas Práticas - Forms , Treinamento
 EASA, Eletrônica Aplicada a sistemas Automatizados , Técnico em Automação
 REEASA, Recuperação Final e Reposição de Aula - Eletrônica Aplicada a sistemas automatizados , 1° Téc. Automação
 EFC-3AQ, Elementos Finais de Controle, 3° Téc Automação EAD - Quarta
-MVFI2AT, Medição de Variáveis Físicas Industriais, 2° Téc. Automação EAD- Terça
 TIAI-4N, Tecnologias da Informação aplicadas à Industria 4.0 , 4° Mecatrônica Presencial
 SAM-3M, Sistemas Automatizados de Manufatura, 3° Mecatrônica Presencial
 CM-3M, Circuitos Microcontrolados, 3° Mecatrônica Presencial
@@ -525,7 +443,6 @@ REPMED, Manutenção de equipamentos e dispositivos – 1 aluno fará reposiçã
 DEPADA, Acionamento de Dispositivos Atuadores – 32h presenciais - Dependência, 2° Téc. Automação EAD- Terça
 REPFEI, Fundamentos da eletricidade Industrial - 1 aluno p reposição de 4h, 1° Eletromecânica EAD
 COM3, Comandos Elétricos, Eletricista Industrial - Turma 3
-AJ1, Ajustagem, Ajustagem - Turma 1 - Prefeitura
 FTMII-1ESA, Fundamentos da Tecnologia Mecânica II, 1° Téc Eletromecânica EAD - Sábado
 AT4, Ajustagem e Torneiro Mecânico, Ajustagem e Torno  - Turma 4
 FMDEPP, Fundamentos Mecânicos  - Dependencia Peter Bilt, 1° Eletromecânica
@@ -535,8 +452,6 @@ SST-AMI2, Saúde e Segurança no Trabalho, Auxiliar de Mecânica Industrial - Tu
 ET-AMI2, Ética e cidadania, Auxiliar de Mecânica Industrial - Turma 2
 MA-AMI2, Meio ambiente, Auxiliar de Mecânica Industrial - Turma 2
 MSCAE-SID, Montagem de Sistemas de Controle e Ac. Eletromecânicos, Técnico em Eletromecânica 3º Mód
-SAEPP4E, SAEP - PROVA PRATICA, ELETROMECANICA
-MF-OS, Manutenção de Ferramentas, APB Ferram. Dispositivos - OneSubsea
 MET2, Metrologia, OPP - Turma 2
 LID2, Leitura e Interpretação de Desenho , OPP - Turma 2
 TMAT2, Tecnologia dos Materiais, OPP - Turma 2
@@ -545,39 +460,25 @@ FCI-TMJUN, Fundamentos da comunicação e informação, APB Assistente Administr
 RSCE-TJUN, Relações socioprofissionais/cidadania e ética, APB Assistente Administrativo - Turma Junho
 SST-TJUN, Saúde e segurança no trabalho , APB Assistente Administrativo - Turma Junho
 FTMII-1, Fundamentos da tecnologia mecânica I – Recuperação final, Técnico em Eletromecânica 1º Mód
-TOR3, Torneiro Mecânico, Torneiro Mecânico - Turma 3 - Prefeitura
 AT5, Ajustagem e Torneiro Mecânico, Ajustagem e Torno  - Turma 5
 AT7, Ajustagem e Torneiro Mecânico, Ajustagem e Torno  - Turma 7
 TPE-FM, Tecnologia do Processo de Estampagem, 1° Ferramenteira de Manutenção
 TM-AMII1, Tecnologia mecânica, Aux Mec Ind - Patronato
 LID-AMII1, Leitura e Interpretação de Desenho Indfustrial, Aux Mec Ind - Patronato
 PRA-AMII1, Prática , Aux Mec Ind - Patronato
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 UC4, Metrologia - 24 h - José - Sala Metrologia, One SubSea
 POT-FM, Planejamento e Organização no Trabalho, APB Ferramenteiro de Manutenção 
 FMMM-2ES, Fabricação Mecânica Aplicada a Manutenção e a Montagem, 2° Tec. Eletromecânica - sáb
-GI6, Gestão Industrial, OPP - Turma 6
-SST6, Saúde e Segurança do Trabalho, OPP - Turma 6
-MAT6, Matemática, OPP - Turma 6
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
-TOR2N, Tornearia Convencional, 2° Técnico em Mecânica - Presencial
-FRE2N, Fresagem Convencional , 2° Técnico em Mecânica - Presencial
-ICSCM-AP, Processos de Fabricação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
-AT1, Ajustagem e Torneiro Mecânico, Ajustagem e Torneiro Mecânico - Turma 1
 DTSA-1M, Desenho Técnico Aplicado à Sistemas Automatizados, 1 ° Mecatrônica Presencial
 FTMI-1ESE, Fundamentos da Tecnologia Mecânica I, 1° Téc Eletromecânica EAD - Segunda
 FTMII1ELE, Fundamentos da Tecnologia Mecânica II, 1° Téc Eletromecânica EAD - Quarta
-TCNC1, Programação e Operação de Torno CNC, Torno CNC - Turma 1
 MA-1N, Matemática Aplicada, 1° Téc Mecânica Presencial
-FA-1N, Física Aplicada, 1° Téc Mecânica Presencial
 PRA-AMI1, Prática, Aux Mecanica Industrial - Turma 1
 MAT3, Matemática, OPP - Turma 3
 MET3, Metrologia, OPP - Turma 3
 LID3, Leitura e Interpretação de Desenho , OPP - Turma 3
 FCI-TTJUN, Fundamentos da comunicação e informação, APB Assistente Administrativo - Turma Junho
 MPP-2QS, Monitoramento dos Processos e Produtos (APP), 2° Téc Qualidade EAD - Sexta
-LID3, Leitura e Interpretação de Desenho , OPP - Turma 3
 MET5, Metrologia , OPP - Turma 5
 LID5, Leitura e Interpretação de Desenho , OPP - Turma 5
 TMAT5, Tecnologia dos Materiais, OPP - Turma 5
@@ -586,17 +487,10 @@ SOLID1, SOLIDWORKS, Solidworks
 MAT5, Matemática, OPP - Turma 5
 MET-SO4, Metrologia, Soldador - Turma 4
 LID-SO4, Leitura e Interpretação de Desenho, Soldador - Turma 4
-MPP-2QS, Monitoramento dos Processos e Produtos (APP), 2° Téc Qualidade EAD - Sexta
-PA-1L, Processos de Armazenagem, 1° Téc Logística EAD - Terça
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
-PFM-AP, Introdução a Corte/Soldagem e Conformação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
 TM-AMI2, Tecnologia dos Materiais , Aux Mec Ind 2
 MET-AMI2, Metrologia , Aux Mec Ind 2
-PM-3N, Gerenciamento de Manutenção - UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
 GI5, Gestão Industrial, OPP - Turma 5
 SST5, Saúde e Segurança do Trabalho, OPP - Turma 5
-PA-1LQ, Processos de Armazenagem, 1° Téc Logística EAD - Terça
 AE--2AS, Acionamentos Eletroeletrônicos, 2° Téc Automação - Segunda Noite
 FE-1MN, Fundamentos da Eletroeletrônica, 1° Mecatrônica Presencial
 CM-3AT, Circuitos Microcontrolados, 3° Automação EAD - Terça Noite
@@ -606,7 +500,6 @@ UC2, Leitura e Interpretação de Desenho Técnico Mecânico , 1° Ferramenteira
 UC3, Materiais para Construção de Ferramentas, 1° Ferramenteira de Manutenção
 GI1 - Sind, Gestão Industrial, OPP - SIND
 SST1 - Sind, Saúde e Segurança do Trabalho, OPP - SIND
-MEI-MILLS, MANUTENÇÃO DE EQUIPAMENTOS INDUSTRIAIS, Tranformar Mills
 SAEPOMEC, SAEP - OBJETIVO, 4° Mecânica Presencial
 SAEPPMEC, SAEP - PRÁTICO, 4° Mecânica Presencial
 DEPDSC, Desenvolvimento de Sistemas de Controle – 20h - 3 alunos para cursar como DP -(preferência aos sábados) , 4° Automação
@@ -616,13 +509,10 @@ RL-ME, Raciocinio Lógico e Análise de Dados, APB Assistente Administrativo - S
 RL-TE, Raciocinio Lógico e Análise de Dados, APB Assistente Administrativo - Seg e Ter
 TD-ME, Transformação Digital no Setor Industrial, APB Assistente Administrativo - Seg e Ter
 TD-TE, Transformação Digital no Setor Industrial, APB Assistente Administrativo - Seg e Ter
-POT-ME, Planejamento e Organização do Trabalho, APB Assistente Administrativo - Seg e Ter
-FORMS, Boas Práticas - Forms , Treinamento
 FCI-PREF, Fundamentos da comunicação e informação, APB Assis Administrativo - Junho Prefeitura
 RSCE-TJP, Relações socioprofissionais/cidadania e ética, APB Assis Administrativo - Junho Prefeitura
 RA-AA1, Rotinas Administrativas, Auxiliar Administrativo - Turma 1
 PAAP-1AQT, Processos Administraticos no Apoio a Projetos, 1° Administração - Quinta Tarde
-RSCE-TJP, Relações socioprofissionais/cidadania e ética, APB Assis Administrativo - Junho Prefeitura
 SST-TJP, Saúde e Segurança do Trabalho , APB Assis Administrativo - Junho Prefeitura
 SPICPPP1, Sustentabilidade nos processos industriais , Controlador e Programador de Produção - Prefeitura
 MPI-1AQT, Modelagem de Projetos I, 1° Administração - Quinta Tarde
@@ -633,38 +523,23 @@ RA-EJA1, UC 2: Rotinas Administrativas, Assistente de Administrativo - Turma 1
 OCD-EJA2, UC 1: Organização e Controle de Documentos, Assistente de Administrativo - Turma 2
 RA-EJA2, UC 2: Rotinas Administrativas, Assistente de Administrativo - Turma 2
 SSTLOG2, Saúde e Segurança no Trabalho, Operador de Processos de Distribuição Logística
-PFM-AP, Introdução a Corte/Soldagem e Conformação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
-IDP-AP, Introdução a Desenvolvimento de Projetos, Téc Mecânica - 1° Ano - Itinerário V - Afonso Pena
-SAEPPMEC, SAEP - PRÁTICO, 4° Mecânica Presencial
 MET-FM, Metrologia, 1° Ferramenteira de Manutenção
-FMMM-JK, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
 MET-MILLS, Metrologia , TransFORMAR 2025.1 - Mills
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 MSM-EM, Montagem de Sistemas Mecânicos, 2 téc. Eletromecânica
 UC7, Relações SócioProfissional Cidadania e ètica, One SubSea
 UC8, Saúde e Segurança do Trabalho, One SubSea
 UC6, Planejamento e Organização do Trabalho, One SubSea
 MET-AMI3, Metrologia , Aux Mec Ind 3 
 PRA-AMI3, Prática , Aux Mec Ind 3 
-FQAP1QSEG, Fundamentos da Qualidade Aplicadas nos Processos (APP), 1° Qualidade EAD - Segunda
-TSI-GM, Transformação no Setor Industrial, APB Assistente Administrativo- Guarda Mirim
 CIPI-1M, Criatividade e Ideação em Projetos de Inovação, 1° Mecatrônica
-GP-PREF, Gestão de Pessoas, APB Assistente Administrativo - Prefeitura
 GPOL-TP, Gestão da Produção/Operações e Logística , APB Assistente Administrativo - Quarta e Sexta
-FA-NPREF, Fundamentos Administração , APB Assistente Administrativo- Prefeitura Nova
 MET-SO3, Metrologia, Soldador - Turma 3
-FMMM-JK, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
 ELEB3, Eletricidade Básica, Eletricista Industrial - Turma 3
-COM3, Comandos Elétricos, Eletricista Industrial - Turma 3
 ELEB4, Eletricidade Básica, Eletricista Industrial - Turma 4
 COM4, Comandos Elétricos, Eletricista Industrial - Turma 4
 ELEB5, Eletricidade Básica, Eletricista Industrial - Turma 5
 COM5, Comandos Elétricos, Eletricista Industrial - Turma 5
 FEI-1QN, Fundamentos de Eletricidade Industrial, 1° Eletromecânica Quinta Noite
-CIA-1M, Comunicação e Informática Aplicada, 1 ° Mecatrônica Presencial
-SPICPPP1, Sustentabilidade nos processos industriais , Controlador e Programador de Produção - Prefeitura
 METMM1, Metrologia, Mecânico de Manutenção
 LIDMM1, Leitura e Interpretação de Desenho, Mecânico de Manutenção
 TMECMM1, Tecnologia Mecânica, Mecânico de Manutenção
@@ -691,33 +566,20 @@ GCF-TP, Gestão Contábil e Financeira, APB Assistente Administrativo - Quarta e
 FQP-AA1, Fundamentos de Qualidade e Produtividade, Auxiliar Administrativo - Turma 1
 LP-AA1, Língua Portuguesa, Auxiliar Administrativo - Turma 1
 ITTA-AA1, Interpretação de Textos Técnicos e Administrativos, Auxiliar Administrativo - Turma 1
-FORMS, Boas Práticas - Forms , Treinamento
 API-LUMI, Aperfeiçoamento em Informática , Treinamento Lumicenter
-MAT1, Matemática, OPP - Turma 1
 IPMI-1AQT, Introdução a Processos de Melhoria e Inovação, 1° Administração - Quinta Tarde
-WB-AI2, Word Básico, Aux Info 2
 EB-AI2, Excel Básico, Aux Info 2
-SMPLOG1, Separação e Movimentação de Pedidos, Operador de Processos de Distribuição Logística
 FA-GM, Fundamentos da Administração, APB Assistente Administrativo- Guarda Mirim
-GCF-TP, Gestão Contábil e Financeira, APB Assistente Administrativo - Quarta e Sexta
-FA-NPREF, Fundamentos Administração , APB Assistente Administrativo- Prefeitura Nova
-GP-PREF, Gestão de Pessoas, APB Assistente Administrativo - Prefeitura
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 MCV-TNM, Marketing/Comercial e Vendas, APB Assistente Administrativo - Seg e Ter
 POT-TNM, Planejamento e Organização do Trabalho, APB Assistente Administrativo - Seg e Ter
-FA-TNM, Fundamentos de Administração, APB Assistente Administrativo - Seg e Ter
-FA-TN, Fundamentos de Administração, APB Assistente Administrativo - Seg e Ter
-GPOL-MP, Gestão da Produção/Operações e Logística , APB Assistente Administrativo - Quarta e Sexta
 TGDQ-MP, Tratamento e Gerenciamento de Dados Quantitativos, APB Assistente Administrativo - Quarta e Sexta
 PO, Postura e Oratória, Treinamento Professores Argus
 PA, Planejamento de Aulas, Treinamento Professores Argus
-AP, Apresentações , Treinamento Professores Argus
 EP-4M, Eletropneumática, 4° Mecânica Presencial
 EH-4M, Eletrohidráulica, 4° Mecânica Presencial
 ICLP-4M, Introdução a Controladores Lógicos Programaveis , 4° Mecânica Presencial
 FE-4M, Fundamentos Elétricos, 4° Mecânica Presencial
 DSAM-LUAN, Desenvolvimento de Sistemas de Automação Mecânica , 3° Téc Mecânica - Luan
-TC-4A, Técnicas de Controle, 4° Téc Automação EAD - Sábado
 IC-2DS, Internet das Coisas, 2° Téc Desenvolvimento de Sistemas EAD - Sábado
 SAEPP4A, SAEP - Prova Prática, 4° Téc Automação EAD - Sábado
 CIA-1AQ, Comunicação e Informática Aplicada , 1° Téc Automação EAD - Quinta Noite
@@ -725,194 +587,119 @@ MVFI-3C, Medição de Variáveis Físicas Industriais , NEM Automação 3° C
 EFC-3C, Elementos Finais de Controle , NEM Automação 3° C
 SLP-4A, Sistemas Lógicos Programáveis , 4° Automação - Sábado
 CM-3C, Circuitos Microcontrolados , NEM Automação 3° C
-LP-1DS, Lógica de Programação (APP), 1° Desenvolvimento de Sistemas EAD - Segunda
-FI1ASEG, Fundamentos da Instrumentação, 1° Téc Automação EAD - Segunda
 DM-2C, Desenho Mecânico , NEM Automação  2° C
 FM-2C, Fundamentos Mecânicos, NEM Automação  2° C
-DSC-4A, Desenvolvimento de Sistemas de Controle, 4° Automação - Sábado
-SAEPPVWM, SAEP - PROVA PRATÍCA, MECATRONICA VW
-SAEPO4M, SAEP - PROVA PRÁTICA, 4° Mecânica EAD - Sábado
 SAEPPVWA, SAEP - PROVA PRATÍCA, ADMINISTRAÇÃO VW
 SAEPOVWA, SAEP - PROVA OBJETIVA, ADMINISTRAÇÃO VW
-SAEPP4E, SAEP - PROVA PRATICA, ELETROMECANICA
 FE-2B, Fundamentos de eletricidade , NEM 2° B
 AE-2B, Acionamentos Eletroeletrônicos , NEM 2° B
 SLP-3B, Sistemas Lógicos Programáveis, NEM 3° B
 SAM-3B, Sistemas automatizados de Manufatura , NEM 3° B
 MEME-3ES, Manutenção Elétrica de Máquinas e Equipamentos, 3° Téc Eletromecânica EAD - Sábado
-FEI-JK, Fundamentos da eletricidade industrial, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
-RECF-JK, Recuperação Final, Téc Eletromecânica 2° Ano Itinerário V - Juscelino
 DS-2DS, Desenvolvimento de Sistemas, 2° Téc Desenvolvimento de Sistemas EAD - Sábado
-FI1ASEG, Fundamentos da Instrumentação, 1° Téc Automação EAD - Segunda
 ICLP-G, Introdução a Controladores Lógicos Programáveis, 4° APT Mecânica Gestamp
 FI-1AQ, Fundamentos da Instrumentação, 1° Téc Automação EAD - Quinta
 PCLPB2, Programação CLP - Básico , Programação CLP - Turma 2
-AE-2B, Acionamentos Eletroeletrônicos , NEM Mecatrônica 2° B
-MVEM-2B, Modelagem Virtual de Elementos Mecânicos, NEM Mecatrônica 2° B
-EASA-2B, Eletrônica Aplicada a Sistemas Automatizados , NEM Mecatrônica 2° B
 ITT-PAT, Inovações e Tendências Tecnológicas, Inovações e Tendências Tecnológicas
-SAM-3B, Sistemas automatizados de Manufatura , NEM 3° B
 IOT, IOT na Prática , Projeto SETR - Industria 4.0 - Beontag
 DEPTC-4A, Técnicas de Controle, 4° Téc Automação
 LP-1DSQ, Logica de Progamação (APP), 1° Desenvolvimento de Sistemas EAD - Quarta Noite
-EASAI-1AQ, Eletrônica Aplicada à Sistemas Automatizados , 1° Automação EAD - Quinta Noite
 PA-2DSS, Programação de Aplicativos, 2° Desenvolvimento de Sistemas Segunda Noite
-DS-3D, Desenvolvimento de Sistemas, NEM Desenvolvimento de Sistemas 3° D
 TS-3D, Teste de Sistemas, NEM Desenvolvimento de Sistemas 3° D
 IS-3D, Implantação de Sistemas, NEM Desenvolvimento de Sistemas 3° D
-WK , Treinamento Wordskills, Elétrica
 IC-2DSS, Internet das Coisas, 2° Desenvolvimento de Sistemas Segunda Noite
 BD-2DSS, Banco de Dados, 2° Desenvolvimento de Sistemas Segunda Noite
-LP-1DSQ, Logica de Progamação (APP), 1° Desenvolvimento de Sistemas EAD - Quarta Noite
 ID1, Inclusão Digital, Inclusão Digital - Turma 1
-DPII-VW, Desenvolvimento de Projetos II, 4° APT Administração VW
 DM-2B, Desenho mecânico , NEM 2° B
 FM-2B, Fundamentos mecânicos , NEM 2° B
-FE-2B, Fundamentos de eletricidade , NEM 2° B
-CPH-3B, Circuitos Eletropneumáticos e Eletro hidráulicos Aplicados a Manufatura, NEM 3° B
 CM-3B, Circuitos Microcontrolados , NEM 3° B
 FEI-1EST, Fundamentos da Eletricidade Industrial, 1° Téc Eletromecânica EAD - Sexta
-AE-2B, Acionamentos Eletroeletrônicos , NEM Mecatrônica 2° B
 SAM-3B, Sistemas automatizados de Manufatura , NEM 3° C
 RAA-M3P, Robótica e Arduino avançados, Róbotica - Módulo 3
-FEI-1EST, Fundamentos da Eletricidade Industrial, 1° Téc Eletromecânica EAD - Sexta
-AE-2B, Acionamentos Eletroeletrônicos , NEM Mecatrônica 2° B
-SAM-3B, Sistemas automatizados de Manufatura , NEM 3° C
-MVEM-2B, Modelagem Virtual de Elementos Mecânicos, NEM Mecatrônica 2° B
-EASA-2B, Eletrônica Aplicada a Sistemas Automatizados , NEM Mecatrônica 2° B
 PM-3B, Processos de Manufatura , NEM 3° C
 TICAI-3B, Tecnologias da Informação e Comunicação Aplicadas à Industria 4.0 , NEM 3° C
 IS-M4P, Integração de sistemas, Róbotica - Módulo 4
-PCLPB2, Programação CLP - Básico , Programação CLP - Turma 2
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
-CIA-1AQ, Comunicação e Informática Aplicada , 1° Téc Automação EAD - Quinta Noite
 ITT-PAT, Inovações e Tendências Tecnológicas (APP 0579101), Patronato
 CIA-1AUT, Comunicação e Informática Aplicada , 1° Automação
 SPI-G, Sustentabilidade nos Processos Industriais, 3° APT Mecânica Gestamp
 IDP-G, Introdução Ao Desenvolvimento de Projetos, 3° APT Mecânica Gestamp
 II4.0-G, Introdução a Indústria 4.0, 3° APT Mecânica Gestamp
 PCM-G, Planejamento e Controle da Manutenção, 3° APT Mecânica Gestamp
-MMA-G, Manutenção Mecânica Aplicada, 3° APT Mecânica Gestamp
-DSAM-LUAN, Desenvolvimento de Sistemas de Automação Mecânica , 3° Téc Mecânica - Luan
-FMMM-2E, Fabricação Mecânica Aplicada à Manutenção e à Montagem, 2° Eletromecânica EAD - Sábado
 CIA-1ASE, Comunicação e Informática Aplicada, 1° Téc Automação EAD - Segunda
 DHP-3AQ, Diagramas Hidráulicos e Pneumáticos, 3° Téc Automação EAD - Quarta
 OPPM-2MT, Otimização de Processos de Produção Mecânica, 2° Téc Mecânica EAD - Terça
 MSE-2E, Montagem de Sistemas Eletricos , 2° Eletromecânica EAD - Sábado
 CM-3M, Circuitos Microcontrolados, 3° Téc Mecatrônica - Presencial
 HPT-2N, Circuitos Eletropneumáticos e Eletrohidráulicos Teórica, 2° Mecatrônica - Presencial
-FT-1N, Fundamentação Teórica, 1° Téc Mecânica Presencial
 FM-1N, Fabricação Mecânica, 1° Téc Mecânica Presencial
 TM-1N, Tecnologia Mecânica- Fundamentos da Tecnologia Mecânica II, 1° Téc Mecânica Presencial
 SAEPOVWM, SAEP - PROVA OBJETIVA, MECATRONICA VW
-SAEPPVWM, SAEP - PROVA PRATÍCA, MECATRONICA VW
-FTMII1ELE, Fundamentos da Tecnologia Mecânica II, 1° Téc Eletromecânica EAD - Quarta
-DTSA-1M, Desenho Técnico Aplicado à Sistemas Automatizados, 1 ° Mecatrônica Presencial
-PCP-2M, Planejamento e Controle da Produção, 2° Téc Mecânica EAD - Terça
 DSAM-G, Desenvolvimento de Sistemas de Automação Mecânica, 4° APT Mecânica Gestamp
-DHP-3AQ, Diagramas Hidráulicos e Pneumáticos, 3° Téc Automação EAD - Quarta
 MMME-3ES, Manutenção Mecânica de Máquinas e Equipamentos, 3° Téc Eletromecânica EAD - Sábado
-HPT-2N, Circuitos Eletropneumáticos e Eletrohidráulicos Teórica, 2° Mecatrônica - Presencial
 HPP-2N, Circuitos Eletropneumáticos e Eletrohidráulicos Prática, 2° Mecatrônica - Presencial
 GMI-3AQ, Gestão da Manutenção Industrial, 3° Téc Automação EAD - Quarta
 OPM-3ES, Otimização da Produção Mecânica II, 3° Téc Eletromecânica EAD - Sábado
 LP-1MN, Logica de Programação, 1° Mecatrônica Presencial
 APMM1, Atividades Praticas, Mecânico de Manutenção Industrial
 AIB, Automação Industrial Básica, Projeto SETR - Industria 4.0 - Beontag
-TOR2N, Tornearia Convencional, 2° Técnico em Mecânica - Presencial
-FRE2N, Fresagem Convencional , 2° Técnico em Mecânica - Presencial
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
-TOR4, Torneiro Mecânico, Torneiro Mecânico - Turma 4 - Prefeitura
-CIA-1M, Comunicação e Informática Aplicada, 1 ° Mecatrônica Presencial
 DHP-3AT, Diagramas Hidráulicos e Pneumáticos, 3° Automação EAD - Terça Noite
 EFC-3AT, Elementos Finais de Controle, 3° Automação EAD - Terça Noite
-PFM-AP, Introdução a Corte/Soldagem e Conformação Mecânica, Téc Mecânica - 2° Ano - Itinerário V - Afonso Pena
-EASAII-2AS, Eletrônica Aplicada à Sistemas Automatizados, 2° Automação EAD - Segunda Noite
 SE-2M, Sistemas Eletrônicos, 2° Mecatrônica - Presencial
-AE-2M, Acionamentos Eletroeletrônicos, 2° Mecatrônica - Presencial
 SM-2M, Sistemas Microcontralados, 2° Mecatrônica - Presencial
-MSM-2EQ, Montagem de Sistemas Mecânicos, 2° Eletromecânica EAD - Quarta
-SOL - T3, Teoria da Soldagem, Soldador - Turma 3
 MET1 - Sind, Metrologia , OPP - SINDMETAL
-MSM-2ES, Montagem de Sistemas Mecânicos, 2° Eletromecânica Segunda Noite
 CE-VW, Comunicação Empresarial , APT 1° Administração
 FA-VW, Fundamentos da Administração, APT 1° Administração
 RSCE-TTJUN, Relações socioprofissionais/cidadania e ética, APB Assistente Administrativo - Turma Junho
 GP-ME, Gestão de Pessoas, APB Assistente Administrativo - Seg e Ter
-GP-TE, Gestão de Pessoas, APB Assistente Administrativo - Seg e Ter
 FA-ME, Fundamentos da Administração, APB Assistente Administrativo - Seg e Ter
 GCF-MP, Gestão Contábil e Financeira, APB Assistente Administrativo - Quarta e Sexta
 RI-AI1, Relações Interpessoais, Aux Info 1
 SST-AI1, Saúde e Segurança no Trabalho, Aux Info 1
 ET-AI1, Ética e cidadania, Aux Info 1
 MA-AI1, Meio ambiente, Aux Info 1
-GP-ME, Gestão de Pessoas, APB Assistente Administrativo - Seg e Ter
-GP-TE, Gestão de Pessoas, APB Assistente Administrativo - Seg e Ter
 MCV-ME, Marketing/Comercial e Vendas, APB Assistente Administrativo - Seg e Ter
 MCV-TE, Marketing/Comercial e Vendas, APB Assistente Administrativo - Seg e Ter
 GCF-ME, Gestão Contábil e Financeira, APB Assistente Administrativo - Seg e Ter
 GCF-TE, Gestão Contábil e Financeira, APB Assistente Administrativo - Seg e Ter
-GCF-MP, Gestão Contábil e Financeira, APB Assistente Administrativo - Quarta e Sexta
-GCF-TP, Gestão Contábil e Financeira, APB Assistente Administrativo - Quarta e Sexta
-GPOL-TP, Gestão da Produção/Operações e Logística , APB Assistente Administrativo - Quarta e Sexta
 TGDQ-TP, Tratamento e Gerenciamento de Dados Quantitativos, APB Assistente Administrativo - Quarta e Sexta
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
-EB-AI2, Excel Básico, Aux Info 2
 PPB-AI2, Power Point Básico, Aux Info 2
-DI-AI2, Digitação e Internet, Aux Info 2
 FC-APA2, Formação Cidadã, Auxiliar de Produção de Alimentos
 FP-APA2, Formação Profissional, Auxiliar de Produção de Alimentos
-RI-AMI3, Relações Interpessoais, Aux Mec Ind 3 
 SST-AMI3, Saúde e Segurança no Trabalho, Aux Mec Ind 3 
 ET-AMI3, Ética e cidadania, Aux Mec Ind 3 
 MA-AMI3, Meio ambiente, Aux Mec Ind 3 
 TMECMM1, Tecnologia Mecânica, Mecânico de Manutenção Industrial
 TMATMM1, Tecnologia dos Materiais, Mecânico de Manutenção Industrial
 FTMI-1MQ, Fundamentos Tecnologia da Mecânica , 1° Mecânica EAD - Quarta Noite
-FTMII-1ESA, Fundamentos da Tecnologia Mecânica II, 1° Téc Eletromecânica EAD - Sábado
 OPMI-2ES, Organização de Fabricação Mecânica I , 2° Téc Eletromecânica EAD - Segunda
 DRQ-1QT, DESENVOLVIMENTO DOS REQUISITOS DA QUALIDADE, 1º Técnico em Qualidade - Terça 
 OPMI, Organização da Produção Mecânica I , 2° Téc. Eletromecânica
-PM-3N, Gerenciamento de Manutenção - UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
-AJ2, Ajustagem, Ajustagem - Turma 2 - Prefeitura
 PCM-3MT, Planejamento e Controle da Manutenção, 3° Téc Mecânica Terça Noite
 IFM-1EQ, Introdução a fabricação Mecânica, 1 ELETROMECÂNICA - quinta - noite
-LID-SO3, Leitura e Interpretação de Desenho, Soldador - Turma 3
-MPP-2QSEG, Monitoramento de Processos e Produtos (APP), 2° Téc Qualidade EAD - Segunda
-FMMM-2EQ, Fabricação Mecânica Aplicada à Manutenção e à Montagem, 2° Eletromecânica EAD - Quarta
-MMA-3MT, Manuntenção Mecânica Aplicada, 3° Mecânica EAD - Terça Noite
 LP-2E, Lógica de programação, NEM Desenvolvimento de Sistemas 2° E
 FTI-2E, Fundamentos de tecnologias da informação, NEM Desenvolvimento de Sistemas 2° E
 LC-2E, Lógica computacional, NEM Desenvolvimento de Sistemas 2° E
 LP-2F, Lógica de programação, NEM 2° F
 FTI-2F, Fundamentos de tecnologias da informação, NEM 2° F
 LC-2F, Lógica computacional, NEM 2° F
-ID1, Inclusão Digital, Inclusão Digital - Turma 1
-LC-2F, Lógica computacional, NEM 2° F
 FRC-2F, Fundamentos de redes de computadores, NEM 2° F
 FBD-2F, Fundamentos de bancos de dados, NEM 2° F
-LC-2E, Lógica computacional, NEM Desenvolvimento de Sistemas 2° E
 FRC-2E, Fundamentos de redes de computadores, NEM Desenvolvimento de Sistemas 2° E
 FBD-2E, Fundamentos de bancos de dados, NEM Desenvolvimento de Sistemas 2° E
-ID1, Inclusão Digital, Inclusão Digital - Turma 1
-LP-1DSQ, Logica de Progamação (APP), 1° Desenvolvimento de Sistemas EAD - Quarta Noite
 MSIS-3DSS, Modelagem de Sistemas, 3° Desenvolvimento de Sistemas EAD - Sábado
 DS-3DSS, Desenvolvilmento de Sistemas, 3° Desenvolvimento de Sistemas EAD - Sábado
 WK , Treinamento Wordskills, Desenvolvimento de sistemas
 ID2, Inclusão Digital, Inclusão Digital - Turma 2
 RSCE-TAGO, Relações socioprofissionais/cidadania e ética, APB Assistente Administrativo - Turma Agosto
 FQ3, Ferramentas da Qualidade, Ferramentas da Qualidade 3
-GP-ME, Gestão de Pessoas, APB Assistente Administrativo - Seg e Ter
 POT-TE, Planejamento e Organização do Trabalho, APB Assistente Administrativo - Seg e Ter
 IFM1ELE, Introdução a Fabricação Mecânica, 1° Téc Eletromecânica Quarta
-FORMS, Boas Práticas - Forms , Treinamento
 CAD-3N, CAD (SolidWorks) - Projeto de Inovação Mecânica, 3° Téc Mecânica Presencial
 GI - SOL1, Gestão Industrial , Soldador - Turma 1
 FTMI-1EST, Fundamentos da Tecnologia Mecânica I, 1° Téc Eletromecânica EAD - Sexta
 CAD-3M, CAD (SolidWorks), 3° Téc Mecânica Presencial
 GM-3M, Gerenciamento de Manutenção, 3° Téc Mecânica Presencial
 PM-3M, Prática de Manutenção, 3° Téc Mecânica Presencial
-FTMI-1ESE, Fundamentos da Tecnologia Mecânica I, 1° Téc Eletromecânica EAD - Segunda
 IIW-AI1, Introdução à Informática Windows, Aux Info 1
 WB-AI1, Word Básico, Aux Info 1
 EB-AI1, Excel Básico, Aux Info 1
@@ -921,42 +708,23 @@ DI-AI1, Digitação e Internet, Aux Info 1
 TMEC2, Tecnologia Mecânica, OPP - Turma 2
 PCP2M, Planejamento e Controle da Produção, 2° Téc Mecânica Presencial
 SST-GM, Saúde e segurança no trabalho , Assistente Administrativo - Guarda Mirim
-PCP2M, Planejamento e Controle da Produção, 2° Téc Mecânica Presencial
-PFSTE, Programa de Formação Socioemocional para Técnicos(as) de Ensino, Treinamento
 LID-FM, Leitura e Interpretação de Desenho , 1° Ferramenteira de Manutenção
 TMEC4, Tecnologia Mecânica, OPP - Turma 4
 CAD-3M, CAD (SolidWorks), 2° Técnico em Mecânica - Presencial
 PIMII-G, Projeto de Inovação Mecânica II, 4° APT Mecânica Gestamp
 PIM-4M, Projeto de Inovação em Mecânica, 4° Mecânica Presencial
-WK , Treinamento Wordskills, Manutenção e solda
 GI2 - Sind, Gestão Industrial, OPP 02 - SINDMETAL
 SST2 - Sind, Saúde e Segurança do Trabalho, OPP 02 - SINDMETAL
 MAT2 - Sind, Matemática, OPP 02 - SINDMETAL
 MET2 - Sind, Metrologia, OPP 02 - SINDMETAL
-FMMM-SC, Fabricação mecânica aplicada à manutenção e à montagem, Téc Eletromecânica 2° Ano Itinerário V- Shirley
 GI10, Gestão Industrial, OPP - Turma 10
-LP-1DS, Lógica de Programação (APP), 1° Desenvolvimento de Sistemas EAD - Segunda
 IFM-1ESE, Introdução a Fabricação Mecânica, 1° Téc Eletromecânica EAD - Segunda
 GM-3N, Gerenciamento de Manutenção - UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
 CADT-2N, Modelagem Virtual de Elementos Mecânicos - Teórica, 2° Mecatrônica - Presencial
-CADP-2N, Modelagem Virtual de Elementos Mecânicos - Prática, 2° Mecatrônica - Presencial
-PFM-2M, Processos de Fabricação Mecânica, 2° Téc Mecânica EAD - Terça
-CAD-1N, CAD - Fundamentos da Tecnologia Mecânica II, 1° Téc Mecânica Presencial
 ELEB2, Eletricidade Básica, Eletricista Industrial - Turma 2
 COM2, Comandos Elétricos, Eletricista Industrial - Turma 2
-ELEB3, Eletricidade Básica, Eletricista Industrial - Turma 3
-FORMS, Boas Práticas - Forms , Treinamento
-ELEB3, Eletricidade Básica, Eletricista Industrial - Turma 3
-ELEB3, Eletricidade Básica, Eletricista Industrial - Turma 3
-COM3, Comandos Elétricos, Eletricista Industrial - Turma 3
 PFM2M, Processos de Fabricação Mecânica, 2° Mecânica Presencial
-FORMS, Boas Práticas - Forms , Treinamento
 MTM2M, Materiais e Tratamentos de Materiais, 2° Téc Mecânica Presencial
 EN2M, Ensaios, 2° Téc Mecânica Presencial
 FCI-GM, Fundamentos da comunicação e informação, Assistente Administrativo - Guarda Mirim
 EM-1N, Elementos de Máquinas, 1° Téc Mecânica Presencial
-IFM-1ESE, Introdução a Fabricação Mecânica, 1° Téc Eletromecânica EAD - Segunda
-GM-3N, Gerenciamento de Manutenção - UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
-PM-3N, Gerenciamento de Manutenção - UC Manutenção Mecânica Aplicada, 3° Téc Mecânica Presencial
-CADT-2N, Modelagem Virtual de Elementos Mecânicos - Teórica, 2° Mecatrônica - Presencial
-CAD-3M, CAD (SolidWorks), 3° Téc Mecânica Presencial
