@@ -123,6 +123,9 @@ body {
 .form-group-modern input[type="text"],
 .form-group-modern input[type="email"],
 .form-group-modern input[type="password"],
+.form-group-modern input[type="number"],
+.form-group-modern select,
+
 .form-select-modern {
     width: 100%;
     padding: 12px 16px;

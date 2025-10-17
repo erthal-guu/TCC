@@ -17,7 +17,7 @@
 
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <div class="sidebar-title"><p><img src="assets/img/logo-senai-home.png" alt=""></p></div>
+        <div class="sidebar-title"><p><img src="../public/assets/img/logo-senai-home.png" alt=""></p></div>
     </div>
 
     <div class="sidebar-content">

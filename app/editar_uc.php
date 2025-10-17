@@ -86,6 +86,7 @@ mysqli_close($connection);
                 </a>
             </p>
         </form>
+        <script src="../public/assets/js/menu.js"></script>
     </div>
     
 </body>

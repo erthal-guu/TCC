@@ -80,7 +80,7 @@ mysqli_close($connection);
         </div>
         <div class="mb-3">
             <label class="form-label">Disciplina</label>
-            <input type="text" name="disciplina" class="form-control" value="<?php echo htmlspecialchars($professor['disciplinas']); ?>" required>
+            <input type="text" name="disciplina" class="form-control" value="<?php echo htmlspecialchars($professor['unidade_curricular']); ?>" required>
         </div>
         <div class="mb-3">
             <label class="form-label">Nível de Capacitação</label>

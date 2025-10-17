@@ -28,25 +28,3 @@ if (hamburger) {
 if (overlay) {
     overlay.addEventListener('click', toggleMenu);
 }
-
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && sidebar && sidebar.classList.contains('active')) {
-        toggleMenu();
-    }
-});
-
-const currentPage = window.location.pathname.split('/').pop();
-const menuLinks = document.querySelectorAll('.sidebar a');
-
-menuLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-    
-    if (linkHref === currentPage || linkHref === './' + currentPage) {
-        link.classList.add('active');
-    }
-    
-    link.addEventListener('click', function() {
-        menuLinks.forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-    });
-});

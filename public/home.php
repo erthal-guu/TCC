@@ -116,19 +116,19 @@ $connection->close();
         <h2>📊 Estatísticas do Sistema</h2>
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">156</div>
+                <div class="stat-number">0</div>
                 <div class="stat-label">Total de Aulas Agendadas</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">8</div>
+                <div class="stat-number">0</div>
                 <div class="stat-label">Aulas Hoje</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">92%</div>
+                <div class="stat-number">0</div>
                 <div class="stat-label">Taxa de Ocupação</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">3</div>
+                <div class="stat-number">0</div>
                 <div class="stat-label">Pendências</div>
             </div>
         </div>

@@ -74,7 +74,6 @@ mysqli_close($connection);
                 <label for="nome">Nome da Turma:</label>
                 <input type="text" id="nome" name="nome" value="<?= htmlspecialchars($turma['nome']) ?>" required />
             </div>
-
             <div class="form-group-modern">
                 <label for="ano">Ano:</label>
                 <input type="number" id="ano" name="ano" value="<?= htmlspecialchars($turma['ano']) ?>" required min="2000" max="2100" />
@@ -82,7 +81,7 @@ mysqli_close($connection);
 
             <div class="form-group-modern">
                 <label for="id_turno">Turno:</label>
-                <select id="id_turno" name="id_turno" required>
+                <select id="id_turno" name="id_turno" required class="form-group-modern" >
                     <option value="">Escolha um turno</option>
                     <?php
                     if ($result_turnos->num_rows > 0) {
@@ -122,6 +121,7 @@ mysqli_close($connection);
                 </a>
             </p>
         </form>
+        <script src="../public/assets/js/menu.js"></script>
     </div>
     
 </body>

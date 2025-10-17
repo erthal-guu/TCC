@@ -17,6 +17,7 @@ if (!$result) {
     <link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
 </head>
 <body>
+    <?php  include("../public/menu.php");?>
 <div class="container d-flex justify-content-center mt-5">
     <div class="main d-flex flex-wrap justify-content-center">
         <?php if ($result->num_rows > 0): ?>
@@ -30,7 +31,7 @@ if (!$result) {
                         <span class="name"><?= htmlspecialchars($row['nome']) ?></span>
                         <p class="mail"><?= htmlspecialchars($row['email'] ?? 'Email não informado') ?></p>
                     </div>
-                    <div class="unidade_curricular"><strong>Disciplinas:</strong> <?= htmlspecialchars($row['unidade_curricular']) ?></div>
+                    <div class="unidade_curricular"><strong>Unidade Curricular:</strong> <?= htmlspecialchars($row['unidade_curricular']) ?></div>
                     <div class="nivel_capacitacao"><strong>Nível de Capacitação:</strong> <?= htmlspecialchars($row['nivel_capacitacao']) ?></div>
                     <div class="actions">
                         <a href="editar_professores.php?id=<?= $row['id'] ?>" class="btn btn-warning btn-sm">✏️ Editar</a>
@@ -81,3 +82,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
     mysqli_close($connection);
 }
 ?>
+<script src="../public/assets/js/menu.js"></script>
