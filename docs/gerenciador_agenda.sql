@@ -100,11 +100,6 @@ CREATE TABLE IF NOT EXISTS `turnos` (
   `nome` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
--- Extraindo dados da tabela `turnos`
-INSERT INTO `turnos` (`id`, `nome`) VALUES
-(1, 'Manha'),
-(2, 'Tarde'),
-(3, 'Noite');
 
 INSERT INTO turnos (nome) VALUES 
   ('Manhã'),
