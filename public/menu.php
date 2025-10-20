@@ -58,18 +58,7 @@
                 <span>Gerenciar Agenda</span>
             </a>
             <a href="visualizar_agenda.php">
-                <div class="menu-icon icon-eye"></div>
-                <span>Visualizar Agenda</span>
-            </a>
-        </div>
-
-        <div class="menu-divider"></div>
-
-        <div class="menu-section">
-            <div class="menu-section-title">ANÁLISES</div>
-            <a href="relatorios.php">
-                <div class="menu-icon icon-chart"></div>
-                <span>Relatórios</span>
+                <a href="../app/Calendario.php"><div class="menu-icon icon-eye"></div><span>Visualizar Agenda</span></a>
             </a>
         </div>
     </div>

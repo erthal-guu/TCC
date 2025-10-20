@@ -1,0 +1,266 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .top-header {
+            background: #003D7A;
+            padding: 15px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .top-header img {
+            width: 180px;
+        }
+
+        .btn-voltar {
+            background: #E31E24;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-voltar:hover {
+            background: #c01a1f;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .content-area {
+            padding: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .calendar-header {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+
+        .calendar-title {
+            color: #003D7A;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .calendar-navigation {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: #003D7A;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .nav-btn:hover {
+            background: #002b5c;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .current-month {
+            font-size: 18px;
+            color: #003D7A;
+            font-weight: 600;
+            padding: 0 20px;
+        }
+
+        .calendar-container {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .calendar-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 8px;
+        }
+
+        .calendar-table th {
+            background: #003D7A;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            border-radius: 8px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .calendar-table td {
+            background: #f8f9fa;
+            padding: 15px;
+            vertical-align: top;
+            border-radius: 8px;
+            min-height: 120px;
+            height: 120px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .calendar-table td:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .day-number {
+            font-weight: bold;
+            color: #003D7A;
+            font-size: 18px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .today {
+            background: #e3f2fd !important;
+            border: 2px solid #003D7A;
+        }
+
+        .event {
+            background: #003D7A;
+            color: white;
+            padding: 8px;
+            border-radius: 6px;
+            margin-top: 5px;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .event:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,61,122,0.3);
+        }
+
+        .event strong {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 12px;
+        }
+
+        .event-time {
+            display: block;
+            opacity: 0.9;
+            margin-top: 3px;
+            font-weight: 600;
+        }
+
+        .empty-cell {
+            background: transparent !important;
+        }
+
+        .btn-add-event {
+            background: linear-gradient(135deg, #28a745, #20c997);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-add-event:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            color: white;
+        }
+
+        .legend {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .legend-title {
+            color: #003D7A;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .legend-items {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .top-header {
+                padding: 15px 20px;
+            }
+
+            .content-area {
+                padding: 20px;
+            }
+
+            .calendar-header {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                background: #003D7A;
+            }
+
+            .calendar-navigation {
+                flex-direction: column;
+            }
+
+            .calendar-table td {
+                min-height: 80px;
+                height: 80px;
+                font-size: 11px;
+            }
+        }

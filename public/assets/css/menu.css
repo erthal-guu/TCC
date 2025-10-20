@@ -1,11 +1,10 @@
-/* Reset e configurações base do menu */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Botão Hamburger */
 .hamburger {
     position: fixed;
     top: 20px;
@@ -53,7 +52,6 @@
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Overlay */
 .overlay {
     position: fixed;
     top: 0;
@@ -73,7 +71,6 @@
     visibility: visible;
 }
 
-/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -114,6 +111,9 @@
     margin-bottom: 8px;
     letter-spacing: 0.5px;
 }
+.sidebar-title img{
+     width: 180px;
+}
 
 .sidebar-subtitle {
     font-size: 13px;
@@ -121,7 +121,7 @@
     font-weight: 400;
 }
 
-/* Conteúdo do Menu */
+
 .sidebar-content {
     flex: 1;
     overflow-y: auto;
@@ -141,7 +141,6 @@
     border-radius: 3px;
 }
 
-/* Seções do Menu */
 .menu-section {
     margin-bottom: 8px;
 }
@@ -155,7 +154,6 @@
     letter-spacing: 1px;
 }
 
-/* Links do Menu */
 .sidebar a {
     display: flex;
     align-items: center;
@@ -203,7 +201,7 @@
     transform: scaleY(1);
 }
 
-/* Ícones */
+
 .menu-icon {
     width: 40px;
     height: 40px;
@@ -226,7 +224,7 @@
     transition: all 0.25s;
 }
 
-/* Ícones específicos */
+
 .icon-home::before {
     clip-path: polygon(50% 0%, 100% 35%, 100% 100%, 65% 100%, 65% 60%, 35% 60%, 35% 100%, 0% 100%, 0% 35%);
 }
@@ -342,14 +340,13 @@
     box-shadow: 6px -4px 0 0 white, 12px -8px 0 0 white, 18px -12px 0 0 white;
 }
 
-/* Divider */
+
 .menu-divider {
     height: 1px;
     background: linear-gradient(90deg, transparent, #e0e0e0, transparent);
     margin: 15px 25px;
 }
 
-/* Footer do Menu */
 .sidebar-footer {
     padding: 20px 25px;
     background: #f8f9fa;
@@ -362,7 +359,7 @@
     text-align: center;
 }
 
-/* Responsivo */
+
 @media (max-width: 768px) {
     .sidebar {
         width: 280px;
