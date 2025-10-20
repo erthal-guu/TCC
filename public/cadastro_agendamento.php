@@ -6,7 +6,7 @@ protect();
 $sql_professores = "SELECT id, nome FROM professores ORDER BY nome";
 $result_professores = $connection->query($sql_professores);
 
-$sql_uc = "SELECT id, nome FROM uc ORDER BY nome";
+$sql_uc = "SELECT id, unidade_curricular FROM uc ORDER BY unidade_curricular";
 $result_uc = $connection->query($sql_uc);
 
 $sql_turmas = "SELECT id, nome, turno FROM turmas ORDER BY nome";
@@ -28,9 +28,7 @@ $connection->close();
 <body>
     <header class="header-principal">
         <div class="header-content">
-            <button class="menu-button" onclick="window.location.href='home.php'">
-                ←
-            </button>
+            <button class="menu-button" onclick="window.location.href='home.php'">←</button>
             <img src="assets/img/logo-senai-home.png" alt="Logo SENAI" class="logo-senai">
         </div>
     </header>
@@ -71,7 +69,7 @@ $connection->close();
                                 <?php 
                                 if ($result_uc && $result_uc->num_rows > 0) {
                                     while($row = $result_uc->fetch_assoc()) {
-                                        echo "<option value='" . $row['id'] . "'>" . htmlspecialchars($row['nome']) . "</option>";
+                                        echo "<option value='" . $row['id'] . "'>" . htmlspecialchars($row['unidade_curricular']) . "</option>";
                                     }
                                 }
                                 ?>
@@ -95,31 +93,31 @@ $connection->close();
                         </div>
 
                         <div class="form-group-modern">
-                            <label for="sala">Sala/Local *</label>
+                            <label for="sala">Sala/Local</label>
                             <input type="text" name="sala" id="sala" placeholder="Ex: Sala 101" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group-modern">
-                            <label for="data">Data da Aula *</label>
+                            <label for="data">Data da Aula </label>
                             <input type="date" name="data_aula" id="data" required>
                         </div>
 
                         <div class="form-group-modern">
-                            <label for="horario_inicio">Horário de Início *</label>
+                            <label for="horario_inicio">Horário de Início</label>
                             <input type="time" name="horario_inicio" id="horario_inicio" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group-modern">
-                            <label for="horario_fim">Horário de Término *</label>
+                            <label for="horario_fim">Horário de Término</label>
                             <input type="time" name="horario_fim" id="horario_fim" required>
                         </div>
 
                         <div class="form-group-modern">
-                            <label for="carga_horaria">Carga Horária (horas) *</label>
+                            <label for="carga_horaria">Carga Horária (horas)</label>
                             <input type="number" name="carga_horaria" id="carga_horaria" step="0.5" min="0.5" placeholder="Ex: 2" required>
                         </div>
                     </div>
@@ -129,14 +127,10 @@ $connection->close();
                         <textarea name="observacoes" id="observacoes" rows="4" placeholder="Observações sobre a aula (opcional)"></textarea>
                     </div>
 
-                    <div class="button-group">
-                        <button type="button" class="btn-cancelar" onclick="window.location.href='home.php'">
-                            Cancelar
-                        </button>
-                        <button type="submit" class="btn-cadastrar">
-                            Agendar Aula
-                        </button>
-                    </div>
+                    <button type="submit" class="btn-cadastrar">Agendar Aula</button>
+                    <p style="text-align: center; margin-top: 16px;">
+                        <a href="home.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">← Voltar para Home</a>
+                    </p>
                 </form>
             </div>
         </div>
