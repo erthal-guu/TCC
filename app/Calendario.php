@@ -145,17 +145,16 @@ if ($nextMonth > 12) {
 
                         echo "<td class='$isToday'>";
                         echo "<span class='day-number'>$currentDay</span>";
-
                         if (isset($events[$currentDay])) {
                             $count = 0;
                             foreach ($events[$currentDay] as $event) {
                                 if ($count < 2) {
                                     echo "<div class='event'>";
                                     echo "<strong>" . htmlspecialchars($event['unidade_curricular']) . "</strong>";
-                                    echo "👨‍🏫 " . htmlspecialchars($event['professor_nome']) . "<br>";
+                                    echo " 👨‍🏫 " . htmlspecialchars($event['professor_nome']) . "<br>";
                                     echo "🏫 " . htmlspecialchars($event['turma_nome']) . "<br>";
                                     echo "📍 " . htmlspecialchars($event['sala']);
-                                    echo "<span class='event-time'>⏰ " . substr($event['horario_inicio'], 0, 5) . " - " . substr($event['horario_fim'], 0, 5) . "</span>";
+                                    echo "<span class='event-time' style='color :White'>⏰ " . substr($event['horario_inicio'], 0, 5) . " - " . substr($event['horario_fim'], 0, 5) . "</span>";
                                     echo "</div>";
                                     $count++;
                                 } else {

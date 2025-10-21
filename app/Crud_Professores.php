@@ -50,7 +50,7 @@ if (!$result) {
 </div>
 
 <div class="container mt-4 text-center">
-    <a href="../public/cadastro_professores.php" class="btn btn-primary btn-lg">Adicionar Novo Professor</a>
+    <a href="../public/cadastro_professores.php" class="btn btn-primary btn-lg"style="background-color: #003D7A; border: #003D7A;">Adicionar Novo Professor</a>
 </div>
 
 <script src="../public/assets/js/menu.js"></script>

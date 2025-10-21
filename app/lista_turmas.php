@@ -49,7 +49,7 @@ mysqli_close($connection);
                 <h1>📚 Gerenciamento de Turmas</h1>
                 <p style="color: #718096; margin: 0;">Visualize e gerencie todas as turmas cadastradas</p>
             </div>
-            <a href="../public/cadastro_turmas.php" class="btn btn-primary">+ Nova Turma</a>
+            <a href="../public/cadastro_turmas.php" class="btn btn-primary" style="background-color: #003D7A; border: #003D7A;">+ Nova Turma</a>
         </div>
 
         <?php if ($result && $result->num_rows > 0): ?>
@@ -89,7 +89,7 @@ mysqli_close($connection);
             <div class="empty-state text-center mt-5">
                 <h3>📭 Nenhuma turma cadastrada</h3>
                 <p style="color: #718096; margin-bottom: 20px;">Comece cadastrando sua primeira turma!</p>
-                <a href="cadastro_turmas.php" class="btn btn-primary">+ Cadastrar Primeira Turma</a>
+                <a href="cadastro_turmas.php" class="btn btn-primary" style="background-color: #003D7A; border:#003D7A;">+ Cadastrar Primeira Turma</a>
             </div>
         <?php endif; ?>
         

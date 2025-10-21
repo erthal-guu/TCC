@@ -45,7 +45,7 @@ mysqli_close($connection);
                 <h1>📚 Gerenciamento de Unidades Curriculares</h1>
                 <p style="color: #718096; margin: 0;">Visualize e gerencie todas as unidades curriculares cadastradas</p>
             </div>
-            <a href="../public/cadastro_uc.php" class="btn btn-primary">+ Nova UC</a>
+            <a href="../public/cadastro_uc.php" class="btn btn-primary"style="background-color: #002a57; border: #002a57;"  >+ Nova UC</a>
         </div>
 
         <?php if ($result && $result->num_rows > 0): ?>
@@ -81,7 +81,7 @@ mysqli_close($connection);
             <div class="empty-state text-center mt-5">
                 <h3>🔭 Nenhuma unidade curricular cadastrada</h3>
                 <p style="color: #718096; margin-bottom: 20px;">Comece cadastrando sua primeira unidade curricular!</p>
-                <a href="cadastro_uc.php" class="btn btn-primary">+ Cadastrar Primeira UC</a>
+                <a href="cadastro_uc.php" class="btn btn-primary"style="background-color: #003D7A; border: #003D7A;">+ Cadastrar Primeira UC</a>
             </div>
         <?php endif; ?>
         
