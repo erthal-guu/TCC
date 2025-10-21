@@ -402,3 +402,82 @@
                 grid-template-columns: 1fr;
             }
         }
+                .proximas-aulas {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .proximas-aulas h2 {
+            color: #003d7a;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        
+        .aula-item {
+            background: #f8f9fa;
+            border-left: 4px solid #003d7a;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .aula-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,61,122,0.15);
+        }
+        
+        .aula-data {
+            color: #003d7a;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        
+        .aula-horario {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+        
+        .aula-detalhes {
+            color: #333;
+            font-size: 0.9rem;
+        }
+        
+        .aula-detalhes span {
+            display: inline-block;
+            margin-right: 15px;
+        }
+        
+        .badge-turma {
+            background: #003d7a;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .badge-uc {
+            background: #0066cc;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+        }
+        
+        .sem-aulas {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+        }
+        
+        .sem-aulas svg {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }   

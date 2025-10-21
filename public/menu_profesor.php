@@ -23,7 +23,7 @@
     <div class="sidebar-content">
         <div class="menu-section">
             <div class="menu-section-title">PRINCIPAL</div>
-            <a href="../public/home_admin.php">
+            <a href="../public/home.php">
                 <div class="menu-icon icon-home"></div>
                 <span>Home</span>
             </a>

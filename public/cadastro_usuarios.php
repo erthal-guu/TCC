@@ -59,9 +59,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="assets/css/cadastro.css"> 
 </head>
 <body>
+   <?php include("../public/menu.php");?>
     <div class="header-principal">
         <div class="header-content">
-            <img src="assets/img/logo-senai.jpg" alt="Logo SENAI" class="logo-senai" />
+            <img src="assets/img/logo-senai-home.png" alt="Logo SENAI" class="logo-senai" />
         </div>
     </div>
 
@@ -74,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </svg>
                 </div>
 
-                <h2 class="card-title">Criar nova conta</h2>
+                <h2 class="card-title">Cadastrar Usuários</h2>
                 <p class="card-subtitle">Preencha os dados abaixo para se cadastrar no sistema</p>
 
                 <form class="form-cadastro" method="post">
@@ -99,10 +100,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <button type="submit" class="btn-cadastrar">Cadastrar</button>
-
-                    <p style="text-align: center; margin-top: 16px; color: #6c757d; font-size: 14px;">
-                        Já tem uma conta? <a href="login.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">Entre aqui</a>
-                    </p>
                 </form>
             </div>
         </div>

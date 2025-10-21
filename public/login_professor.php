@@ -3,45 +3,45 @@ session_start();
 include("../app/conexao.php");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
-    
-    $sql = "SELECT id, senha, nome_usuario FROM usuarios WHERE email = ?";
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
 
+    if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "<script>alert('Informe um email válido.'); window.history.back();</script>";
+        exit;
+    }
+
+    $sql = "SELECT id, nome, email FROM professores WHERE email = ? LIMIT 1";
     $stmt = mysqli_prepare($connection, $sql);
 
     if (!$stmt) {
+    
         die("Erro ao preparar a consulta: " . mysqli_error($connection));
     }
 
     mysqli_stmt_bind_param($stmt, "s", $email);
     mysqli_stmt_execute($stmt);
-    
     $result = mysqli_stmt_get_result($stmt);
-    
-    if (mysqli_num_rows($result) > 0) {
+
+    if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        $senha_hash_do_banco = $row['senha'];
 
-        if (password_verify($senha, $senha_hash_do_banco)) {
-            $_SESSION['id_usuario'] = $row['id'];
-            $_SESSION['nome_usuario'] = $row['nome_usuario'];
-            $_SESSION['email'] = $email;
+        session_regenerate_id(true); 
+        $_SESSION['id_usuario'] = $row['id'];
+        $_SESSION['nome'] = $row['nome'];
+        $_SESSION['email'] = $row['email'];
 
-            mysqli_stmt_close($stmt);
-            mysqli_close($connection);
+        mysqli_stmt_close($stmt);
+        mysqli_close($connection);
 
-            header("Location: home_admin.php");
-            exit();
-        } else {
-            echo "<script>alert('Email ou senha inválidos.');</script>";
-        }
+        header("Location: home_professor.php");
+        exit();
     } else {
-        echo "<script>alert('Usuário não encontrado.');</script>";
-    }
+        mysqli_stmt_close($stmt);
+        mysqli_close($connection);
 
-    mysqli_stmt_close($stmt);
-    mysqli_close($connection);
+        echo "<script>alert('Professor não encontrado.'); window.history.back();</script>";
+        exit();
+    }
 }
 ?>
 
@@ -77,16 +77,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" placeholder="seu@email.com" required />
                     </div>
-
-                    <div class="form-group-modern">
-                        <label for="senha">Senha</label>
-                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
-                    </div>
-
                     <button type="submit" class="btn-cadastrar">Entrar</button>
 
                     <p style="text-align: center; margin-top: 16px; color: #6c757d; font-size: 14px;">
-                        Você é um Professor? <a href="Login_professor.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">Entre aqui</a>
+                        Você é um Professor? <a href="login.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">Entre aqui</a>
                     </p>
                 </form>
             </div>
