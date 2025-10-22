@@ -134,5 +134,31 @@ CREATE TABLE IF NOT EXISTS `uc` (
   `curso_modulo` VARCHAR(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+-- --------------------------------------------------------
+
+-- Insert usuário admin
+INSERT INTO usuarios (nome_usuario, senha, email) VALUES
+('admin', '$2y$10$8Jw84dmNl1KtHK5PEKWSPuqaSkXBZxUWIH2g5u16A7L8y3F4dGx0m', 'admin@gmail.com');
 
 -- --------------------------------------------------------
+-- Estrutura da tabela `aulas`
+
+DROP TABLE IF EXISTS `aulas`;
+CREATE TABLE IF NOT EXISTS `aulas` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `professor_id` int NOT NULL,
+  `uc_id` int NOT NULL,
+  `turma_id` int NOT NULL,
+  `sala` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `data_aula` date NOT NULL,
+  `horario_inicio` time NOT NULL,
+  `horario_fim` time NOT NULL,
+  `observacoes` text COLLATE utf8mb4_general_ci,
+  PRIMARY KEY (`id`),
+  KEY `professor_id` (`professor_id`),
+  KEY `uc_id` (`uc_id`),
+  KEY `turma_id` (`turma_id`),
+  CONSTRAINT `aulas_ibfk_1` FOREIGN KEY (`professor_id`) REFERENCES `professores` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `aulas_ibfk_2` FOREIGN KEY (`uc_id`) REFERENCES `uc` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `aulas_ibfk_3` FOREIGN KEY (`turma_id`) REFERENCES `turmas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

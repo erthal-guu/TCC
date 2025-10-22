@@ -127,6 +127,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <input type="email" id="email" name="email" placeholder="Digite o email do professor" 
                                value="<?= htmlspecialchars($email ?? '') ?>" required>
                     </div>
+
+                    
                     <div class="form-group-modern">    
                         <label for="unidade_curricular">Unidade Curricular *</label>
                         <select id="unidade_curricular" name="unidade_curricular" class="form-select-modern" required>

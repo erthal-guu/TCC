@@ -2,10 +2,10 @@
 session_start();
 include("../app/conexao.php");
 
-if (!isset($_SESSION['id_usuario'])) {
-    header("Location: login.php");
-    exit;
-}
+// if (!isset($_SESSION['id_usuario'])) {
+//     header("Location: login.php");
+//     exit;
+// }
 
 $id_professor = $_SESSION['id_usuario'];
 $nomeProfessor = $_SESSION['nome'] ?? 'Professor';

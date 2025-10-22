@@ -1,7 +1,7 @@
 <?php
 include("../app/conexao.php");
-include("../app/protect.php");
-protect();
+// include("../app/protect.php");
+// protect();
 
 
 $sql_professores = "SELECT COUNT(*) AS total FROM professores";
