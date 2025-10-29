@@ -14,7 +14,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt = mysqli_prepare($connection, $sql);
 
     if (!$stmt) {
-    
         die("Erro ao preparar a consulta: " . mysqli_error($connection));
     }
 
@@ -24,14 +23,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($result && mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-
         session_regenerate_id(true); 
-        $_SESSION['id_usuario'] = $row['id'];
-        $_SESSION['nome'] = $row['nome'];
+        $_SESSION['id_usuario'] = $row['id'];          
+        $_SESSION['nome_usuario'] = $row['nome'];     
         $_SESSION['email'] = $row['email'];
 
         mysqli_stmt_close($stmt);
         mysqli_close($connection);
+
 
         header("Location: home_professor.php");
         exit();
@@ -44,7 +43,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

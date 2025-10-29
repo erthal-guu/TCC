@@ -1,11 +1,6 @@
 <?php
 session_start();
-include("../app/conexao.php");
-
-// if (!isset($_SESSION['id_usuario'])) {
-//     header("Location: login.php");
-//     exit;
-// }
+include("../app/conexao.php");      
 
 $id_professor = $_SESSION['id_usuario'];
 $nomeProfessor = $_SESSION['nome'] ?? 'Professor';
@@ -70,7 +65,6 @@ while ($row = $result_proximas->fetch_assoc()) {
 }
 $stmt->close();
 
-// Total de turmas distintas do professor
 $sql_turmas = "SELECT COUNT(DISTINCT turma_id) AS total FROM aulas WHERE professor_id = ?";
 $stmt = $connection->prepare($sql_turmas);
 $stmt->bind_param("i", $id_professor);
@@ -95,7 +89,7 @@ $connection->close();
 </head>
 <body>
 
-<?php include ("menu_profesor.php"); ?>
+<?php include ("menu_professor.php"); ?>
 
 <div class="top-header">
     <div class="logo-section">
@@ -118,7 +112,7 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $totalAulas; ?></span>
                     <span class="card-stats-label">Aulas Cadastradas</span>
                 </div>
-                <button class="card-button"><a href="../app/Calendario_professor.php">Ver Calendário</a></button>
+                <button class="card-button"><a href="../public/Calendario_professor.php">Ver Calendário</a></button>
             </div>
         </div>
 
@@ -142,7 +136,7 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $aulasFuturas; ?></span>
                     <span class="card-stats-label">Aulas Agendadas</span>
                 </div>
-                <button class="card-button"><a href="../app/Calendario_professor.php">Ver Agenda</a></button>
+                <button class="card-button"><a href="../app/Calendario.php">Ver Agenda</a></button>
             </div>
         </div>
     </div>
@@ -202,7 +196,7 @@ $connection->close();
         <h2>⚡ Ações Rápidas</h2>
         <div class="actions-grid">
             <button class="action-btn">
-                <a href="../app/Calendario_professor.php">
+                <a href="../app/Calendario.php">
                     <span class="action-icon">📅</span>
                     <span>Ver Calendário Completo</span>
                 </a>

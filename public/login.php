@@ -5,6 +5,7 @@ include("../app/conexao.php");
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
+
     
     $sql = "SELECT id, senha, nome_usuario FROM usuarios WHERE email = ?";
 

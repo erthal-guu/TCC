@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             mysqli_stmt_bind_param($stmt_insert, "sss", $nome, $email, $hashSenha);
 
             if (mysqli_stmt_execute($stmt_insert)) {
-                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='login.php';</script>";
+                echo "<script>alert('Usuário cadastrado com sucesso!');</script>";
                 exit();
             } else {
                 echo "Erro ao cadastrar usuário: " . mysqli_stmt_error($stmt_insert);
