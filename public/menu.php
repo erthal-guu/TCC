@@ -33,7 +33,7 @@
             <div class="menu-section-title">CADASTROS</div>
             <a href="../public/cadastro_usuarios.php">
                 <div class="menu-icon icon-user"></div>
-                <span>Cadastrar Usuaário</span>
+                <span>Cadastrar Usuário</span>
             <a href="../public/cadastro_Professores.php">
                 <div class="menu-icon icon-professor"></div>
                 <span>Cadastrar Professor</span>

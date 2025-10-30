@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
 
                 <h2 class="card-title">Cadastrar Usuários</h2>
-                <p class="card-subtitle">Preencha os dados abaixo para se cadastrar no sistema</p>
+                <p class="card-subtitle">Preencha os dados abaixo para cadastrar outro administrador no sistema</p>
 
                 <form class="form-cadastro" method="post">
                     <div class="form-group-modern">

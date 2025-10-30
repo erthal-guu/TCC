@@ -72,6 +72,7 @@ CREATE TABLE IF NOT EXISTS `professores` (
 
 INSERT INTO `professores` (`id`, `nome`, `email`, `unidade_curricular`, `nivel_capacitacao`) VALUES
 (1, 'Gustavo erthal ', 'vplgugs@gmail.com', 'Desenvolvimento de sistemas', 'N3');
+('Isaac Klimiont', 'isaaclk08@gmail.com', 'Desenvolvimento de sistemas', 'N3');
 
 -- --------------------------------------------------------
 

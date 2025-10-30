@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $nivel_capacitacao = '';
                         
                         
-                        header("refresh:2;url=home.php");
+                        header("refresh:2;url=cadastro_professores.php");
                     } else {
                         $msg = "Erro ao cadastrar Professor: " . $stmt_insert->error;
                         $msgType = "danger";
@@ -166,7 +166,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <button type="submit" class="btn-cadastrar">👨‍🏫 Cadastrar Professor</button>
                     
                     <p style="text-align: center; margin-top: 16px;">
-                        <a href="home.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
+                        <a href="home_admin.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
                             ← Voltar para Home
                         </a>
                     </p>
@@ -176,6 +176,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
 
