@@ -2,7 +2,6 @@ CREATE DATABASE IF NOT EXISTS `gerenciador_agenda` DEFAULT CHARACTER SET utf8mb4
 USE `gerenciador_agenda`;
 
 -- Estrutura da tabela `agenda_turmas`
-
 DROP TABLE IF EXISTS `agenda_turmas`;
 CREATE TABLE IF NOT EXISTS `agenda_turmas` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -17,7 +16,6 @@ CREATE TABLE IF NOT EXISTS `agenda_turmas` (
 -- --------------------------------------------------------
 
 -- Estrutura da tabela `disciplinas`
-
 DROP TABLE IF EXISTS `disciplinas`;
 CREATE TABLE IF NOT EXISTS `disciplinas` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -28,8 +26,7 @@ CREATE TABLE IF NOT EXISTS `disciplinas` (
   UNIQUE KEY `nome_disciplina` (`nome_disciplina`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Extraindo dados da tabela `disciplinas`
-
+-- Dados da tabela `disciplinas`
 INSERT INTO `disciplinas` (`id`, `nome_disciplina`) VALUES
 (2, 'Desenvolvimento de sistemas'),
 (3, 'Automação Industrial'),
@@ -38,7 +35,6 @@ INSERT INTO `disciplinas` (`id`, `nome_disciplina`) VALUES
 -- --------------------------------------------------------
 
 -- Estrutura da tabela `nivel_capacitacao`
-
 DROP TABLE IF EXISTS `nivel_capacitacao`;
 CREATE TABLE IF NOT EXISTS `nivel_capacitacao` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -46,8 +42,7 @@ CREATE TABLE IF NOT EXISTS `nivel_capacitacao` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Extraindo dados da tabela `nivel_capacitacao`
-
+-- Dados da tabela `nivel_capacitacao`
 INSERT INTO `nivel_capacitacao` (`id`, `nivel`) VALUES
 (1, 'N0'),
 (2, 'N1'),
@@ -57,7 +52,6 @@ INSERT INTO `nivel_capacitacao` (`id`, `nivel`) VALUES
 -- --------------------------------------------------------
 
 -- Estrutura da tabela `professores`
-
 DROP TABLE IF EXISTS `professores`;
 CREATE TABLE IF NOT EXISTS `professores` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -66,18 +60,16 @@ CREATE TABLE IF NOT EXISTS `professores` (
   `unidade_curricular` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `nivel_capacitacao` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Extraindo dados da tabela `professores`
-
+-- Dados da tabela `professores` (CORRIGIDO)
 INSERT INTO `professores` (`id`, `nome`, `email`, `unidade_curricular`, `nivel_capacitacao`) VALUES
-(1, 'Gustavo erthal ', 'vplgugs@gmail.com', 'Desenvolvimento de sistemas', 'N3');
-('Isaac Klimiont', 'isaaclk08@gmail.com', 'Desenvolvimento de sistemas', 'N3');
+(1, 'Gustavo Erthal', 'vplgugs@gmail.com', 'Desenvolvimento de sistemas', 'N3'),
+(2, 'Isaac Klimiont', 'isaaclk08@gmail.com', 'Desenvolvimento de sistemas', 'N3');
 
 -- --------------------------------------------------------
 
--- Estrutura da tabela `turmas` (ATUALIZADA: com professor e sala)
-
+-- Estrutura da tabela `turmas`
 DROP TABLE IF EXISTS `turmas`;
 CREATE TABLE IF NOT EXISTS `turmas` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -94,7 +86,6 @@ CREATE TABLE IF NOT EXISTS `turmas` (
 -- --------------------------------------------------------
 
 -- Estrutura da tabela `turnos`
-
 DROP TABLE IF EXISTS `turnos`;
 CREATE TABLE IF NOT EXISTS `turnos` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -102,16 +93,14 @@ CREATE TABLE IF NOT EXISTS `turnos` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
-INSERT INTO turnos (nome) VALUES 
-  ('Manhã'),
-  ('Tarde'),
-  ('Noite');
-
+INSERT INTO `turnos` (nome) VALUES 
+('Manhã'),
+('Tarde'),
+('Noite');
 
 -- --------------------------------------------------------
 
 -- Estrutura da tabela `usuarios`
-
 DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -123,10 +112,13 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Usuário admin
+INSERT INTO `usuarios` (nome_usuario, senha, email) VALUES
+('admin', '$2y$10$8Jw84dmNl1KtHK5PEKWSPuqaSkXBZxUWIH2g5u16A7L8y3F4dGx0m', 'admin@gmail.com');
+
 -- --------------------------------------------------------
 
--- Tabela `uc` substituindo `unidades_curriculares`
-
+-- Tabela `uc`
 DROP TABLE IF EXISTS `uc`;
 CREATE TABLE IF NOT EXISTS `uc` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -135,15 +127,10 @@ CREATE TABLE IF NOT EXISTS `uc` (
   `curso_modulo` VARCHAR(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
--- --------------------------------------------------------
-
--- Insert usuário admin
-INSERT INTO usuarios (nome_usuario, senha, email) VALUES
-('admin', '$2y$10$8Jw84dmNl1KtHK5PEKWSPuqaSkXBZxUWIH2g5u16A7L8y3F4dGx0m', 'admin@gmail.com');
 
 -- --------------------------------------------------------
+
 -- Estrutura da tabela `aulas`
-
 DROP TABLE IF EXISTS `aulas`;
 CREATE TABLE IF NOT EXISTS `aulas` (
   `id` int NOT NULL AUTO_INCREMENT,
