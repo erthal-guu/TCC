@@ -188,7 +188,7 @@ $turnos_result = $connection->query("SELECT id, nome FROM turnos ORDER BY id ASC
 
                 <div class="form-group-modern">
                     <label for="professores">Professores Responsáveis (Opcional)</label>
-                    <select id="professores" name="professores[]" class="form-select-modern" 
+                    <select id="professores" name="professores[]" class  
                             multiple style="height: 150px;">
                         <?php 
                         if ($professores_result && $professores_result->num_rows > 0) {
