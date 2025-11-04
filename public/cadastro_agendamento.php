@@ -50,7 +50,7 @@ $connection->close();
                 
                 <h1 class="card-title">Agendar Nova Aula</h1>
                 <p class="card-subtitle">Preencha os dados para agendar uma nova aula no sistema</p>
-                <form action="../app/Calendario.php" method="POST" class="form-cadastro" id="formAgendamento">
+                <form action="../app/Calendario_admin.php" method="POST" class="form-cadastro" id="formAgendamento">
                     
                     <div class="form-row">
                         <div class="form-group-modern">

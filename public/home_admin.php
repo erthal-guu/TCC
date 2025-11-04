@@ -1,7 +1,7 @@
 <?php
 include("../app/conexao.php");
- include("../app/protect.php");
- protect();
+include("../app/protect.php");
+protect();
 
 
 $sql_professores = "SELECT COUNT(*) AS total FROM professores";
@@ -165,7 +165,7 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $totalAulas; ?></span>
                     <span class="card-stats-label">Aulas Cadastradas</span>
                 </div>
-                <button class="card-button"><a href="../app/Calendario.php">Visualizar</a></button>
+                <button class="card-button"><a href="../app/Calendario_admin.php">Visualizar</a></button>
             </div>
         </div>
     </div>
