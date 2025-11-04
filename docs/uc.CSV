@@ -1,35 +1,35 @@
-SIGLA ;CURSO;LOCAL 
-AJT;Ajustagem e Torno  ;AFONSO PENA 
-AUT;Automação;AFONSO PENA 
-AADM;Auxiliar Administrativo ;AFONSO PENA 
-AEI;Auxiliar de Eletricista Industrial ;AFONSO PENA 
-AUME;Auxíliar de Mecânica;AFONSO PENA 
-AUMEI;Auxiliar de Mecânica Industrial;AFONSO PENA 
-AUXPA;Auxiliar de Produção de Alimentos;AFONSO PENA 
-AUXI;Auxiliar Informática ;AFONSO PENA 
-CA;Construtor de Alvenaria;AFONSO PENA 
-CPP;Controlador e Programador de Produção ;AFONSO PENA 
-DS;Desenvolvimento de sistemas;AFONSO PENA 
-EI;Eletricista Industrial ;AFONSO PENA 
-ELMEC;Eletromecânica;AFONSO PENA 
-FA;Ferramentaria Avançada ;AFONSO PENA 
-FQUA;Ferramentas da Qualidade ;AFONSO PENA 
-FD;Ferramenteiro de Dispositivos ;AFONSO PENA 
-ID;Inclusão Digital ;AFONSO PENA 
-IB;Informática Básica ;AFONSO PENA 
-ITT;Inovações e Tendências Tecnológicas;AFONSO PENA 
-IF;Inversores de Frequência ;AFONSO PENA 
-MS;Manutenção e solda;AFONSO PENA 
-MEC;MECÂNICA;AFONSO PENA 
-MECT;Mecatrônica ;AFONSO PENA 
-NEM;NEM ;AFONSO PENA 
-ONES;One SubSea;AFONSO PENA 
-OMI;Operação de Máquinas Injetoras;AFONSO PENA 
-OPDL;Operador de Processos de Distribuição Logística;AFONSO PENA 
-PCLP;Programação CLP;AFONSO PENA 
-PSETR;Projeto SETR - Industria 4.0 ;AFONSO PENA 
-QUA;Qualidade;AFONSO PENA 
-SPE;Sistema de Produção Enxuto - Turma;AFONSO PENA 
-SOL;Soldador ;AFONSO PENA 
-TORM;Torneiro Mecânico;AFONSO PENA 
-TORN;Torno ;AFONSO PENA 
+SIGLA , CURSO, LOCAL 
+AJT, Ajustagem e Torno  , AFONSO PENA 
+AUT, Automação, AFONSO PENA 
+AADM, Auxiliar Administrativo , AFONSO PENA 
+AEI, Auxiliar de Eletricista Industrial , AFONSO PENA 
+AUME, Auxíliar de Mecânica, AFONSO PENA 
+AUMEI, Auxiliar de Mecânica Industrial, AFONSO PENA 
+AUXPA, Auxiliar de Produção de Alimentos, AFONSO PENA 
+AUXI, Auxiliar Informática , AFONSO PENA 
+CA, Construtor de Alvenaria, AFONSO PENA 
+CPP, Controlador e Programador de Produção , AFONSO PENA 
+DS, Desenvolvimento de sistemas, AFONSO PENA 
+EI, Eletricista Industrial , AFONSO PENA 
+ELMEC, Eletromecânica, AFONSO PENA 
+FA, Ferramentaria Avançada , AFONSO PENA 
+FQUA, Ferramentas da Qualidade , AFONSO PENA 
+FD, Ferramenteiro de Dispositivos , AFONSO PENA 
+ID, Inclusão Digital , AFONSO PENA 
+IB, Informática Básica , AFONSO PENA 
+ITT, Inovações e Tendências Tecnológicas, AFONSO PENA 
+IF, Inversores de Frequência , AFONSO PENA 
+MS, Manutenção e solda, AFONSO PENA 
+MEC, MECÂNICA, AFONSO PENA 
+MECT, Mecatrônica , AFONSO PENA 
+NEM, NEM , AFONSO PENA 
+ONES, One SubSea, AFONSO PENA 
+OMI, Operação de Máquinas Injetoras, AFONSO PENA 
+OPDL, Operador de Processos de Distribuição Logística, AFONSO PENA 
+PCLP, Programação CLP, AFONSO PENA 
+PSETR, Projeto SETR - Industria 4.0 , AFONSO PENA 
+QUA, Qualidade, AFONSO PENA 
+SPE, Sistema de Produção Enxuto - Turma, AFONSO PENA 
+SOL, Soldador , AFONSO PENA 
+TORM, Torneiro Mecânico, AFONSO PENA 
+TORN, Torno , AFONSO PENA 
