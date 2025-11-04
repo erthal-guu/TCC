@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("iiisssss", $professor_id, $uc_id, $turma_id, $sala, $data_aula, $horario_inicio, $horario_fim, $observacoes);
 
     if ($stmt->execute()) {
-        header("Location: Calendario.php?success=1");
+        header("Location: Calendario_admin.php?success=1");
         exit;
     } else {
         echo "Erro ao agendar aula: " . $stmt->error;
@@ -34,7 +34,7 @@ $daysInMonth = date('t', $firstDayOfMonth);
 $startDayOfWeek = date('w', $firstDayOfMonth);
 
 $sql = "
-    SELECT a.data_aula, a.horario_inicio, a.horario_fim, a.sala,
+    SELECT a.id, a.data_aula, a.horario_inicio, a.horario_fim, a.sala,
            p.nome AS professor_nome, u.unidade_curricular, t.nome AS turma_nome
     FROM aulas a
     LEFT JOIN professores p ON a.professor_id = p.id
@@ -104,7 +104,10 @@ if ($nextMonth > 12) {
                 <a href="?year=<?php echo $prevYear; ?>&month=<?php echo $prevMonth; ?>" class="nav-btn">← Anterior</a>
                 <span class="current-month"><?php echo $monthNames[$month] . " " . $year; ?></span>
                 <a href="?year=<?php echo $nextYear; ?>&month=<?php echo $nextMonth; ?>" class="nav-btn">Próximo →</a>
-                <a href="../public/cadastro_agendamento.php" class="nav-btn" style="background-color: #002a55ff;">+ Nova Aula</a>
+                <div style="display: flex; gap: 10px;">
+                    <a href="gerar_aulas_automaticas.php" class="nav-btn"> Gerar Aulas</a>
+                    <a href="../public/cadastro_agendamento.php" class="nav-btn" style="background-color: #002a55ff;">+ Nova Aula</a>
+                </div>
             </div>
         </div>
 
@@ -155,6 +158,10 @@ if ($nextMonth > 12) {
                                     echo "🏫 " . htmlspecialchars($event['turma_nome']) . "<br>";
                                     echo "📍 " . htmlspecialchars($event['sala']);
                                     echo "<span class='event-time' style='color :White'>⏰ " . substr($event['horario_inicio'], 0, 5) . " - " . substr($event['horario_fim'], 0, 5) . "</span>";
+                                    echo "<div class='event-actions' style='margin-top: 5px;'>";
+                                    echo "<a href='editar_aula.php?id=" . $event['id'] . "' class='btn btn-sm btn-warning' style='margin-right: 5px; padding: 2px 6px; font-size: 10px;'>✏️ Editar</a>";
+                                    echo "<a href='#' onclick='confirmarExclusao(" . $event['id'] . ")' class='btn btn-sm btn-danger' style='padding: 2px 6px; font-size: 10px;'>🗑️ Excluir</a>";
+                                    echo "</div>";
                                     echo "</div>";
                                     $count++;
                                 } else {
@@ -184,6 +191,51 @@ if ($nextMonth > 12) {
             </div>
         </div>
     </div>
+
+    <script>
+    function confirmarExclusao(aulaId) {
+        if (confirm('Tem certeza que deseja excluir esta aula? Esta ação não pode ser desfeita.')) {
+            window.location.href = 'excluir_aula.php?id=' + aulaId + '&confirm=yes';
+        }
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success')) {
+        const successType = urlParams.get('success');
+        let message = '';
+
+        switch(successType) {
+            case '1':
+                message = 'Aula agendada com sucesso!';
+                break;
+            case '2':
+                message = 'Aula atualizada com sucesso!';
+                break;
+            case '3':
+                message = 'Aula excluída com sucesso!';
+                break;
+        }
+
+        if (message) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = 'alert alert-success alert-dismissible fade show position-fixed';
+            alertDiv.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            document.body.appendChild(alertDiv);
+
+            setTimeout(() => {
+                if (alertDiv && alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 5000);
+        }
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../public/assets/js/menu.js"></script>
 </body>
 </html>
