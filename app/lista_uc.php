@@ -3,7 +3,7 @@ include("conexao.php");
 include("protect.php");
 protect();
 
-$sql = "SELECT u.id, u.sigla, u.unidade_curricular, u.curso_modulo
+$sql = "SELECT u.id, u.sigla, u.unidade_curricular
         FROM uc u
         ORDER BY u.unidade_curricular ASC";
 
@@ -74,7 +74,6 @@ mysqli_close($connection);
                         <tr>
                             <th>Sigla</th>
                             <th>Unidade Curricular</th>
-                            <th>Curso/Módulo</th>
                             <th style="width: 150px;">Ações</th>
                         </tr>
                     </thead>
@@ -83,7 +82,6 @@ mysqli_close($connection);
                             <tr>
                                 <td><?= htmlspecialchars($uc['sigla']) ?></td>
                                 <td><?= htmlspecialchars($uc['unidade_curricular']) ?></td>
-                                <td><?= htmlspecialchars($uc['curso_modulo'] ?? '-') ?></td>
                                 <td>
                                     <a href="editar_uc.php?id=<?= $uc['id'] ?>" class="btn btn-sm btn-warning me-1">✏️ Editar</a>
                                     <form method="POST" style="display:inline" onsubmit="return confirm('Tem certeza que deseja deletar a unidade curricular <?= htmlspecialchars(addslashes($uc['unidade_curricular'])) ?>? Esta ação não pode ser desfeita.');">
