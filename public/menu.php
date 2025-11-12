@@ -46,22 +46,15 @@
                 <div class="menu-icon icon-users"></div>
                 <span>Cadastrar Turma</span>
             </a>
-            <a href="cadastrar_relacionamento.php">
-                <div class="menu-icon icon-link"></div>
-                <span>Relacionar Prof/Matéria/Turno</span>
-            </a>
         </div>
 
         <div class="menu-divider"></div>
 
         <div class="menu-section">
             <div class="menu-section-title">AGENDA</div>
-            <a href="gerenciar_agenda.php">
+            <a href="../app/calendario_admin.php">
                 <div class="menu-icon icon-calendar"></div>
                 <span>Gerenciar Agenda</span>
-            </a>
-            <a href="visualizar_agenda.php">
-                <a href="../app/Calendario.php"><div class="menu-icon icon-eye"></div><span>Visualizar Agenda</span></a>
             </a>
         </div>
     </div>

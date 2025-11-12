@@ -164,7 +164,7 @@ $turnos_result = $connection->query("SELECT id, nome FROM turnos ORDER BY id ASC
 
                     <div class="col-md-6">
                         <div class="form-group-modern">
-                            <label for="id_turno">Turno (Opcional)</label>
+                            <label for="id_turno">Turno *</label>
                             <select id="id_turno" name="id_turno" class="form-select-modern">
                                 <option value="">Selecione o turno</option>
                                 <?php 
@@ -187,7 +187,7 @@ $turnos_result = $connection->query("SELECT id, nome FROM turnos ORDER BY id ASC
                 </div>
 
                 <div class="form-group-modern">
-                    <label for="professores">Professores Responsáveis (Opcional)</label>
+                    <label for="professores">Professores Responsáveis *</label>
                     <select id="professores" name="professores[]" class  
                             multiple style="height: 150px;">
                         <?php 
@@ -206,7 +206,7 @@ $turnos_result = $connection->query("SELECT id, nome FROM turnos ORDER BY id ASC
                 </div>
 
                 <button type="submit" class="btn-cadastrar">
-                    📚 Cadastrar Unidade Curricular
+                    Cadastrar Unidade Curricular
                 </button>
 
                 <p style="text-align: center; margin-top: 16px;">

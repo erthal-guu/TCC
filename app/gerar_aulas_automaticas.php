@@ -1,7 +1,9 @@
 <?php
+ob_start();
 include("conexao.php");
 include("protect.php");
 protect();
+
 function executarQuery($connection, $sql) {
     $result = $connection->query($sql);
     if (!$result) {
@@ -120,17 +122,22 @@ function gerarPadraoSemanal($connection, $params) {
                     }
 
                     $observacoes = "Aula gerada automaticamente - Padrão semanal";
+                    
+                    $prof_id = $professor['id'];
+                    $uc_id = $uc['id'];
+                    $turma_id = $turma['id'];
+                    $data_aula = $data_atual->format('Y-m-d');
 
-                    $stmt->bind_param("iiisssss",
-                        $professor['id'],
-                        $uc['id'],
-                        $turma['id'],
-                        $sala,
-                        $data_atual->format('Y-m-d'),
-                        $inicio,
-                        $fim,
-                        $observacoes
-                    );
+                   $stmt->bind_param("iiisssss",
+                    $prof_id,        
+                    $uc_id,          
+                    $turma_id,       
+                    $sala,
+                    $data_aula,      
+                    $inicio,
+                    $fim,
+                    $observacoes
+);
 
                     if($stmt->execute()) {
                         $aulas_geradas++;

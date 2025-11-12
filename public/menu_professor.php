@@ -29,39 +29,12 @@
             </a>
         </div>
 
-        <div class="menu-section">
-            <div class="menu-section-title">CADASTROS</div>
-            <a href="../public/cadastro_usuarios.php">
-                <div class="menu-icon icon-user"></div>
-                <span>Cadastrar Usuário</span>
-            <a href="../public/cadastro_Professores.php">
-                <div class="menu-icon icon-professor"></div>
-                <span>Cadastrar Professor</span>
-            </a>
-            <a href="../public/cadastro_uc.php">
-                <div class="menu-icon icon-book"></div>
-                <span>Cadastrar UC</span>
-            </a>
-            <a href="../public/cadastro_turmas.php">
-                <div class="menu-icon icon-users"></div>
-                <span>Cadastrar Turma</span>
-            </a>
-            <a href="cadastrar_relacionamento.php">
-                <div class="menu-icon icon-link"></div>
-                <span>Relacionar Prof/Matéria/Turno</span>
-            </a>
-        </div>
-
         <div class="menu-divider"></div>
 
         <div class="menu-section">
-            <div class="menu-section-title">AGENDA</div>
-            <a href="gerenciar_agenda.php">
-                <div class="menu-icon icon-calendar"></div>
-                <span>Gerenciar Agenda</span>
-            </a>
+            <div class="menu-section-title">AGENDA</div>  
             <a href="visualizar_agenda.php">
-                <a href="../app/Calendario.php"><div class="menu-icon icon-eye"></div><span>Visualizar Agenda</span></a>
+                <a href="../public/Calendario_professor.php"><div class="menu-icon icon-eye"></div><span>Visualizar Agenda</span></a>
             </a>
         </div>
     </div>

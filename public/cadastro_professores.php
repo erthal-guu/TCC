@@ -163,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </select>
                     </div>
                     
-                    <button type="submit" class="btn-cadastrar">👨‍🏫 Cadastrar Professor</button>
+                    <button type="submit" class="btn-cadastrar">Cadastrar Professor</button>
                     
                     <p style="text-align: center; margin-top: 16px;">
                         <a href="home_admin.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
