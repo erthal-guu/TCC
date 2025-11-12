@@ -35,25 +35,6 @@ mysqli_close($connection);
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
     <link rel="stylesheet" href="../public/assets/css/lista.css"> 
     <link rel="stylesheet" href="../public/assets/css/menu.css" />
-    <style>
-        /* Cores tema azul e branco */
-        .table thead {
-            background-color: #003D7A !important;
-        }
-        
-        .table thead th {
-            background-color: #003D7A !important;
-            color: white !important;
-        }
-        
-        .table-striped tbody tr:nth-of-type(odd) {
-            background-color: #f0f8ff !important;
-        }
-        
-        .table tbody tr:hover {
-            background-color: #e6f2ff !important;
-        }
-    </style>
     <?php include("../public/menu.php"); ?>
 </head>
 <body>
@@ -97,8 +78,6 @@ mysqli_close($connection);
         <?php else: ?>
             <div class="empty-state text-center mt-5">
                 <h3>🔭 Nenhuma unidade curricular cadastrada</h3>
-                <p style="color: #718096; margin-bottom: 20px;">Comece cadastrando sua primeira unidade curricular!</p>
-                <a href="cadastro_uc.php" class="btn btn-primary" style="background-color: #003D7A; border: #003D7A;">+ Cadastrar Primeira UC</a>
             </div>
         <?php endif; ?>
         

@@ -191,50 +191,6 @@ if ($nextMonth > 12) {
             </div>
         </div>
     </div>
-
-    <script>
-    function confirmarExclusao(aulaId) {
-        if (confirm('Tem certeza que deseja excluir esta aula? Esta ação não pode ser desfeita.')) {
-            window.location.href = 'excluir_aula.php?id=' + aulaId + '&confirm=yes';
-        }
-    }
-
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.get('success')) {
-        const successType = urlParams.get('success');
-        let message = '';
-
-        switch(successType) {
-            case '1':
-                message = 'Aula agendada com sucesso!';
-                break;
-            case '2':
-                message = 'Aula atualizada com sucesso!';
-                break;
-            case '3':
-                message = 'Aula excluída com sucesso!';
-                break;
-        }
-
-        if (message) {
-            const alertDiv = document.createElement('div');
-            alertDiv.className = 'alert alert-success alert-dismissible fade show position-fixed';
-            alertDiv.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
-            alertDiv.innerHTML = `
-                ${message}
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            `;
-            document.body.appendChild(alertDiv);
-
-            setTimeout(() => {
-                if (alertDiv && alertDiv.parentNode) {
-                    alertDiv.remove();
-                }
-            }, 5000);
-        }
-    }
-    </script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../public/assets/js/menu.js"></script>
 </body>
