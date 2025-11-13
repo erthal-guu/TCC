@@ -220,48 +220,11 @@ mysqldump -u root -p gerenciador_agenda > backup_$(date +%Y%m%d).sql
 mysql -u root -p gerenciador_agenda < backup_arquivo.sql
 ```
 
-### Logs de Erro
-
-Os logs do PHP podem ser encontrados em:
-- **WAMP**: `C:\wamp64\logs\php\php_error.log`
-- **Apache**: `C:\wamp64\logs\apache\error.log`
-
-## 📝 Roadmap Futuro
-
-- [ ] Sistema de notificações por email
-- [ ] Relatórios estatísticos avançados
-- [ ] Aplicação mobile (React Native)
-- [ ] Sistema de avaliações
-- [ ] Modo offline (PWA)
-
-## 🐛 Problemas Conhecidos
-
-- **Importação de CSV**: Formatação precisa ser UTF-8
-- **Cache**: Limpar cache do navegador após atualizações
-- **Timezone**: Verificar configuração de `date.timezone` no php.ini
-
-## 📞 Suporte
-
-Para suporte, reporte issues no [GitHub Issues](https://github.com/Erthal-guu/TCC/issues).
-
-## 📄 Licença
-
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
----
-
 ## 👨‍💻 Autores
 
 - **Erthal-guu** - *Desenvolvimento Principal* - [GitHub](https://github.com/Erthal-guu)
 - **isaacLkt** - *Desenvolvimento e Banco de Dados* - [GitHub](https://github.com/isaaclkt)
 - **Bebelaaa** - *Interface e Documentação*
 
-## 🙏 Agradecimentos
-
-- **SENAI** - Pela oportunidade de desenvolvimento
-- **Professores e Colaboradores** - Pelo suporte durante o desenvolvimento
-- **Comunidade Open Source** - Pelas ferramentas e recursos utilizados
-
----
 
 **Desenvolvido com ❤️ para o TCC**
