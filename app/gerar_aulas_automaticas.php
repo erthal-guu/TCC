@@ -11,11 +11,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $aulas_geradas = 0;
 
-    $horarios = [
-        'manha' => ['08:00-09:40', '10:00-11:40'],
-        'tarde' => ['13:30-15:10', '15:30-17:10'],
-        'noite' => ['19:00-20:40', '20:50-22:30']
-    ];
+$horarios = [
+    'manha' => ['07:15-08:05', '08:05-08:55', '08:55-09:45', '10:05-10:55', '10:55-11:45'],
+    'tarde' => ['13:30-14:20', '14:20-15:10', '15:10-16:00', '16:20-17:10', '17:10-18:00'],
+    'noite' => ['19:00-19:50', '19:50-20:40', '20:40-21:30', '21:40-22:30', '22:30-23:20']
+];
 
     $salas = ['101', '102', '103', '201', '202', 'LAB-01', 'LAB-02'];
 
@@ -56,22 +56,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $uc = $ucs[array_rand($ucs)];
                     $turma = $turmas[array_rand($turmas)];
                     $sala = $salas[array_rand($salas)];
+                        if (isset($turma['turno'])) {
+                            $turno = strtolower(trim($turma['turno']));
+                            if (in_array($turno, ['manhã', 'manha', 'matutino'])) $turno = 'manha';
+                            elseif (in_array($turno, ['tarde'])) $turno = 'tarde';
+                            elseif (in_array($turno, ['noite', 'noturno'])) $turno = 'noite';
 
-                    if(isset($turma['turno'])) {
-                        $turno = strtolower($turma['turno']);
-                        if(isset($horarios[$turno])) {
-                            $horario = $horarios[$turno][array_rand($horarios[$turno])];
-                            $horario_array = explode('-', $horario);
-                            $inicio = $horario_array[0];
-                            $fim = $horario_array[1];
-                        } else {
-                            $inicio = sprintf('%02d:00', 8 + $i * 2);
-                            $fim = sprintf('%02d:40', 9 + $i * 2);
+                            if (isset($horarios[$turno])) {
+                                $horario = $horarios[$turno][array_rand($horarios[$turno])];
+                                $horario_array = explode('-', $horario);
+                                $inicio = $horario_array[0];
+                                $fim = $horario_array[1];
+                            } else {
+                                $inicio = sprintf('%02d:00', 8 + $i * 2);
+                                $fim = sprintf('%02d:40', 9 + $i * 2);
+                            }
                         }
-                    } else {
-                        $inicio = sprintf('%02d:00', 8 + $i * 2);
-                        $fim = sprintf('%02d:40', 9 + $i * 2);
-                    }
+
 
                     $observacoes = "Aula gerada automaticamente - Padrão semanal";
 
