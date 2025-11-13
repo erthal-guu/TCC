@@ -70,10 +70,21 @@ if ($result_mes) {
     $aulasMes = $row['total'];
 }
 
+$sql_usuarios = "SELECT COUNT(*) AS total FROM usuarios";
+$result_usuarios = $connection->query($sql_usuarios);
+$totalUsuarios = 0;
+
+if ($result_usuarios) {
+    $row = $result_usuarios->fetch_assoc();
+    $totalUsuarios = $row['total'];
+} else {
+    echo "Erro na consulta: " . $connection->error;
+}
+
 $sql_aulas_futuras = "
-    SELECT COUNT(*) AS total 
-    FROM aulas 
-    WHERE (data_aula > CURDATE()) 
+    SELECT COUNT(*) AS total
+    FROM aulas
+    WHERE (data_aula > CURDATE())
        OR (data_aula = CURDATE() AND horario_fim > CURTIME())
 ";
 $result_futuras = $connection->query($sql_aulas_futuras);
@@ -134,6 +145,19 @@ $connection->close();
             </div>
         </div>
 
+        <div class="card card-usuarios">
+            <div class="card-content">
+                <div class="card-icon">🙋‍♂️</div>
+                <div class="card-title">Usuários</div><br>
+                <div class="card-stats">
+                    <span class="card-stats-number"><?php echo $totalUsuarios; ?></span>
+                    <span class="card-stats-label">Usuários Cadastrados</span>
+                </div>
+                <button class="card-button"><a href="../app/Crud_Usuarios.php">Visualizar</a></button>
+            </div>
+        </div>
+        
+
         <div class="card card-unidades">
             <div class="card-content">
                 <div class="card-icon">📚</div>
@@ -157,7 +181,8 @@ $connection->close();
                 <button class="card-button"><a href="../app/Lista_Turmas.php">Visualizar</a></button>
             </div>
         </div>
-                <div class="card card-aulas">
+
+        <div class="card card-aulas">
             <div class="card-content">
                 <div class="card-icon">📅</div>
                 <div class="card-title">Aulas Agendadas</div><br>

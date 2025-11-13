@@ -116,17 +116,6 @@ $connection->close();
             </div>
         </div>
 
-        <div class="card card-turmas">
-            <div class="card-content">
-                <div class="card-icon">👥</div>
-                <div class="card-title">Minhas Turmas</div><br>
-                <div class="card-stats">
-                    <span class="card-stats-number"><?php echo $totalTurmas; ?></span>
-                    <span class="card-stats-label">Turmas Ativas</span>
-                </div>
-                <button class="card-button"><a href="../app/Minhas_turmas.php">Visualizar</a></button>
-            </div>
-        </div>
 
         <div class="card card-professores">
             <div class="card-content">
@@ -136,7 +125,7 @@ $connection->close();
                     <span class="card-stats-number"><?php echo $aulasFuturas; ?></span>
                     <span class="card-stats-label">Aulas Agendadas</span>
                 </div>
-                <button class="card-button"><a href="../app/Calendario.php">Ver Agenda</a></button>
+                <button class="card-button"><a href="../public/Calendario_professor.php">Ver Agenda</a></button>
             </div>
         </div>
     </div>
@@ -206,13 +195,6 @@ $connection->close();
                 <a href="../app/Minhas_aulas.php">
                     <span class="action-icon">📝</span>
                     <span>Minhas Aulas</span>
-                </a>
-            </button>
-            
-            <button class="action-btn">
-                <a href="../app/Minhas_turmas.php">
-                    <span class="action-icon">👥</span>
-                    <span>Minhas Turmas</span>
                 </a>
             </button>
         </div>

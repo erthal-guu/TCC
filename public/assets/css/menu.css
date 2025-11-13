@@ -366,3 +366,124 @@
         left: -280px;
     }
 }
+        .professor-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin: 15px;
+            width: 380px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        
+        .professor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .professor-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 4px solid #003D7A;
+            object-fit: cover;
+        }
+        
+        .professor-info {
+            flex: 1;
+            margin-left: 20px;
+        }
+        
+        .professor-name {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #003D7A;
+            margin-bottom: 5px;
+        }
+        
+        .professor-email {
+            font-size: 0.9rem;
+            color: #6c757d;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .info-section {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #003D7A;
+        }
+        
+        .info-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #003D7A;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        
+        .info-content {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        .card-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .card-actions .btn {
+            flex: 1;
+            padding: 10px;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-editar {
+            background-color: #ffc107;
+            border: none;
+            color: #000;
+        }
+        
+        .btn-editar:hover {
+            background-color: #ffb300;
+            transform: scale(1.02);
+        }
+        
+        .btn-deletar {
+            background-color: #dc3545;
+            border: none;
+            color: white;
+        }
+        
+        .btn-deletar:hover {
+            background-color: #c82333;
+            transform: scale(1.02);
+        }
+        
+        .menu-dots {
+            color: #6c757d;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+        
+        .menu-dots:hover {
+            color: #003D7A;
+        }

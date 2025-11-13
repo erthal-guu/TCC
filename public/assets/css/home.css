@@ -145,6 +145,10 @@
             justify-content: space-between;
         }
 
+        .card-aulas {
+            grid-column: span 4;
+        }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(0,0,0,0.12);
@@ -154,11 +158,19 @@
             background: #003D7A;
         }
 
+        .card-usuarios {
+            background: #003D7A;
+        }
+
         .card-unidades {
             background: #003D7A;
         }
 
         .card-turmas {
+            background: #003D7A;
+        }
+
+        .card-aulas {
             background: #003D7A;
         }
 
@@ -185,12 +197,22 @@
             color: white;
         }
 
+        .card-usuarios .card-icon {
+            background: #003D7A;
+            color: white;
+        }
+
         .card-unidades .card-icon {
             background: #003D7A;
             color: white;
         }
 
         .card-turmas .card-icon {
+            background: #003D7A;
+            color: white;
+        }
+
+        .card-aulas .card-icon {
             background: #003D7A;
             color: white;
         }
@@ -400,6 +422,15 @@
         @media (max-width: 768px) {
             .cards-container {
                 grid-template-columns: 1fr;
+            }
+            .card-aulas {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 1200px) and (min-width: 769px) {
+            .cards-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
                 .proximas-aulas {
