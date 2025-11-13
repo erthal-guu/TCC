@@ -2,7 +2,7 @@
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.0+-blue.svg)](https://php.net)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0+-orange.svg)](https://mysql.com)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 
 Sistema web para gestão de agenda escolar, desenvolvido como Trabalho de Conclusão de Curso (TCC). Permite o gerenciamento completo de professores, turmas, unidades curriculares e agendamento de aulas, com interfaces diferenciadas para administradores e professores.
 
