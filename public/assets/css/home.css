@@ -156,6 +156,9 @@
 
         .card-professores {
             background: #003D7A;
+
+        }
+        .card-aulas{
             grid-column: span 4;
         }
 

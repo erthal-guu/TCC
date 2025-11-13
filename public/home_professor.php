@@ -117,7 +117,7 @@ $connection->close();
         </div>
 
 
-        <div class="card card-professores">
+        <div class="card card-aulas">
             <div class="card-content">
                 <div class="card-icon">⏰</div>
                 <div class="card-title">Próximas Aulas</div><br>
