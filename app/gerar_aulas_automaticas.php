@@ -177,25 +177,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
     </div>
-
-    <script>
-        function mostrarOpcoes() {
-            const tipo = document.querySelector('[name="tipo"]').value;
-
-            document.getElementById('opcoes-padrao-semanal').style.display = 'none';
-
-            if(tipo) {
-                document.getElementById('opcoes-' + tipo).style.display = 'block';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            const selectTipo = document.querySelector('[name="tipo"]');
-            if (selectTipo) {
-                selectTipo.addEventListener('change', mostrarOpcoes);
-            }
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../public/assets/js/menu.js"></script>
 </body>

@@ -210,7 +210,7 @@ $turnos_result = $connection->query("SELECT id, nome FROM turnos ORDER BY id ASC
                 </button>
 
                 <p style="text-align: center; margin-top: 16px;">
-                    <a href="home.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
+                    <a href="../public/home_admin.php" style="color: #003D7A; text-decoration: none; font-weight: 600;">
                         ← Voltar para Home
                     </a>
                 </p>

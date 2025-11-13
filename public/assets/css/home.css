@@ -23,7 +23,7 @@
         }
 
         .logo-section {
-            display: flex;
+            display: flex;;
             align-items: center;
             gap: 15px;
         }
@@ -156,6 +156,7 @@
 
         .card-professores {
             background: #003D7A;
+            grid-column: span 4;
         }
 
         .card-usuarios {
